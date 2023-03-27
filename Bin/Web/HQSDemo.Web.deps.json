@@ -6,14 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "HQSDemo.Web/1.0.2023.0324": {
+      "HQSDemo.Web/1.0.2023.0327": {
         "dependencies": {
           "NewLife.Cube.Core": "5.5.2023.205",
           "NewLife.Redis": "5.1.2023.203",
           "NewLife.Stardust.Extensions": "2.6.2023.203",
           "System.Drawing.Common": "7.0.0",
-          "Zero.Core": "1.0.2023.324",
-          "Zero.Data": "1.0.2023.324"
+          "Zero.Core": "1.0.2023.327",
+          "Zero.Data": "1.0.2023.327"
         },
         "runtime": {
           "HQSDemo.Web.dll": {}
@@ -143,7 +143,7 @@
           }
         }
       },
-      "Zero.Core/1.0.2023.324": {
+      "Zero.Core/1.0.2023.327": {
         "dependencies": {
           "NewLife.Core": "10.1.2023.203"
         },
@@ -151,12 +151,12 @@
           "Zero.Core.dll": {}
         }
       },
-      "Zero.Data/1.0.2023.324": {
+      "Zero.Data/1.0.2023.327": {
         "dependencies": {
           "NewLife.Core": "10.1.2023.203",
           "NewLife.Stardust": "2.6.2023.203",
           "NewLife.XCode": "11.5.2023.203",
-          "Zero.Core": "1.0.2023.324"
+          "Zero.Core": "1.0.2023.327"
         },
         "runtime": {
           "Zero.Data.dll": {}
@@ -165,7 +165,7 @@
     }
   },
   "libraries": {
-    "HQSDemo.Web/1.0.2023.0324": {
+    "HQSDemo.Web/1.0.2023.0327": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -240,12 +240,12 @@
       "path": "system.drawing.common/7.0.0",
       "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
     },
-    "Zero.Core/1.0.2023.324": {
+    "Zero.Core/1.0.2023.327": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Zero.Data/1.0.2023.324": {
+    "Zero.Data/1.0.2023.327": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

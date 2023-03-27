@@ -7,12 +7,12 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "Zero.Data/1.0.2023.0323": {
+      "Zero.Data/1.0.2023.0327": {
         "dependencies": {
           "NewLife.Core": "10.1.2023.203",
           "NewLife.Stardust": "2.6.2023.203",
           "NewLife.XCode": "11.5.2023.203",
-          "Zero.Core": "1.0.2023.323"
+          "Zero.Core": "1.0.2023.327"
         },
         "runtime": {
           "Zero.Data.dll": {}
@@ -60,7 +60,7 @@
           }
         }
       },
-      "Zero.Core/1.0.2023.323": {
+      "Zero.Core/1.0.2023.327": {
         "dependencies": {
           "NewLife.Core": "10.1.2023.203"
         },
@@ -71,7 +71,7 @@
     }
   },
   "libraries": {
-    "Zero.Data/1.0.2023.0323": {
+    "Zero.Data/1.0.2023.0327": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -104,7 +104,7 @@
       "path": "newlife.xcode/11.5.2023.203",
       "hashPath": "newlife.xcode.11.5.2023.203.nupkg.sha512"
     },
-    "Zero.Core/1.0.2023.323": {
+    "Zero.Core/1.0.2023.327": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

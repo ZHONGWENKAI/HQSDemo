@@ -1,4 +1,4 @@
-﻿ @model Zero.Data.Projects.User
+﻿@model Zero.Data.Projects.User
 @using Zero.Data.Projects
 @using NewLife;
 @using NewLife.Web;
@@ -81,7 +81,17 @@
         <table class="table table-bordered table-hover table-striped table-condensed" >
             <tbody>
                 <tr class="text-center">                    
-                    <td class="text-center"  width="80" height="80"><img id="Avatar" src="@Model.Avatar" width="80" height="80"/></td>
+                    <td class="text-center"  width="80" height="80">
+                        @if (Model.Avatar ==null)
+                    {
+                        <img src="GetDefalutAvatar" width="80" height="80"/>
+                    }
+                    else
+                    {
+                        <img id="Avatar" src="@Model.Avatar" width="80" height="80"/>
+                    }    
+                        
+                    </td>
                     <td id="Name" class="text-left">@Model.Name</td>
                     <td style="text-align:right;" class="text-right"></td>
                 </tr>

@@ -106,7 +106,7 @@ namespace Zero.Data.Projects
         //    return base.OnDelete();
         //}
 
-        // <summary>根据用户ID删除所有记录</summary>
+        // <summary>批量删除</summary>
         /// <param name="userDiseaseList">疾病ID</param>
         /// <returns>实体列表</returns>
         public static Boolean DeteleAllByUserID(List<UserDisease> userDiseaseList)
@@ -115,7 +115,24 @@ namespace Zero.Data.Projects
 
             if (userDiseaseList != null)
             {
-                userDiseaseList.Delete();
+                userDiseaseList.Delete(true);
+                b = true;
+            }
+
+
+            return b;
+        }
+
+        // <summary>批量添加</summary>
+        /// <param name="userDiseaseList">疾病ID</param>
+        /// <returns>实体列表</returns>
+        public static Boolean InsertAllByUserID(List<UserDisease> userDiseaseList)
+        {
+            bool b = false;
+
+            if (userDiseaseList != null)
+            {
+                userDiseaseList.Insert(true);
                 b = true;
             }
 

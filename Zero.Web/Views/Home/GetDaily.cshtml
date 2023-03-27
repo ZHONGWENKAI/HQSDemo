@@ -19,19 +19,6 @@
     var user = (Zero.Data.Projects.User)ViewData["user"];
 }
 
-@*<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="UserCenter/GetCommoncss">
-  <link rel="stylesheet" href="UserCenter/GetStylecss">
-  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
-  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
-  <title>日常打卡</title>
-</head>*@
 <body id="list">
 
 
@@ -99,8 +86,18 @@
         {
         <table class="table table-bordered table-hover table-striped table-condensed" >
             <tbody>
-                <tr class="text-center">                    
-                    <td class="text-center"  width="80" height="80"><img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/></td>
+                <tr class="text-center">           
+                    
+                    <td class="text-center"  width="80" height="80">
+                     @if (user.Avatar ==null)
+                    {
+                        <img src="GetDefalutAvatar" width="80" height="80"/>
+                    }
+                    else
+                    {
+                         <img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/>
+                    }               
+                    </td>
                     <td class="text-left">@findUserByID(entity.UserID).Name</td>
                     <td style="text-align:right;" class="text-right">@entity.EvaluateTime</td>
                 </tr>
@@ -166,7 +163,7 @@
         </div>
     
   </body>
-  <script>
+ @* <script>
  $(document).ready(function(){
    $("#search").click(function () {
         var EffectID=$("#EffectID option:selected").text();       
@@ -216,4 +213,4 @@
         });
     });
  });
-  </script>
+  </script>*@

@@ -96,7 +96,16 @@
         <table class="table table-bordered table-hover table-striped table-condensed" >
             <tbody>
                 <tr class="text-center">                    
-                    <td class="text-center"  width="80" height="80"><img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/></td>
+                    <td class="text-center"  width="80" height="80">
+                        @if (user.Avatar ==null)
+                    {
+                        <img src="GetDefalutAvatar" width="80" height="80"/>
+                    }
+                    else
+                    {
+                         <img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/>
+                    }               
+                     </td>
                     <td class="text-left">@findUserByID(entity.UserID).Name</td>
                     <td style="text-align:right;" class="text-right">@entity.EvaluateTime</td>
                 </tr>
@@ -124,7 +133,7 @@
                 @foreach(var picture in pictureList(entity.ID))
                 {
                 
-                
+                    
                     <img src="@picture.Content" width="150" height="120"/>
                   
                 }

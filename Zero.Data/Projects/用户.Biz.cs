@@ -237,6 +237,50 @@ namespace Zero.Data.Projects
             return FindAll(_.InfectionID == infectionId);
         }
 
+        public static IList<User> FindAllByNameLike(String name)
+        {
+            WhereExpression exp = new WhereExpression();
+            if (name != "")
+            {
+                
+                exp &= "name like '%" + name + "%' ";
+            }
+            
+            return FindAll(exp);
+        }
+
+        public static IList<User> FindAllUserByDiseases(String DiseaseName)
+        {
+
+            List<User> users = new List<User>();
+
+            if (DiseaseName != "" && DiseaseName != null)
+            {
+                String[] diseaseNames1 = DiseaseName.Split(",");
+                String[] diseaseNames = diseaseNames1;
+                for (int i = 0; i < diseaseNames1.Length - 1; i++)
+                {
+                    diseaseNames[i] = diseaseNames1[i];
+                }
+                int[] diseaseIds = { };
+                for (int i = 0; i < diseaseNames.Length; i++)
+                {
+                    diseaseIds[i] = Disease.FindByName(diseaseNames[i]).ID;
+                }
+                List<UserDisease> userDiseases = new List<UserDisease>();
+                for (int i = 0; i < diseaseIds.Length; i++)
+                {
+                    userDiseases.AddRange(UserDisease.FindAllByDiseaseID(diseaseIds[i]));
+                }
+
+                for (int i = 0; i < userDiseases.Count; i++)
+                {
+                    users.Add(User.FindByID(userDiseases[i].UserID));
+                }
+
+            }
+            return users;
+        }
 
         #endregion
 
@@ -259,39 +303,7 @@ namespace Zero.Data.Projects
             return FindAll(exp, page);
         }
 
-        public static IList<User> FindAllUserByDiseases(String DiseaseName)
-        {
-            
-            List<User> users = new List<User>();
-            
-            if (DiseaseName != ""&& DiseaseName != null)
-            {
-                String[] diseaseNames1 = DiseaseName.Split(",");
-                String[] diseaseNames = diseaseNames1;
-                for (int i = 0; i < diseaseNames1.Length-1; i++)
-                {
-                    diseaseNames[i] = diseaseNames1[i];
-                }
-                int[] diseaseIds = { };
-                for (int i = 0; i < diseaseNames.Length; i++)
-                {
-                    diseaseIds[i]=Disease.FindByName(diseaseNames[i]).ID;
-                }
-                List <UserDisease> userDiseases= new List<UserDisease>();
-                for (int i = 0; i < diseaseIds.Length; i++)
-                {
-                    userDiseases.AddRange(UserDisease.FindAllByDiseaseID(diseaseIds [i]));
-                }
-
-                for (int i = 0; i < userDiseases.Count; i++)
-                {
-                    users.Add(User.FindByID(userDiseases[i].UserID));
-                }
-
-            }
-            return users;
-        }
-
+        
 
         // Select Count(ID) as ID,Category From User Where CreateTime>'2020-01-24 00:00:00' Group By Category Order By ID Desc limit 20
         //static readonly FieldCache<User> _CategoryCache = new FieldCache<User>(nameof(Category))

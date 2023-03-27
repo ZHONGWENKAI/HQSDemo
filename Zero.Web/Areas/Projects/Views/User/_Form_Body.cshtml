@@ -1,0 +1,133 @@
+﻿@using NewLife;
+@using NewLife.Cube.ViewModels
+@using XCode;
+@using XCode.Configuration;
+@{
+    var entity = Model as IEntity;
+    var fields = ViewBag.Fields as FieldCollection;
+    var groupFields = fields.GroupByCategory(entity);
+}
+
+<div class="form-group col-xs-9 col-sm-9">
+     @if (entity.GetValue("Avatar") ==null)
+      {
+        <img id=Avatarimg src="User/GetDefalutAvatar" width="60" height="60"/>
+    }
+    else
+    {
+        <img id=Avatarimg src="@entity.GetValue("Avatar")" width="60" height="60"/> 
+    }
+</div>
+         
+   
+@if (groupFields.Count > 1)
+{
+    var i = 0;
+    var j = 0;
+    <ul class="nav nav-tabs" role="tablist">
+        @foreach (var item in groupFields)
+        {
+            <li class="@(i==0?"active":"")"><a href="@("#item"+i)" data-toggle="tab">@item.Key</a></li>
+            i++;
+        }
+    </ul>
+    <div class="tab-content">
+        @foreach (var group in groupFields)
+        {
+            <div class="tab-pane fade in @(j==0?"active":"")" id="@("item"+j)">
+                <div class="row">
+                    @foreach (var item in group.Value)
+                    {
+                        if ((!item.PrimaryKey || item.Field != null && !item.Field.IsIdentity) && (item.DataVisible == null || item.DataVisible(entity)))
+                        {
+                            if (item is FormField formField && !formField.GroupView.IsNullOrEmpty())
+                                @await Html.PartialAsync(formField.GroupView, new ValueTuple<IEntity, DataField>(entity, item)) 
+                            else
+                                @await Html.PartialAsync("_Form_Group", new ValueTuple<IEntity, DataField>(entity, item))
+                        }
+                    }
+                </div>
+            </div>
+            j++;
+        }
+    </div>
+}
+else
+{
+    
+        // 表单页显示非主键或非自增字段
+    foreach (var item in fields)
+    {        
+        if ((!item.PrimaryKey || item.Field != null && !item.Field.IsIdentity) && (item.DataVisible == null || item.DataVisible(entity))&&item.Name !="Avatar")
+        {
+            
+            if (item is FormField formField && !formField.GroupView.IsNullOrEmpty())
+                @await Html.PartialAsync(formField.GroupView, new ValueTuple<IEntity, DataField>(entity, item))  
+            else
+                @await Html.PartialAsync("_Form_Group", new ValueTuple<IEntity, DataField>(entity, item))
+        }
+            
+    }
+           
+}
+ @*<div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-2 col-sm-2">头像</label>
+    <div class="input-group col-xs-12 col-sm-6">
+        <input class="form-control" id="Avatar" name="Avatar" type="file" value="" /></div>*@
+
+
+        
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">头像</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatar" name="Avatar" type="hidden" value="@entity.GetValue("Avatar")"/></div>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatarpath" type="file" accept="image/*" value="" /></div>
+        </div>
+
+     
+@*    <script>
+
+           
+        $(document).ready(function(){
+            $("#Avatarpath").change(function(){
+            var url = null;  
+            var fileObj = document.getElementById("Avatarpath").files[0];
+          
+            if (window.webkitURL != undefined) {  
+                url = window.webkitURL.createObjectURL(fileObj);  
+                
+            }else if (window.URL != undefined) {  
+                url = window.URL.createObjectURL(fileObj);  
+            }
+                
+            $("#Avatarimg").attr("src",url);
+            $('#Avatarimg').attr("style","display:inline");
+              
+            $('#Avatar').attr("value",url); 
+            alert(url);
+  });
+});
+
+    </script>*@
+
+    <script>
+        $("#Avatarpath").change(function () {
+        console.log($("#Avatarpath"))
+        var file = $("#Avatarpath").get(0).files[0];
+
+        if(file!=null){
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+        // 图片格式为 base64
+        //console.log(e)
+       
+       $("#Avatar").attr("value",e.target.result)
+       $("#Avatarimg").attr("src",e.target.result)
+        }
+        
+    }
+})
+    </script>

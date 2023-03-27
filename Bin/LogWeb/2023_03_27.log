@@ -1,0 +1,208 @@
+﻿#Software: Web管理平台
+#ProcessID: 7652 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 00:41:00.4060000
+#Date: 2023-03-27
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+09:47:14.107  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+09:47:14.108  1 N - NewLife组件核心库 ©2002-2023 NewLife
+09:47:14.108  1 N - HQSDemo.Web v1.0.2023.0324 Build 2023-03-24 18:52:00 .NETCoreApp,Version=v6.0
+09:47:14.109  1 N - Web管理平台 ©2002-2023 NewLife
+09:47:14.109  1 N - 正在初始化星尘……
+09:47:14.194  1 N - 星尘探测：http://192.168.1.120:6600
+09:47:14.195  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@7652
+09:47:14.199  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+09:47:14.225  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+09:47:14.226  1 N - NewLife数据中间件 ©2002-2023 NewLife
+09:47:14.226  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+09:47:14.358  6 Y P 接入星尘服务端：
+09:47:14.362  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+09:47:14.613  1 N - ================================ Start 配置魔方 ================================
+09:47:14.614  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+09:47:14.615  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+09:47:14.938  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+09:47:14.938  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8483.33960, Culture=neutral, PublicKeyToken=null
+09:47:14.969  1 N - [Membership]待检查数据表：AppModule
+09:47:14.984  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+09:47:15.007  1 N - [Membership] select * from sqlite_master
+09:47:15.009  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+09:47:15.079  1 N - [Membership] Select * From AppModule
+09:47:15.085  1 N - ================================ End   配置魔方 ================================
+09:47:15.151  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,Picture,Member,DailyOrSum,Story,Infection,VersionPlan,User,UserDisease,Disease,Effect
+09:47:15.170  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,Picture,Member,DailyOrSum,Story,Infection,VersionPlan,User,UserDisease,Disease,Effect
+09:47:15.171  1 N - [Zero] select * from sqlite_master
+09:47:15.172  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+09:47:15.183  1 N - [Zero] Create Index IX_DailyOrSum_UserID On DailyOrSum (UserID)
+09:47:15.189  1 N - 修改表CreateIndex失败！SQL logic error
+index IX_DailyOrSum_UserID already exists[SQL:[Zero] Create Index IX_DailyOrSum_UserID On DailyOrSum (UserID)][DB:Zero/SQLite]
+09:47:15.190  1 N - [Zero] Create Index IX_DailyOrSum_EffectID On DailyOrSum (EffectID)
+09:47:15.193  1 N - 修改表CreateIndex失败！SQL logic error
+index IX_DailyOrSum_EffectID already exists[SQL:[Zero] Create Index IX_DailyOrSum_EffectID On DailyOrSum (EffectID)][DB:Zero/SQLite]
+09:47:15.193  1 N - DDL模式[On]，请手工修改表：
+Alter Table DailyOrSum Drop Column Picture;
+09:47:15.199  1 N - SQLite需要重建表，因无法执行：Alter Table User Alter Column Avatar text NULL COLLATE NOCASE
+09:47:15.202  1 N - [Zero] Alter Table User Rename To Temp_User_5734
+09:47:15.205  1 N - [Zero] Create Table User(
+	ID integer Primary Key AUTOINCREMENT,
+	password nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Avatar text NULL COLLATE NOCASE,
+	Sex int NOT NULL DEFAULT 0,
+	Age int NOT NULL DEFAULT 0,
+	BirthDay datetime NOT NULL DEFAULT '0001-01-01',
+	Phone nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Height int NOT NULL DEFAULT 0,
+	Weight int NOT NULL DEFAULT 0,
+	InfectionID int NOT NULL DEFAULT 0,
+	UsageAmount int NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+09:47:15.206  1 N - [Zero] Insert Into User(ID, password, Name, Avatar, Sex, Age, BirthDay, Phone, Height, Weight, InfectionID, UsageAmount, CreateUser, CreateUserID, CreateIP, CreateTime, UpdateUser, UpdateUserID, UpdateIP, UpdateTime, Remark) Select ifnull(ID, 0), ifnull(password, ''), ifnull(Name, ''), Avatar, ifnull(Sex, 0), ifnull(Age, 0), ifnull(BirthDay, '0001-01-01 00:00:00'), ifnull(Phone, ''), ifnull(Height, 0), ifnull(Weight, 0), ifnull(InfectionID, 0), ifnull(UsageAmount, 0), CreateUser, ifnull(CreateUserID, 0), CreateIP, CreateTime, UpdateUser, ifnull(UpdateUserID, 0), UpdateIP, UpdateTime, Remark From Temp_User_5734
+09:47:15.207  1 N - [Zero] Create Unique Index IU_User_Name On User (Name)
+09:47:15.232  1 N - XCode.Exceptions.XSqlException: SQL logic error
+index IU_User_Name already exists[SQL:[Zero] Create Unique Index IU_User_Name On User (Name)][DB:Zero/SQLite]
+ ---> code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+index IU_User_Name already exists
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteNonQuery()
+   at XCode.DataAccessLayer.DbSession.<>c.<Execute>b__31_0(DbCommand cmd2)
+   at XCode.DataAccessLayer.DbSession.<>c__DisplayClass33_0`1.<Execute>b__0()
+   --- End of inner exception stack trace ---
+   at XCode.DataAccessLayer.DbSession.<>c__DisplayClass33_0`1.<Execute>b__0()
+   at XCode.DataAccessLayer.DbSession.Process[TResult](Func`1 callback)
+   at XCode.DataAccessLayer.DbSession.Execute[T](DbCommand cmd, Boolean query, Func`2 callback)
+   at XCode.DataAccessLayer.DbSession.Execute(String sql, CommandType type, IDataParameter[] ps)
+   at XCode.DataAccessLayer.SQLiteMetaData.CheckColumnsChange(IDataTable entitytable, IDataTable dbtable, Boolean onlySql, Boolean noDelete)
+   at XCode.DataAccessLayer.DbMetaData.CheckTable(IDataTable entitytable, IDataTable dbtable, Migration mode)
+   at XCode.DataAccessLayer.SQLiteMetaData.CheckTable(IDataTable entitytable, IDataTable dbtable, Migration mode)
+   at XCode.DataAccessLayer.DbMetaData.CheckAllTables(IDataTable[] tables, Migration mode, Boolean dbExit)
+09:47:15.234  1 N - ================================ Start 初始化魔方 ================================
+09:47:15.235  1 N - [Membership] select * from sqlite_master
+09:47:15.242  1 N - 初始化ManageProvider
+09:47:15.255  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+09:47:15.259  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+09:47:15.259  1 N - [Membership] select * from sqlite_master
+09:47:15.268  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 2
+09:47:15.271  1 N - [Membership] Select Count(*) From User
+09:47:15.275  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+09:47:15.275  1 N - [Membership] Select Count(*) From Role
+09:47:15.277  1 N - [Membership] Select * From Role
+09:47:15.287  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+09:47:15.287  1 N - [Membership] Select Count(*) From Department
+09:47:15.290  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+09:47:15.291  1 N - [Membership]待检查数据表：UserOnline,Log
+09:47:15.292  1 N - [Membership] select * from sqlite_master
+09:47:15.295  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+09:47:15.298  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+09:47:15.298  1 N - [Membership] select * from sqlite_master
+09:47:15.303  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+09:47:15.303  1 N - [Membership] Select Count(*) From OAuthConfig
+09:47:15.311  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+09:47:15.311  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+09:47:15.312  1 N - 注册魔方区域路由
+09:47:15.320  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+09:47:15.350  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+09:47:15.351 12 Y P start------初始化[Projects]的菜单体系------start
+09:47:15.352 12 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 53
+09:47:15.355 12 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+09:47:15.357 12 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+09:47:15.379 12 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+09:47:15.403 20 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+09:47:15.424 12 Y P end---------初始化[Projects]的菜单体系---------end
+09:47:15.464  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+09:47:15.465 13 Y P start------初始化[Nodes]的菜单体系------start
+09:47:15.474  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+09:47:15.479 13 Y P end---------初始化[Nodes]的菜单体系---------end
+09:47:15.489  1 N - 开始注册权限管理区域[NewMuen]，控制器命名空间[Zero.Web.Areas.NewMuen.Controllers]
+09:47:15.490  6 Y P start------初始化[NewMuen]的菜单体系------start
+09:47:15.493 13 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+09:47:15.499  6 Y P end---------初始化[NewMuen]的菜单体系---------end
+09:47:15.627  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+09:47:15.628 13 Y P start------初始化[Admin]的菜单体系------start
+09:47:15.658 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+09:47:15.664 13 Y P end---------初始化[Admin]的菜单体系---------end
+09:47:15.664  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+09:47:15.664 13 Y P start------初始化[Cube]的菜单体系------start
+09:47:15.678 16 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+09:47:15.684 13 Y P end---------初始化[Cube]的菜单体系---------end
+09:47:15.684  1 N - ================================ End   初始化魔方 ================================
+09:47:15.685 13 Y P 初始化星尘注册中心，提供服务注册与发布能力
+09:47:15.692 13 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@7652","MinVersion":null,"Tag":null}
+09:47:15.714  7 Y - StarWeb: http://@7132:1999
+09:47:15.715  7 Y - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Cube.config
+09:47:15.786  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@7652","IP":"192.168.1.120,172.30.64.1","Version":"1.0.8483.33960","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+09:47:15.796  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@7652","Version":"1.0.8483.33960","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-27 09:47:15","UpdateTime":"2023-03-27 09:47:15"}
+09:47:16.722 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+09:47:16.732 13 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@7652","MinVersion":null,"Tag":null}
+09:47:16.739  7 Y - Zero.WebApi服务信息：[]
+09:47:16.744  7 Y - Zero.WebApi服务地址：
+09:47:17.393  6 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+09:47:19.237 24 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@7652
+09:47:23.483  9 W P User.Count 快速计算表记录数（非精确）[User/Zero] 参考值 1
+09:47:23.484  9 W P [Zero] Select Count(*) From User
+09:47:23.486  9 W P [Zero] Select * From User
+09:47:23.498  9 W P UserDisease.Count 快速计算表记录数（非精确）[UserDisease/Zero] 参考值 2
+09:47:23.498  9 W P [Zero] Select Count(*) From UserDisease
+09:47:23.501  9 W P [Zero] Select * From UserDisease
+09:47:23.504  9 W P Disease.Count 快速计算表记录数（非精确）[Disease/Zero] 参考值 5
+09:47:23.504  9 W P [Zero] Select Count(*) From Disease
+09:47:23.506  9 W P [Zero] Select * From Disease
+09:47:24.978 10 N T 对象缓存<UserOnline>(0)     总次数          4，命中          2（50.00%）	[NewLife.Cube.Entity.UserOnline]
+09:47:24.979 10 N T 对象缓存<UserStat>(0)       总次数          2	[NewLife.Cube.Entity.UserStat]
+09:47:24.979 10 N T 实体缓存<User>(2)           总次数          1	[XCode.Membership.User]
+09:47:24.980 10 N T 实体缓存<UserDisease>(2)    总次数          1	[Zero.Data.Projects.UserDisease]
+09:47:24.980 10 N T 实体缓存<User>(1)           总次数          1	[Zero.Data.Projects.User]
+09:47:24.980 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+09:47:24.981 10 N T 实体缓存<Menu>(53)          总次数        125，命中        124（99.20%）	[XCode.Membership.Menu]
+09:47:24.981 10 N T 实体缓存<OAuthConfig>(9)    总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.OAuthConfig]
+09:47:24.981 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+09:47:24.981 10 N T 实体缓存<Disease>(5)        总次数          2，命中          1（50.00%）	[Zero.Data.Projects.Disease]
+09:47:28.316 32 W P [Zero] Select * From Effect
+09:47:28.320 32 W P [Zero] Select * From Infection
+09:47:28.331 32 W P Infection.Count 快速计算表记录数（非精确）[Infection/Zero] 参考值 4
+09:47:28.331 32 W P [Zero] Select Count(*) From Infection
+09:48:48.096  9 Y P [Zero] Select Count(*) From User
+09:48:48.097  6 W P [Zero] Select * From User
+09:48:48.229  6 W P [Zero] Select * From User
+09:48:52.554  6 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 6
+09:48:52.554  6 W P [Zero] Select Count(*) From DailyOrSum
+09:48:52.557  6 W P [Zero] Select * From DailyOrSum
+09:48:52.591  6 W P [Zero] Select * From Disease
+09:48:52.593  6 W P [Zero] Select * From Effect
+09:48:52.595  6 W P [Zero] Select * From Infection
+09:48:52.598  6 W P Effect.Count 快速计算表记录数（非精确）[Effect/Zero] 参考值 3
+09:48:52.599  6 W P [Zero] Select Count(*) From Effect
+09:48:52.602  6 W P [Zero] Select * From UserDisease
+09:48:52.603 12 Y Device [Zero] Select Count(*) From UserDisease
+09:48:52.606  9 W P [Zero] Select Count(*) From Disease
+09:48:52.606 13 Y P [Zero] Select Count(*) From Infection
+09:48:52.606  6 W P Picture.Count 快速计算表记录数（非精确）[Picture/Zero] 参考值 5
+09:48:52.606  6 W P [Zero] Select Count(*) From Picture
+09:48:52.609  6 W P [Zero] Select * From Picture

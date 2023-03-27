@@ -1,0 +1,145 @@
+﻿ @model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+
+<body>
+    <div class="panel panel-default">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                个人信息采集</li>
+            <li>
+            <a href="/Home/GetUser/@Model.ID">个人中心</a>
+            </li>
+
+        </ul>
+    <div class="hidden-xs" style="float: right; margin-left: 40px;max-width:1000px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;" title="用户。存储用户信息">用户。存储用户信息</div>
+    </div>
+        <div class="page-content">
+        <div class="page-content">
+        <section class="content-wrapper main-content clear-fix">
+                
+    <div class="form-horizontal">
+    
+    <form action="/Home/EditUser/@Model.ID" method="post">        <ul>
+
+    </ul>
+
+   <div class="form-group col-xs-9 col-sm-9">
+    
+        <img id=Avatarimg src="@Model.Avatar" width="60" height="60"/> 
+    
+</div>
+         
+   
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">名称</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Name" name="Name" type="text" value="@Model.Name" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">性别</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <select class="multiselect" data-val="true" data-val-required="The Int64 field is required." id="Sex" name="Sex"><option selected="selected" value="@Model.Sex">@Model.Sex</option>
+            <option value="1">男</option>
+            <option value="2">女</option>
+        </select></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">年龄</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Age" name="Age" role="number" type="text" value="@Model.Age" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">出生日期</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    <input autocomplete="off" class="form-control date form_datetime" dateformat="yyyy-MM-dd" id="BirthDay" name="BirthDay" type="text" value="@Model.BirthDay" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">手机</label>
+        <div class="input-group col-xs-9 col-sm-9">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+        <input class="form-control" id="Phone" name="Phone" type="tel" value="@Model.Phone" />
+    </div>
+</div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">身高cm</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Height" name="Height" role="number" type="text" value="@Model.Height" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">体重kg</label>
+    <div class="input-group col-xs-9 col-sm-9">
+    <input class="form-control" id="Weight" name="Weight" role="number" type="text" value="@Model.Weight" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">新冠感染情况</label>
+    <div class="input-group col-xs-9 col-sm-9">
+    <select class="multiselect" id="InfectionID" name="InfectionID"><option selected="selected" value="@Model.Infection">@Model.Infection.Name</option>
+    <option value="1">未感染</option>
+    <option value="2">无症状阳性</option>
+    <option value="3">已确诊</option>
+    <option value="4">已康复</option>
+    </select></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">服用数量</label>
+        <div class="input-group col-xs-9 col-sm-9">
+    <input class="form-control" id="UsageAmount" name="UsageAmount" role="number" type="text" value="@Model.UsageAmount" /></div>
+
+
+
+        
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">头像</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatar" name="Avatar" type="hidden"/></div>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatarpath" type="file" accept="image/*" value="" /></div>
+        </div>
+
+
+
+         <div class="clearfix form-actions col-xs-12 col-sm-12 col-md-12">
+        <label class="control-label col-xs-4 col-sm-5 col-md-5"></label>
+        <button type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-plus"></i><strong>编辑</strong></button>
+        <button type="button" class="btn btn-danger btn-sm" onclick="history.go(-1);"><i class="glyphicon glyphicon-remove"></i><strong>取消</strong></button>
+    </div>
+</body>
+
+<script>
+        $("#Avatarpath").change(function () {
+        console.log($("#Avatarpath"))
+        var file = $("#Avatarpath").get(0).files[0];
+        
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+        // 图片格式为 base64
+        //console.log(e)
+       
+       $("#Avatar").attr("value",e.target.result)
+       $("#Avatarimg").attr("src",e.target.result)
+       
+        
+    }
+})
+    </script>

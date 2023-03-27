@@ -1,0 +1,1209 @@
+﻿#Software: Web管理平台
+#ProcessID: 3916 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 08:43:14.6560000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+17:59:44.629  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+17:59:44.648  1 N - NewLife组件核心库 ©2002-2023 NewLife
+17:59:44.653  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 17:59:40 .NETCoreApp,Version=v6.0
+17:59:44.653  1 N - Web管理平台 ©2002-2023 NewLife
+17:59:44.653  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Core.config
+17:59:44.894  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Core.config
+17:59:44.898  1 N - 正在初始化星尘……
+17:59:44.914  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Star.config
+17:59:44.943  6 Y P 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Socket.config
+17:59:44.969  1 N - 星尘探测：http://192.168.1.120:6600
+17:59:44.969  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Star.config
+17:59:44.970  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@3916
+17:59:44.974  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+17:59:45.001  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\XCode.config
+17:59:45.003  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+17:59:45.003  1 N - NewLife数据中间件 ©2002-2023 NewLife
+17:59:45.003  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+17:59:45.139  8 Y - 接入星尘服务端：
+17:59:45.142  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+17:59:45.269  1 N - ================================ Start 配置魔方 ================================
+17:59:45.270  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+17:59:45.271  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+17:59:45.272  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Sys.config
+17:59:45.285  1 N - 保存配置 D:\Code\HQSDemo\Bin\Web\Config\Cube.config
+17:59:45.540  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+17:59:45.540  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.32390, Culture=neutral, PublicKeyToken=null
+17:59:45.567  1 N - 创建数据库：Membership
+17:59:45.568  1 N - 创建数据库：D:\Code\HQSDemo\Bin\Data\Membership.db
+17:59:45.569  1 N - [Membership]待检查数据表：AppModule
+17:59:45.575  1 N - Microsoft.Data.Sqlite.dll不存在或平台版本不正确，准备联网获取 http://x.newlifex.com/
+17:59:45.587  1 N - 下载链接 http://x.newlifex.com/，目标 Microsoft.Data.Sqlite.win-x64,Microsoft.Data.Sqlite.win,Microsoft.Data.Sqlite_net60,Microsoft.Data.Sqlite_netstandard21,Microsoft.Data.Sqlite_netstandard20
+17:59:45.588  6 Y P WebClientX.Get http://x.newlifex.com/
+17:59:45.808  1 N - 未找到  Microsoft.Data.Sqlite.dll
+17:59:45.808  1 N - System.Data.SQLite.dll不存在或平台版本不正确，准备联网获取 http://x.newlifex.com/
+17:59:45.809  1 N - 下载链接 http://x.newlifex.com/，目标 System.Data.SQLite.win-x64,System.Data.SQLite.win,System.Data.SQLite_net60,System.Data.SQLite_netstandard21,System.Data.SQLite_netstandard20,System.Data.SQLite
+17:59:45.809 13 Y P WebClientX.Get http://x.newlifex.com/
+17:59:45.966  1 N - 分析得到文件 System.Data.SQLite.win-x64_20220621.zip，准备下载 http://x.newlifex.com/System.Data.SQLite.win-x64_20220621.zip，保存到 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.win-x64_20220621.zip
+17:59:45.967  9 Y P WebClientX.Get http://x.newlifex.com/System.Data.SQLite.win-x64_20220621.zip
+17:59:46.128  1 N - 下载完成，共1,045,867字节，耗时161毫秒
+17:59:46.129  1 N - 解压缩到 D:\Code\HQSDemo\Bin\Web\Plugins
+17:59:46.151  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+17:59:46.172  1 N - [Membership] select * from sqlite_master
+17:59:46.175  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:59:46.214  1 N - 创建表：AppModule(应用插件。基于魔方实现的应用功能插件)
+17:59:46.220  1 N - [Membership] Create Table AppModule(
+	Id integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NULL COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Type nvarchar(50) NULL COLLATE NOCASE,
+	ClassName nvarchar(50) NULL COLLATE NOCASE,
+	FilePath nvarchar(200) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserId int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserId int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.233  1 N - [Membership] Select * From AppModule
+17:59:46.238  1 N - ================================ End   配置魔方 ================================
+17:59:46.305  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+17:59:46.317  1 N - 创建数据库：Zero
+17:59:46.317  1 N - 创建数据库：D:\Code\HQSDemo\Bin\Data\Zero.db
+17:59:46.318  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+17:59:46.318  1 N - [Zero] select * from sqlite_master
+17:59:46.319  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+17:59:46.320  1 N - 创建表：Node(节点)
+17:59:46.322  1 N - [Zero] Create Table Node(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NULL COLLATE NOCASE,
+	Code nvarchar(50) NULL COLLATE NOCASE,
+	Secret nvarchar(50) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	ProductCode nvarchar(50) NULL COLLATE NOCASE,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	Version nvarchar(50) NULL COLLATE NOCASE,
+	CompileTime datetime NULL,
+	OS nvarchar(100) NULL COLLATE NOCASE,
+	OSVersion nvarchar(50) NULL COLLATE NOCASE,
+	Architecture nvarchar(50) NULL COLLATE NOCASE,
+	MachineName nvarchar(50) NULL COLLATE NOCASE,
+	UserName nvarchar(50) NULL COLLATE NOCASE,
+	IP nvarchar(200) NULL COLLATE NOCASE,
+	Cpu int NOT NULL DEFAULT 0,
+	Memory int NOT NULL DEFAULT 0,
+	TotalSize int NOT NULL DEFAULT 0,
+	MaxOpenFiles int NOT NULL DEFAULT 0,
+	Dpi nvarchar(50) NULL COLLATE NOCASE,
+	Resolution nvarchar(50) NULL COLLATE NOCASE,
+	Processor nvarchar(200) NULL COLLATE NOCASE,
+	Uuid nvarchar(50) NULL COLLATE NOCASE,
+	MachineGuid nvarchar(50) NULL COLLATE NOCASE,
+	DiskID nvarchar(200) NULL COLLATE NOCASE,
+	MACs nvarchar(200) NULL COLLATE NOCASE,
+	InstallPath nvarchar(200) NULL COLLATE NOCASE,
+	Runtime nvarchar(50) NULL COLLATE NOCASE,
+	Framework nvarchar(50) NULL COLLATE NOCASE,
+	ProvinceID int NOT NULL DEFAULT 0,
+	CityID int NOT NULL DEFAULT 0,
+	Address nvarchar(200) NULL COLLATE NOCASE,
+	Period int NOT NULL DEFAULT 0,
+	WebHook nvarchar(500) NULL COLLATE NOCASE,
+	AlarmCpuRate int NOT NULL DEFAULT 0,
+	AlarmMemoryRate int NOT NULL DEFAULT 0,
+	AlarmDiskRate int NOT NULL DEFAULT 0,
+	AlarmTcp int NOT NULL DEFAULT 0,
+	AlarmProcesses nvarchar(50) NULL COLLATE NOCASE,
+	AlarmOnOffline bit NOT NULL DEFAULT 0,
+	Logins int NOT NULL DEFAULT 0,
+	LastLogin datetime NULL,
+	LastLoginIP nvarchar(50) NULL COLLATE NOCASE,
+	OnlineTime int NOT NULL DEFAULT 0,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.325  1 N - [Zero] Create Unique Index IU_Node_Code On Node (Code)
+17:59:46.327  1 N - [Zero] Create Index IX_Node_Uuid_MachineGuid_MACs On Node (Uuid, MachineGuid, MACs)
+17:59:46.329  1 N - [Zero] Create Index IX_Node_IP On Node (IP)
+17:59:46.330  1 N - [Zero] Create Index IX_Node_Category On Node (Category)
+17:59:46.332  1 N - [Zero] Create Index IX_Node_ProductCode On Node (ProductCode)
+17:59:46.334  1 N - [Zero] Create Index IX_Node_UpdateTime On Node (UpdateTime)
+17:59:46.336  1 N - 创建表：Product(产品)
+17:59:46.336  1 N - [Zero] Create Table Product(
+	ID integer Primary Key AUTOINCREMENT,
+	TeamId int NOT NULL DEFAULT 0,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Kind nvarchar(50) NULL COLLATE NOCASE,
+	LeaderId int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Versions int NOT NULL DEFAULT 0,
+	Stories int NOT NULL DEFAULT 0,
+	Completed bit NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.338  1 N - [Zero] Create Unique Index IU_Product_Name On Product (Name)
+17:59:46.340  1 N - 创建表：Team(团队。管理一系列相关的产品和应用系统)
+17:59:46.342  1 N - [Zero] Create Table Team(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Code nvarchar(50) NULL COLLATE NOCASE,
+	LeaderId int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Products int NOT NULL DEFAULT 0,
+	Versions int NOT NULL DEFAULT 0,
+	Members int NOT NULL DEFAULT 0,
+	AssistMembers int NOT NULL DEFAULT 0,
+	WebHook nvarchar(200) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.343  1 N - [Zero] Create Unique Index IU_Team_Name On Team (Name)
+17:59:46.345  1 N - [Zero] Create Unique Index IU_Team_Code On Team (Code)
+17:59:46.347  1 N - 创建表：TeamMember(团队成员。每个团队拥有哪些成员，每个成员有一个主力团队)
+17:59:46.348  1 N - [Zero] Create Table TeamMember(
+	ID integer Primary Key AUTOINCREMENT,
+	TeamId int NOT NULL DEFAULT 0,
+	MemberId int NOT NULL DEFAULT 0,
+	Kind nvarchar(50) NULL COLLATE NOCASE,
+	Major bit NOT NULL DEFAULT 0,
+	Leader bit NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.350  1 N - [Zero] Create Index IX_TeamMember_TeamId On TeamMember (TeamId)
+17:59:46.352  1 N - [Zero] Create Index IX_TeamMember_MemberId On TeamMember (MemberId)
+17:59:46.353  1 N - 创建表：User(存储用户信息)
+17:59:46.354  1 N - [Zero] Create Table User(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Avatar nvarchar(50) NULL COLLATE NOCASE,
+	Sex int NOT NULL DEFAULT 0,
+	Age int NOT NULL DEFAULT 0,
+	BirthDay datetime NULL,
+	Phone nvarchar(50) NULL COLLATE NOCASE,
+	Height int NOT NULL DEFAULT 0,
+	Weight int NOT NULL DEFAULT 0,
+	InfectionID int NOT NULL DEFAULT 0,
+	UsageAmount int NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.357  1 N - [Zero] Create Unique Index IU_User_Name On User (Name)
+17:59:46.358  1 N - 创建表：DailyOrSum(存储用户疗程和打卡记录信息)
+17:59:46.359  1 N - [Zero] Create Table DailyOrSum(
+	ID integer Primary Key AUTOINCREMENT,
+	UserID nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	EvaluateTime datetime NULL,
+	Evaluate int NULL,
+	Recording int NULL,
+	Picture int NOT NULL DEFAULT 0,
+	Type int NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.361  1 N - [Zero] Create Index IX_DailyOrSum_UserID On DailyOrSum (UserID)
+17:59:46.363  1 N - 创建表：Disease(存储疾病类型)
+17:59:46.363  1 N - [Zero] Create Table Disease(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.365  1 N - [Zero] Create Unique Index IU_Disease_Name On Disease (Name)
+17:59:46.367  1 N - 创建表：Member(成员。所有可用团队成员)
+17:59:46.368  1 N - [Zero] Create Table Member(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Kind nvarchar(50) NULL COLLATE NOCASE,
+	TeamId int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Teams int NOT NULL DEFAULT 0,
+	UserId int NOT NULL DEFAULT 0,
+	UserName nvarchar(50) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.370  1 N - [Zero] Create Unique Index IU_Member_Name On Member (Name)
+17:59:46.373  1 N - 创建表：Story(故事。用户故事的目标是将特定价值提供给客户，不必是传统意义上的外部最终用户，也可以是依赖您团队的组织内部客户或同事。用户故事是简单语言中的几句话，概述了所需的结果。)
+17:59:46.374  1 N - [Zero] Create Table Story(
+	ID integer Primary Key AUTOINCREMENT,
+	ProductId int NOT NULL DEFAULT 0,
+	VersionId int NOT NULL DEFAULT 0,
+	MemberId int NOT NULL DEFAULT 0,
+	Title nvarchar(50) NULL COLLATE NOCASE,
+	StartDate datetime NULL,
+	EndDate datetime NULL,
+	ManHours int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.376  1 N - [Zero] Create Index IX_Story_VersionId On Story (VersionId)
+17:59:46.378  1 N - [Zero] Create Index IX_Story_MemberId On Story (MemberId)
+17:59:46.380  1 N - 创建表：Infection(新冠感染状态)
+17:59:46.381  1 N - [Zero] Create Table Infection(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.383  1 N - [Zero] Create Unique Index IU_Infection_Name On Infection (Name)
+17:59:46.385  1 N - 创建表：VersionPlan(版本计划)
+17:59:46.386  1 N - [Zero] Create Table VersionPlan(
+	ID integer Primary Key AUTOINCREMENT,
+	TeamId int NOT NULL DEFAULT 0,
+	ProductId int NOT NULL DEFAULT 0,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Kind nvarchar(50) NULL COLLATE NOCASE,
+	StartDate datetime NULL,
+	EndDate datetime NULL,
+	ManHours int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Completed bit NOT NULL DEFAULT 0,
+	Stories int NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.388  1 N - [Zero] Create Index IX_VersionPlan_TeamId On VersionPlan (TeamId)
+17:59:46.390  1 N - [Zero] Create Index IX_VersionPlan_ProductId On VersionPlan (ProductId)
+17:59:46.392  1 N - 创建表：UserDisease(用户疾病对应表)
+17:59:46.393  1 N - [Zero] Create Table UserDisease(
+	ID integer Primary Key AUTOINCREMENT,
+	UserID int NOT NULL DEFAULT 0,
+	DiseaseID int NOT NULL DEFAULT 0,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.395  1 N - [Zero] Create Index IX_UserDisease_UserID On UserDisease (UserID)
+17:59:46.397  1 N - [Zero] Create Index IX_UserDisease_DiseaseID On UserDisease (DiseaseID)
+17:59:46.399  1 N - 创建表：Effect(评价效果种类)
+17:59:46.399  1 N - [Zero] Create Table Effect(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.401  1 N - [Zero] Create Unique Index IU_Effect_Name On Effect (Name)
+17:59:46.406  1 N - ================================ Start 初始化魔方 ================================
+17:59:46.407  1 N - [Membership] select * from sqlite_master
+17:59:46.414  1 N - 未发现OAuth应用新表 OAuthApp
+17:59:46.415  1 N - 初始化ManageProvider
+17:59:46.416  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+17:59:46.418  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+17:59:46.419  1 N - [Membership] select * from sqlite_master
+17:59:46.420  1 N - 创建表：UserToken(用户令牌。授权指定用户访问接口数据，支持有效期)
+17:59:46.421  1 N - [Membership] Create Table UserToken(
+	ID integer Primary Key AUTOINCREMENT,
+	Token nvarchar(50) NULL COLLATE NOCASE,
+	Url nvarchar(200) NULL COLLATE NOCASE,
+	UserID int NOT NULL DEFAULT 0,
+	Expire datetime NULL,
+	Enable bit NOT NULL DEFAULT 0,
+	Times int NOT NULL DEFAULT 0,
+	FirstIP nvarchar(50) NULL COLLATE NOCASE,
+	FirstTime datetime NULL,
+	LastIP nvarchar(50) NULL COLLATE NOCASE,
+	LastTime datetime NULL,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.423  1 N - [Membership] Create Unique Index IU_UserToken_Token On UserToken (Token)
+17:59:46.424  1 N - [Membership] Create Index IX_UserToken_UserID On UserToken (UserID)
+17:59:46.426  1 N - 创建表：UserStat(用户统计)
+17:59:46.427  1 N - [Membership] Create Table UserStat(
+	ID integer Primary Key AUTOINCREMENT,
+	Date datetime NULL,
+	Total int NOT NULL DEFAULT 0,
+	Logins int NOT NULL DEFAULT 0,
+	OAuths int NOT NULL DEFAULT 0,
+	MaxOnline int NOT NULL DEFAULT 0,
+	Actives int NOT NULL DEFAULT 0,
+	ActivesT7 int NOT NULL DEFAULT 0,
+	ActivesT30 int NOT NULL DEFAULT 0,
+	News int NOT NULL DEFAULT 0,
+	NewsT7 int NOT NULL DEFAULT 0,
+	NewsT30 int NOT NULL DEFAULT 0,
+	OnlineTime int NOT NULL DEFAULT 0,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(1000) NULL COLLATE NOCASE
+)
+17:59:46.429  1 N - [Membership] Create Unique Index IU_UserStat_Date On UserStat (Date)
+17:59:46.430  1 N - 创建表：UserConnect(用户链接。第三方绑定)
+17:59:46.431  1 N - [Membership] Create Table UserConnect(
+	ID integer Primary Key AUTOINCREMENT,
+	Provider nvarchar(50) NULL COLLATE NOCASE,
+	UserID int NOT NULL DEFAULT 0,
+	OpenID nvarchar(50) NULL COLLATE NOCASE,
+	UnionID nvarchar(50) NULL COLLATE NOCASE,
+	LinkID integer NOT NULL DEFAULT 0,
+	NickName nvarchar(50) NULL COLLATE NOCASE,
+	DeviceId nvarchar(50) NULL COLLATE NOCASE,
+	Avatar nvarchar(200) NULL COLLATE NOCASE,
+	AccessToken nvarchar(500) NULL COLLATE NOCASE,
+	RefreshToken nvarchar(500) NULL COLLATE NOCASE,
+	Expire datetime NULL,
+	Enable bit NOT NULL DEFAULT 0,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark text NULL COLLATE NOCASE
+)
+17:59:46.433  1 N - [Membership] Create Unique Index IU_UserConnect_Provider_OpenID On UserConnect (Provider, OpenID)
+17:59:46.435  1 N - [Membership] Create Index IX_UserConnect_UserID On UserConnect (UserID)
+17:59:46.437  1 N - [Membership] Create Index IX_UserConnect_OpenID On UserConnect (OpenID)
+17:59:46.438  1 N - [Membership] Create Index IX_UserConnect_UnionID On UserConnect (UnionID)
+17:59:46.440  1 N - [Membership] Create Index IX_UserConnect_DeviceId On UserConnect (DeviceId)
+17:59:46.442  1 N - 创建表：User(用户。用户帐号信息)
+17:59:46.443  1 N - [Membership] Create Table User(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Password nvarchar(200) NULL COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Sex int NOT NULL DEFAULT 0,
+	Mail nvarchar(50) NULL COLLATE NOCASE,
+	Mobile nvarchar(50) NULL COLLATE NOCASE,
+	Code nvarchar(50) NULL COLLATE NOCASE,
+	AreaId int NOT NULL DEFAULT 0,
+	Avatar nvarchar(200) NULL COLLATE NOCASE,
+	RoleID int NOT NULL DEFAULT 0,
+	RoleIds nvarchar(200) NULL COLLATE NOCASE,
+	DepartmentID int NOT NULL DEFAULT 0,
+	Online bit NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Age int NOT NULL DEFAULT 0,
+	Birthday datetime NULL,
+	Logins int NOT NULL DEFAULT 0,
+	LastLogin datetime NULL,
+	LastLoginIP nvarchar(50) NULL COLLATE NOCASE,
+	RegisterTime datetime NULL,
+	RegisterIP nvarchar(50) NULL COLLATE NOCASE,
+	OnlineTime int NOT NULL DEFAULT 0,
+	Ex1 int NOT NULL DEFAULT 0,
+	Ex2 int NOT NULL DEFAULT 0,
+	Ex3 real NOT NULL DEFAULT 0,
+	Ex4 nvarchar(50) NULL COLLATE NOCASE,
+	Ex5 nvarchar(50) NULL COLLATE NOCASE,
+	Ex6 nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.445  1 N - [Membership] Create Unique Index IU_User_Name On User (Name)
+17:59:46.447  1 N - [Membership] Create Index IX_User_Mail On User (Mail)
+17:59:46.449  1 N - [Membership] Create Index IX_User_Mobile On User (Mobile)
+17:59:46.451  1 N - [Membership] Create Index IX_User_Code On User (Code)
+17:59:46.453  1 N - [Membership] Create Index IX_User_RoleID On User (RoleID)
+17:59:46.455  1 N - [Membership] Create Index IX_User_UpdateTime On User (UpdateTime)
+17:59:46.457  1 N - 创建表：Menu(菜单)
+17:59:46.458  1 N - [Membership] Create Table Menu(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	FullName nvarchar(200) NULL COLLATE NOCASE,
+	ParentID int NOT NULL DEFAULT 0,
+	Url nvarchar(200) NULL COLLATE NOCASE,
+	Sort int NOT NULL DEFAULT 0,
+	Icon nvarchar(50) NULL COLLATE NOCASE,
+	Visible bit NOT NULL DEFAULT 0,
+	Necessary bit NOT NULL DEFAULT 0,
+	NewWindow bit NOT NULL DEFAULT 0,
+	Permission nvarchar(200) NULL COLLATE NOCASE,
+	Ex1 int NOT NULL DEFAULT 0,
+	Ex2 int NOT NULL DEFAULT 0,
+	Ex3 real NOT NULL DEFAULT 0,
+	Ex4 nvarchar(50) NULL COLLATE NOCASE,
+	Ex5 nvarchar(50) NULL COLLATE NOCASE,
+	Ex6 nvarchar(50) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.460  1 N - [Membership] Create Index IX_Menu_Name On Menu (Name)
+17:59:46.462  1 N - [Membership] Create Unique Index IU_Menu_ParentID_Name On Menu (ParentID, Name)
+17:59:46.463  1 N - 创建表：Role(角色)
+17:59:46.464  1 N - [Membership] Create Table Role(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	IsSystem bit NOT NULL DEFAULT 0,
+	Permission text NULL COLLATE NOCASE,
+	Sort int NOT NULL DEFAULT 0,
+	Ex1 int NOT NULL DEFAULT 0,
+	Ex2 int NOT NULL DEFAULT 0,
+	Ex3 real NOT NULL DEFAULT 0,
+	Ex4 nvarchar(50) NULL COLLATE NOCASE,
+	Ex5 nvarchar(50) NULL COLLATE NOCASE,
+	Ex6 nvarchar(50) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.466  1 N - [Membership] Create Unique Index IU_Role_Name On Role (Name)
+17:59:46.468  1 N - 创建表：Department(部门。组织机构，多级树状结构)
+17:59:46.469  1 N - [Membership] Create Table Department(
+	ID integer Primary Key AUTOINCREMENT,
+	Code nvarchar(50) NULL COLLATE NOCASE,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	FullName nvarchar(200) NULL COLLATE NOCASE,
+	ParentID int NOT NULL DEFAULT 0,
+	Level int NOT NULL DEFAULT 0,
+	Sort int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Visible bit NOT NULL DEFAULT 0,
+	ManagerID int NOT NULL DEFAULT 0,
+	Ex1 int NOT NULL DEFAULT 0,
+	Ex2 int NOT NULL DEFAULT 0,
+	Ex3 real NOT NULL DEFAULT 0,
+	Ex4 nvarchar(50) NULL COLLATE NOCASE,
+	Ex5 nvarchar(50) NULL COLLATE NOCASE,
+	Ex6 nvarchar(50) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.471  1 N - [Membership] Create Index IX_Department_Name On Department (Name)
+17:59:46.473  1 N - [Membership] Create Index IX_Department_ParentID_Name On Department (ParentID, Name)
+17:59:46.475  1 N - [Membership] Create Index IX_Department_Code On Department (Code)
+17:59:46.477  1 N - [Membership] Create Index IX_Department_UpdateTime On Department (UpdateTime)
+17:59:46.481  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 -2
+17:59:46.483  1 N - [Membership] Select * From User Order By ID Desc limit 1
+17:59:46.486  1 N - [Membership] Select Count(*) From User
+17:59:46.490  1 N - 开始初始化User用户数据……
+17:59:46.503  1 N - [Membership] Insert Into User(Name,Password,DisplayName,Sex,AreaId,RoleID,RoleIds,DepartmentID,Online,Enable,Age,Logins,OnlineTime,Ex1,Ex2,Ex3,UpdateUser,UpdateUserID,UpdateTime) Values('admin','21232F297A57A5A743894A0E4A801FC3','管理员',0,0,1,'',0,0,1,0,0,0,0,0,0,'',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.522  1 N - 完成初始化User用户数据！
+17:59:46.523  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 -2
+17:59:46.523  1 N - [Membership] Select * From Role Order By ID Desc limit 1
+17:59:46.525  1 N - [Membership] Select Count(*) From Role
+17:59:46.527  1 N - 开始初始化Role角色数据……
+17:59:46.530  1 N - [Membership] Select * From Role Where Name='管理员'
+17:59:46.534  1 N - [Membership] Insert Into Role(Name,Enable,IsSystem,Sort,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime,Remark) Values('管理员',1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46','默认拥有全部最高权限，由系统工程师使用，安装配置整个系统');Select last_insert_rowid() newid
+17:59:46.536  1 N - [Membership] Select * From Role Where Name='高级用户'
+17:59:46.538  1 N - [Membership] Insert Into Role(Name,Enable,IsSystem,Sort,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime,Remark) Values('高级用户',1,0,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46','业务管理人员，可以管理业务模块，可以分配授权用户等级');Select last_insert_rowid() newid
+17:59:46.540  1 N - [Membership] Select * From Role Where Name='普通用户'
+17:59:46.542  1 N - [Membership] Insert Into Role(Name,Enable,IsSystem,Sort,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime,Remark) Values('普通用户',1,0,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46','普通业务人员，可以使用系统常规业务模块功能');Select last_insert_rowid() newid
+17:59:46.544  1 N - [Membership] Select * From Role Where Name='游客'
+17:59:46.546  1 N - [Membership] Insert Into Role(Name,Enable,IsSystem,Sort,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime,Remark) Values('游客',1,0,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46','新注册默认属于游客');Select last_insert_rowid() newid
+17:59:46.548  1 N - 完成初始化Role角色数据！
+17:59:46.549  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 -2
+17:59:46.549  1 N - [Membership] Select * From Department Order By ID Desc limit 1
+17:59:46.551  1 N - [Membership] Select Count(*) From Department
+17:59:46.553  1 N - 开始初始化Department数据……
+17:59:46.554  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('001','总公司',0,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.556  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('011','行政部',1,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.559  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('012','技术部',1,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.561  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('013','生产部',1,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.563  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('101','上海分公司',0,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.565  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('111','行政部',5,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.567  1 N - [Membership] Insert Into Department(Code,Name,ParentID,Level,Sort,Enable,Visible,ManagerID,Ex1,Ex2,Ex3,CreateUserID,CreateTime,UpdateUser,UpdateUserID,UpdateTime) Values('112','市场部',5,0,0,1,1,0,0,0,0,0,'2023-03-09 17:59:46','',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.569  1 N - 完成初始化Department数据！
+17:59:46.570  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+17:59:46.571  1 N - [Membership]待检查数据表：UserOnline,Log
+17:59:46.571  1 N - [Membership] select * from sqlite_master
+17:59:46.573  1 N - 创建表：UserOnline(用户在线)
+17:59:46.573  1 N - [Membership] Create Table UserOnline(
+	ID integer Primary Key AUTOINCREMENT,
+	UserID int NOT NULL DEFAULT 0,
+	Name nvarchar(50) NULL COLLATE NOCASE,
+	SessionID nvarchar(50) NULL COLLATE NOCASE,
+	OAuthProvider nvarchar(50) NULL COLLATE NOCASE,
+	Times int NOT NULL DEFAULT 0,
+	Page nvarchar(50) NULL COLLATE NOCASE,
+	Platform nvarchar(50) NULL COLLATE NOCASE,
+	OS nvarchar(50) NULL COLLATE NOCASE,
+	Device nvarchar(50) NULL COLLATE NOCASE,
+	Brower nvarchar(50) NULL COLLATE NOCASE,
+	NetType nvarchar(50) NULL COLLATE NOCASE,
+	DeviceId nvarchar(50) NULL COLLATE NOCASE,
+	Status nvarchar(500) NULL COLLATE NOCASE,
+	OnlineTime int NOT NULL DEFAULT 0,
+	LastError datetime NULL,
+	TraceId nvarchar(50) NULL COLLATE NOCASE,
+	Address nvarchar(200) NULL COLLATE NOCASE,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NOT NULL DEFAULT '0001-01-01'
+)
+17:59:46.575  1 N - [Membership] Create Index IX_UserOnline_UserID On UserOnline (UserID)
+17:59:46.578  1 N - [Membership] Create Index IX_UserOnline_SessionID On UserOnline (SessionID)
+17:59:46.581  1 N - [Membership] Create Index IX_UserOnline_CreateTime On UserOnline (CreateTime)
+17:59:46.583  1 N - 创建表：Log(日志)
+17:59:46.584  1 N - [Membership] Create Table Log(
+	ID integer Primary Key,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	[Action] nvarchar(50) NULL COLLATE NOCASE,
+	LinkID int NOT NULL DEFAULT 0,
+	Success bit NOT NULL DEFAULT 0,
+	UserName nvarchar(50) NULL COLLATE NOCASE,
+	Ex1 int NOT NULL DEFAULT 0,
+	Ex2 int NOT NULL DEFAULT 0,
+	Ex3 real NOT NULL DEFAULT 0,
+	Ex4 nvarchar(50) NULL COLLATE NOCASE,
+	Ex5 nvarchar(50) NULL COLLATE NOCASE,
+	Ex6 nvarchar(50) NULL COLLATE NOCASE,
+	TraceId nvarchar(50) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NOT NULL DEFAULT '0001-01-01',
+	Remark nvarchar(2000) NULL COLLATE NOCASE
+)
+17:59:46.586  1 N - [Membership] Create Index IX_Log_Action_Category_ID On Log ([Action], Category, ID)
+17:59:46.588  1 N - [Membership] Create Index IX_Log_Category_LinkID_ID On Log (Category, LinkID, ID)
+17:59:46.590  1 N - [Membership] Create Index IX_Log_CreateUserID_ID On Log (CreateUserID, ID)
+17:59:46.592  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+17:59:46.595  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+17:59:46.595  1 N - [Membership] select * from sqlite_master
+17:59:46.597  1 N - 创建表：OAuthLog(OAuth日志。用于记录OAuth客户端请求，同时Id作为state，避免向OAuthServer泄漏本机Url)
+17:59:46.598  1 N - [Membership] Create Table OAuthLog(
+	Id integer Primary Key,
+	Provider nvarchar(50) NULL COLLATE NOCASE,
+	ConnectId int NOT NULL DEFAULT 0,
+	UserId int NOT NULL DEFAULT 0,
+	[Action] nvarchar(50) NULL COLLATE NOCASE,
+	Success bit NOT NULL DEFAULT 0,
+	RedirectUri nvarchar(500) NULL COLLATE NOCASE,
+	ResponseType nvarchar(50) NULL COLLATE NOCASE,
+	Scope nvarchar(50) NULL COLLATE NOCASE,
+	State nvarchar(500) NULL COLLATE NOCASE,
+	Source nvarchar(50) NULL COLLATE NOCASE,
+	AccessToken nvarchar(2000) NULL COLLATE NOCASE,
+	RefreshToken nvarchar(2000) NULL COLLATE NOCASE,
+	TraceId nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(2000) NULL COLLATE NOCASE,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateTime datetime NULL
+)
+17:59:46.600  1 N - [Membership] Create Index IX_OAuthLog_Provider On OAuthLog (Provider)
+17:59:46.602  1 N - [Membership] Create Index IX_OAuthLog_ConnectId On OAuthLog (ConnectId)
+17:59:46.604  1 N - [Membership] Create Index IX_OAuthLog_UserId On OAuthLog (UserId)
+17:59:46.606  1 N - 创建表：OAuthConfig(OAuth配置。需要连接的OAuth认证方)
+17:59:46.607  1 N - [Membership] Create Table OAuthConfig(
+	ID integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	NickName nvarchar(50) NULL COLLATE NOCASE,
+	Logo nvarchar(50) NULL COLLATE NOCASE,
+	AppId nvarchar(50) NULL COLLATE NOCASE,
+	Secret nvarchar(200) NULL COLLATE NOCASE,
+	Server nvarchar(200) NULL COLLATE NOCASE,
+	AccessServer nvarchar(200) NULL COLLATE NOCASE,
+	GrantType int NOT NULL DEFAULT 0,
+	Scope nvarchar(50) NULL COLLATE NOCASE,
+	AuthUrl nvarchar(200) NULL COLLATE NOCASE,
+	AccessUrl nvarchar(200) NULL COLLATE NOCASE,
+	UserUrl nvarchar(200) NULL COLLATE NOCASE,
+	AppUrl nvarchar(200) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	Debug bit NOT NULL DEFAULT 0,
+	Visible bit NOT NULL DEFAULT 0,
+	AutoRegister bit NOT NULL DEFAULT 0,
+	AutoRole nvarchar(50) NULL COLLATE NOCASE,
+	Sort int NOT NULL DEFAULT 0,
+	SecurityKey nvarchar(500) NULL COLLATE NOCASE,
+	FieldMap nvarchar(500) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.610  1 N - [Membership] Create Unique Index IU_OAuthConfig_Name On OAuthConfig (Name)
+17:59:46.612  1 N - 创建表：PrincipalAgent(委托代理。委托某人代理自己的用户权限，代理人下一次登录时将得到委托人的身份)
+17:59:46.612  1 N - [Membership] Create Table PrincipalAgent(
+	Id integer Primary Key AUTOINCREMENT,
+	PrincipalId int NOT NULL DEFAULT 0,
+	AgentId int NOT NULL DEFAULT 0,
+	Enable bit NOT NULL DEFAULT 0,
+	Times int NOT NULL DEFAULT 0,
+	Expire datetime NULL,
+	CreateUserId int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserId int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.615  1 N - [Membership] Create Index IX_PrincipalAgent_PrincipalId On PrincipalAgent (PrincipalId)
+17:59:46.617  1 N - [Membership] Create Index IX_PrincipalAgent_AgentId On PrincipalAgent (AgentId)
+17:59:46.619  1 N - 创建表：CronJob(定时作业。定时执行任务)
+17:59:46.619  1 N - [Membership] Create Table CronJob(
+	Id integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Cron nvarchar(50) NULL COLLATE NOCASE,
+	Method nvarchar(200) NULL COLLATE NOCASE,
+	Argument nvarchar(2000) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	LastTime datetime NULL,
+	NextTime datetime NULL,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.621  1 N - [Membership] Create Unique Index IU_CronJob_Name On CronJob (Name)
+17:59:46.634  1 N - 创建表：AppLog(应用日志。用于OAuthServer的子系统)
+17:59:46.635  1 N - [Membership] Create Table AppLog(
+	Id integer Primary Key,
+	AppId int NOT NULL DEFAULT 0,
+	[Action] nvarchar(50) NULL COLLATE NOCASE,
+	Success bit NOT NULL DEFAULT 0,
+	ClientId nvarchar(50) NULL COLLATE NOCASE,
+	RedirectUri nvarchar(500) NULL COLLATE NOCASE,
+	ResponseType nvarchar(50) NULL COLLATE NOCASE,
+	Scope nvarchar(50) NULL COLLATE NOCASE,
+	State nvarchar(500) NULL COLLATE NOCASE,
+	AccessToken nvarchar(2000) NULL COLLATE NOCASE,
+	RefreshToken nvarchar(2000) NULL COLLATE NOCASE,
+	TraceId nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(2000) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL
+)
+17:59:46.638  1 N - [Membership] Create Index IX_AppLog_AppId On AppLog (AppId)
+17:59:46.640  1 N - 创建表：OAuthApp(应用系统。用于OAuthServer的子系统)
+17:59:46.642  1 N - [Membership] Create Table OAuthApp(
+	Id integer Primary Key AUTOINCREMENT,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Secret nvarchar(50) NULL COLLATE NOCASE,
+	HomePage nvarchar(200) NULL COLLATE NOCASE,
+	Logo nvarchar(50) NULL COLLATE NOCASE,
+	White nvarchar(200) NULL COLLATE NOCASE,
+	Black nvarchar(200) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	TokenExpire int NOT NULL DEFAULT 0,
+	Urls nvarchar(500) NULL COLLATE NOCASE,
+	RoleIds nvarchar(50) NULL COLLATE NOCASE,
+	Scopes nvarchar(200) NULL COLLATE NOCASE,
+	OAuths nvarchar(50) NULL COLLATE NOCASE,
+	Expired datetime NULL,
+	Auths int NOT NULL DEFAULT 0,
+	LastAuth datetime NULL,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.644  1 N - [Membership] Create Unique Index IU_OAuthApp_Name On OAuthApp (Name)
+17:59:46.646  1 N - 创建表：ModelColumn(模型列。实体表的数据列)
+17:59:46.648  1 N - [Membership] Create Table ModelColumn(
+	Id integer Primary Key AUTOINCREMENT,
+	TableId int NOT NULL DEFAULT 0,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	DataType nvarchar(50) NULL COLLATE NOCASE,
+	ItemType nvarchar(50) NULL COLLATE NOCASE,
+	PrimaryKey bit NOT NULL DEFAULT 0,
+	Master bit NOT NULL DEFAULT 0,
+	Length int NOT NULL DEFAULT 0,
+	Nullable bit NOT NULL DEFAULT 0,
+	IsDataObjectField bit NOT NULL DEFAULT 0,
+	Description nvarchar(500) NULL COLLATE NOCASE,
+	ShowInList bit NOT NULL DEFAULT 0,
+	ShowInAddForm bit NOT NULL DEFAULT 0,
+	ShowInEditForm bit NOT NULL DEFAULT 0,
+	ShowInDetailForm bit NOT NULL DEFAULT 0,
+	ShowInSearch bit NOT NULL DEFAULT 0,
+	Sort int NOT NULL DEFAULT 0,
+	Width nvarchar(50) NULL COLLATE NOCASE,
+	CellText nvarchar(50) NULL COLLATE NOCASE,
+	CellTitle nvarchar(50) NULL COLLATE NOCASE,
+	CellUrl nvarchar(50) NULL COLLATE NOCASE,
+	HeaderText nvarchar(50) NULL COLLATE NOCASE,
+	HeaderTitle nvarchar(50) NULL COLLATE NOCASE,
+	HeaderUrl nvarchar(50) NULL COLLATE NOCASE,
+	DataAction nvarchar(50) NULL COLLATE NOCASE,
+	DataSource nvarchar(500) NULL COLLATE NOCASE,
+	CreateUserId int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserId int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE
+)
+17:59:46.650  1 N - [Membership] Create Unique Index IU_ModelColumn_TableId_Name On ModelColumn (TableId, Name)
+17:59:46.652  1 N - 创建表：ModelTable(模型表。实体表模型)
+17:59:46.653  1 N - [Membership] Create Table ModelTable(
+	Id integer Primary Key AUTOINCREMENT,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	Name nvarchar(50) NOT NULL DEFAULT '' COLLATE NOCASE,
+	DisplayName nvarchar(50) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	Url nvarchar(50) NULL COLLATE NOCASE,
+	Controller nvarchar(100) NULL COLLATE NOCASE,
+	TableName nvarchar(50) NULL COLLATE NOCASE,
+	ConnName nvarchar(50) NULL COLLATE NOCASE,
+	InsertOnly bit NOT NULL DEFAULT 0,
+	Description nvarchar(500) NULL COLLATE NOCASE,
+	CreateUserId int NOT NULL DEFAULT 0,
+	CreateTime datetime NULL,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserId int NOT NULL DEFAULT 0,
+	UpdateTime datetime NULL,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE
+)
+17:59:46.655  1 N - [Membership] Create Unique Index IU_ModelTable_Category_Name On ModelTable (Category, Name)
+17:59:46.658  1 N - 创建表：Attachment(附件。用于记录各系统模块使用的文件，可以是Local/NAS/OSS等)
+17:59:46.659  1 N - [Membership] Create Table Attachment(
+	Id integer Primary Key,
+	Category nvarchar(50) NULL COLLATE NOCASE,
+	[Key] nvarchar(50) NULL COLLATE NOCASE,
+	Title nvarchar(200) NULL COLLATE NOCASE,
+	FileName nvarchar(200) NOT NULL DEFAULT '' COLLATE NOCASE,
+	Extension nvarchar(50) NULL COLLATE NOCASE,
+	Size integer NOT NULL DEFAULT 0,
+	ContentType nvarchar(50) NULL COLLATE NOCASE,
+	FilePath nvarchar(200) NULL COLLATE NOCASE,
+	Hash nvarchar(50) NULL COLLATE NOCASE,
+	Enable bit NOT NULL DEFAULT 0,
+	UploadTime datetime NULL,
+	Url nvarchar(500) NULL COLLATE NOCASE,
+	Source nvarchar(500) NULL COLLATE NOCASE,
+	CreateUser nvarchar(50) NULL COLLATE NOCASE,
+	CreateUserID int NOT NULL DEFAULT 0,
+	CreateIP nvarchar(50) NULL COLLATE NOCASE,
+	CreateTime datetime NULL,
+	UpdateUser nvarchar(50) NULL COLLATE NOCASE,
+	UpdateUserID int NOT NULL DEFAULT 0,
+	UpdateIP nvarchar(50) NULL COLLATE NOCASE,
+	UpdateTime datetime NULL,
+	Remark nvarchar(500) NULL COLLATE NOCASE
+)
+17:59:46.661  1 N - [Membership] Create Index IX_Attachment_Category_Key On Attachment (Category, [Key])
+17:59:46.663  1 N - [Membership] Create Index IX_Attachment_FilePath On Attachment (FilePath)
+17:59:46.666  1 N - [Membership] Create Index IX_Attachment_Extension On Attachment (Extension)
+17:59:46.668  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 -2
+17:59:46.668  1 N - [Membership] Select * From OAuthConfig Order By ID Desc limit 1
+17:59:46.670  1 N - [Membership] Select Count(*) From OAuthConfig
+17:59:46.672  1 N - 开始初始化OAuthConfig[OAuth配置]数据……
+17:59:46.675  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,AppId,Secret,Server,GrantType,AuthUrl,AccessUrl,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime) Values('NewLife','新生命用户中心','/Content/images/logo/NewLife.png','NewLife.Cube','waIFwId0T3NDR1Ml','https://sso.newlifex.com/sso',0,'authorize?response_type={response_type}&client_id={key}&redirect_uri={redirect}&state={state}&scope={scope}','access_token?grant_type=authorization_code&client_id={key}&client_secret={secret}&code={code}&state={state}&redirect_uri={redirect}',1,1,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46');Select last_insert_rowid() newid
+17:59:46.678  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('QQ','QQ','/Content/images/logo/QQ.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46',null);Select last_insert_rowid() newid
+17:59:46.681  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('Github','Github','/Content/images/logo/Github.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46',null);Select last_insert_rowid() newid
+17:59:46.683  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('Baidu','百度','/Content/images/logo/Baidu.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46',null);Select last_insert_rowid() newid
+17:59:46.686  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('Ding','钉钉','/Content/images/logo/Ding.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46','snsapi_qrlogin扫码登录，snsapi_auth钉钉内免登，snsapi_login密码登录');Select last_insert_rowid() newid
+17:59:46.690  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('QyWeiXin','企业微信','/Content/images/logo/QyWeiXin.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46',null);Select last_insert_rowid() newid
+17:59:46.692  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('Weixin','微信公众号','/Content/images/logo/Weixin.png',0,0,0,0,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46','snsapi_base静默登录，snsapi_userinfo需要用户关注后授权');Select last_insert_rowid() newid
+17:59:46.695  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('OpenWeixin','微信开放平台','/Content/images/logo/Weixin.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46','snsapi_login用于扫码登录');Select last_insert_rowid() newid
+17:59:46.698  1 N - [Membership] Insert Into OAuthConfig(Name,NickName,Logo,GrantType,Enable,Debug,Visible,AutoRegister,Sort,FieldMap,CreateUserID,CreateTime,UpdateUserID,UpdateTime,Remark) Values('Microsoft','微软','/Content/images/logo/Microsoft.png',0,0,0,1,1,0,'{
+    "OpenID": null,
+    "UnionID": null,
+    "UserID": null,
+    "UserName": null,
+    "NickName": null,
+    "Sex": null,
+    "UserCode": null,
+    "DepartmentCode": null,
+    "DepartmentName": null,
+    "ParentDepartmentCode": null,
+    "ParentDepartmentName": null,
+    "Mobile": null,
+    "Mail": null,
+    "Avatar": null,
+    "Detail": null,
+    "DeviceId": null,
+    "AreaId": null
+}',0,'2023-03-09 17:59:46',0,'2023-03-09 17:59:46',null);Select last_insert_rowid() newid
+17:59:46.700  1 N - 完成初始化OAuthConfig[OAuth配置]数据！
+17:59:46.706  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+17:59:46.706  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+17:59:46.707  1 N - 注册魔方区域路由
+17:59:46.715  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+17:59:46.731  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+17:59:46.732  6 Y P start------初始化[Projects]的菜单体系------start
+17:59:46.733  6 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 -2
+17:59:46.737  6 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 -2
+17:59:46.741  6 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 -2
+17:59:46.781  6 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+17:59:46.837 13 Y P 新增了菜单，需要检查权限
+17:59:46.853 13 Y P 没有任何角色拥有菜单[Projects]的权限
+17:59:46.853 13 Y P 没有任何角色拥有菜单[Member]的权限
+17:59:46.853 13 Y P 没有任何角色拥有菜单[Product]的权限
+17:59:46.854 13 Y P 没有任何角色拥有菜单[Story]的权限
+17:59:46.854 13 Y P 没有任何角色拥有菜单[Team]的权限
+17:59:46.854 13 Y P 没有任何角色拥有菜单[TeamMember]的权限
+17:59:46.854 13 Y P 没有任何角色拥有菜单[VersionPlan]的权限
+17:59:46.856 13 Y P 共有7个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+17:59:46.866 13 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+17:59:46.870  6 Y P end---------初始化[Projects]的菜单体系---------end
+17:59:46.919  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+17:59:46.920  6 Y P start------初始化[Nodes]的菜单体系------start
+17:59:46.962 16 Y P 新增了菜单，需要检查权限
+17:59:46.967 16 Y P 没有任何角色拥有菜单[Nodes]的权限
+17:59:46.967 16 Y P 没有任何角色拥有菜单[Node]的权限
+17:59:46.967 16 Y P 没有任何角色拥有菜单[NodeHistory]的权限
+17:59:46.967 16 Y P 没有任何角色拥有菜单[NodeOnline]的权限
+17:59:46.968 16 Y P 共有4个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+17:59:46.974 16 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+17:59:46.978  6 Y P end---------初始化[Nodes]的菜单体系---------end
+17:59:47.107  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+17:59:47.108  6 Y P start------初始化[Admin]的菜单体系------start
+17:59:47.309 16 Y P 新增了菜单，需要检查权限
+17:59:47.322 16 Y P 没有任何角色拥有菜单[Index]的权限
+17:59:47.322 16 Y P 没有任何角色拥有菜单[Main]的权限
+17:59:47.322 16 Y P 没有任何角色拥有菜单[Core]的权限
+17:59:47.323 16 Y P 没有任何角色拥有菜单[Cube]的权限
+17:59:47.323 16 Y P 没有任何角色拥有菜单[Db]的权限
+17:59:47.323 16 Y P 没有任何角色拥有菜单[Department]的权限
+17:59:47.323 16 Y P 没有任何角色拥有菜单[File]的权限
+17:59:47.323 16 Y P 没有任何角色拥有菜单[Log]的权限
+17:59:47.324 16 Y P 没有任何角色拥有菜单[Menu]的权限
+17:59:47.324 16 Y P 没有任何角色拥有菜单[OAuthConfig]的权限
+17:59:47.324 16 Y P 没有任何角色拥有菜单[OAuthLog]的权限
+17:59:47.325 16 Y P 没有任何角色拥有菜单[Parameter]的权限
+17:59:47.325 16 Y P 没有任何角色拥有菜单[Role]的权限
+17:59:47.325 16 Y P 没有任何角色拥有菜单[Sys]的权限
+17:59:47.326 16 Y P 没有任何角色拥有菜单[UserConnect]的权限
+17:59:47.326 16 Y P 没有任何角色拥有菜单[User]的权限
+17:59:47.326 16 Y P 没有任何角色拥有菜单[UserOnline]的权限
+17:59:47.326 16 Y P 没有任何角色拥有菜单[UserStat]的权限
+17:59:47.326 16 Y P 没有任何角色拥有菜单[UserToken]的权限
+17:59:47.327 16 Y P 没有任何角色拥有菜单[XCode]的权限
+17:59:47.327 16 Y P 共有20个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+17:59:47.334 16 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+17:59:47.339  6 Y P end---------初始化[Admin]的菜单体系---------end
+17:59:47.339  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+17:59:47.339 12 Y P start------初始化[Cube]的菜单体系------start
+17:59:47.446  6 Y P 新增了菜单，需要检查权限
+17:59:47.451  6 Y P 没有任何角色拥有菜单[Cube]的权限
+17:59:47.451  6 Y P 没有任何角色拥有菜单[AppModule]的权限
+17:59:47.451  6 Y P 没有任何角色拥有菜单[App]的权限
+17:59:47.452  6 Y P 没有任何角色拥有菜单[AppLog]的权限
+17:59:47.452  6 Y P 没有任何角色拥有菜单[Area]的权限
+17:59:47.452  6 Y P 没有任何角色拥有菜单[Attachment]的权限
+17:59:47.452  6 Y P 没有任何角色拥有菜单[CronJob]的权限
+17:59:47.453  6 Y P 没有任何角色拥有菜单[ModelColumn]的权限
+17:59:47.453  6 Y P 没有任何角色拥有菜单[ModelTable]的权限
+17:59:47.453  6 Y P 没有任何角色拥有菜单[PrincipalAgent]的权限
+17:59:47.453  6 Y P 共有10个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+17:59:47.460  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+17:59:47.465 12 Y P end---------初始化[Cube]的菜单体系---------end
+17:59:47.465  1 N - ================================ End   初始化魔方 ================================
+17:59:47.467 16 Y P 初始化星尘注册中心，提供服务注册与发布能力
+17:59:47.472 16 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@3916","MinVersion":null,"Tag":null}
+17:59:47.484  7 Y - StarWeb: 
+17:59:47.561  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@3916","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.32390","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+17:59:47.572  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@3916","Version":"1.0.8468.32390","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 17:59:47","UpdateTime":"2023-03-09 17:59:47"}
+17:59:48.499 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 -2
+17:59:48.518  9 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@3916","MinVersion":null,"Tag":null}
+17:59:48.528 17 Y - Zero.WebApi服务信息：[]
+17:59:48.532 17 Y - Zero.WebApi服务地址：
+17:59:49.077  6 W T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 -2
+17:59:50.019 12 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@3916
+17:59:55.558 10 N T 实体缓存<OAuthConfig>(9)    总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.OAuthConfig]
+17:59:55.558 10 N T 实体缓存<CronJob>(2)        总次数          2	[NewLife.Cube.Entity.CronJob]
+17:59:55.559 10 N T 对象缓存<UserOnline>(0)     总次数          3，命中          1（33.33%）	[NewLife.Cube.Entity.UserOnline]
+17:59:55.559 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+17:59:55.559 10 N T 实体缓存<Menu>(42)          总次数        300，命中        216（72.00%）	[XCode.Membership.Menu]
+17:59:55.559 10 N T 对象缓存<UserStat>(0)       总次数          2	[NewLife.Cube.Entity.UserStat]
+18:01:02.963  9 W P Team.Count 快速计算表记录数（非精确）[Team/Zero] 参考值 -2
+18:01:02.963  9 W P [Zero] Select * From Team Order By ID Desc limit 1
+18:01:02.965  9 W P [Zero] Select Count(*) From Team
+18:01:02.967  9 W P [Zero] Select Count(*) From Team
+18:01:03.786  6 W P Member.Count 快速计算表记录数（非精确）[Member/Zero] 参考值 -2
+18:01:03.787  6 W P [Zero] Select * From Member Order By ID Desc limit 1
+18:01:03.789  6 W P [Zero] Select Count(*) From Member
+18:01:03.790  6 W P [Zero] Select Count(*) From Member
+18:01:03.797  6 W P [Zero] Select * From Team
+18:01:03.805 12 W P [Zero] Select Count(ID) as group_count,Kind From Member Where CreateTime>'2023-02-07 00:00:00' Group By Kind Order By group_count desc limit 50
+18:01:04.607  6 W P Product.Count 快速计算表记录数（非精确）[Product/Zero] 参考值 -2
+18:01:04.608  6 W P [Zero] Select * From Product Order By ID Desc limit 1
+18:01:04.610  6 W P [Zero] Select Count(*) From Product
+18:01:04.611  6 W P [Zero] Select Count(*) From Product
+18:01:04.621 12 W P [Zero] Select Count(ID) as group_count,Kind From Product Where CreateTime>'2023-02-07 00:00:00' Group By Kind Order By group_count desc limit 50
+18:01:04.904 12 W P VersionPlan.Count 快速计算表记录数（非精确）[VersionPlan/Zero] 参考值 -2
+18:01:04.904 12 W P [Zero] Select * From VersionPlan Order By ID Desc limit 1
+18:01:04.906 12 W P [Zero] Select Count(*) From VersionPlan
+18:01:04.907 12 W P [Zero] Select Count(*) From VersionPlan

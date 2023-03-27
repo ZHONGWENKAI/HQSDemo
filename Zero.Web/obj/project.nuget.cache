@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "AXbEVUtYHEPKWRV8PFJUdjSCPBVHu5ksYmBxPmR4y5BhRTduSWIIEHscKbNfHOc8t+tkbmG63CrYD54unh97aQ==",
+  "success": true,
+  "projectFilePath": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
+  "expectedPackageFiles": [
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.core\\10.1.2023.203\\newlife.core.10.1.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.cube.core\\5.5.2023.205\\newlife.cube.core.5.5.2023.205.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.ip\\2.0.2023.203\\newlife.ip.2.0.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.redis\\5.1.2023.203\\newlife.redis.5.1.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.remoting\\2.0.2023.203\\newlife.remoting.2.0.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.stardust\\2.6.2023.203\\newlife.stardust.2.6.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.stardust.extensions\\2.6.2023.203\\newlife.stardust.extensions.2.6.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\newlife.xcode\\11.5.2023.203\\newlife.xcode.11.5.2023.203.nupkg.sha512",
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

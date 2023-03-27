@@ -1,0 +1,54 @@
+﻿@model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var findUserDisease = UserDisease.FindAllByUserID;
+
+    var act = Context.Request.Path + "";
+}
+
+<a class="btn btn-success btn-sm" href="/Home/EditUserView/@Model.ID" >编辑</a>
+
+<table class="table table-bordered table-hover table-striped table-condensed">
+    <tbody>
+            <tr><td width="60" height="60">
+                    @if (Model.Avatar ==null)
+                    {
+                        <img src="User/GetDefalutAvatar" width="60" height="60"/>
+                    }
+                    else
+                    {
+                        <img src="@Model.Avatar" width="60" height="60"/>
+                    }    
+                </td>
+                <td class="text-left">
+                    @Model.Name
+                </td>
+            </tr>               
+            <tr><td class="text-left">性别</td><td class="text-right">@Model.Sex</td><tr/>
+            <tr><td class="text-left">年龄</td><td class="text-right">@Model.Age</td><tr/>         
+            <tr><td class="text-left">手机号</td><td class="text-right">@Model.Phone</td><tr/>         
+            <tr><td class="text-left">身高（cm）</td><td class="text-right">@Model.Height</td><tr/>         
+            <tr><td class="text-left">体重（kg）</td><td class="text-right">@Model.Weight</td><tr/>         
+            <tr><td class="text-left" colspan="2">慢性病类型  <br/>                 
+               
+                    @foreach (var disease in findUserDisease(Model.ID))
+                    {
+                        <span>@disease.DiseaseName</span>
+                    }                    
+               </td>
+            <tr/>         
+         
+    </tbody>
+</table>

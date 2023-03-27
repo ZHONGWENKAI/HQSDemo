@@ -1,0 +1,219 @@
+﻿@model IList<DailyOrSum>
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var pictureList = Picture.FindAllByDailyOrSumID;
+    var findEffect = Effect.FindByID;
+    var findDiseaseByUserID = UserDisease.FindAllByUserID;
+    var user = (Zero.Data.Projects.User)ViewData["user"];
+}
+
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="UserCenter/GetCommoncss">
+  <link rel="stylesheet" href="UserCenter/GetStylecss">
+  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
+  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
+  <title>日常打卡</title>
+</head>*@
+<body id="list">
+
+
+
+    <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+    <input type = "hidden" id ="userid" value = "@user.ID">
+
+    <ul>
+        <li><a class="active" href="GetDaily?id=@user.ID">日常打卡</a></li>
+        <li><a href="GetSum?id=@user.ID">疗程总结</a></li>
+    </ul>
+
+    @{
+    var DiseaseDic = Disease.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    var EffectDic = Effect.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    var InfectionDic = Infection.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+}
+<div class="form-group">
+    @Html.ForDropDownList("EffectID", EffectDic, "", "效果评价", true)
+    @Html.ForDropDownList("InfectionID", InfectionDic, "", "新冠感染情况", true)
+    @Html.ForListBox("DiseaseID", DiseaseDic, "疾病类型")  
+    
+    <button id="search" type="submit" class="btn btn-purple btn-sm">
+            <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+            查询
+            
+    </button>
+
+</div>
+
+
+        @foreach (var entity in Model)
+        {
+        <table class="table table-bordered table-hover table-striped table-condensed" >
+            <tbody>
+                <tr class="text-center">                    
+                    <td class="text-center"  width="80" height="80"><img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/></td>
+                    <td class="text-left">@findUserByID(entity.UserID).Name</td>
+                    <td style="text-align:right;" class="text-right">@entity.EvaluateTime</td>
+                </tr>
+              
+                <tr class="text-left"><td >评价效果</td><td text-center colspan="3">@findEffect(entity.EffectID)</td></tr>
+                <tr class="text-left">
+                    <td >慢性病类型</td>
+                    <td  text-center colspan="3">
+                    @foreach (var disease in findDiseaseByUserID(entity.UserID))
+                    {
+                        <span>@disease.DiseaseName</span>
+                        <span>,</span>
+                    }
+                </td>
+                </tr>
+                <tr class="text-left"><td >新冠感染</td><td text-center colspan="3">@findUserByID(entity.UserID).Infection</td></tr>
+                <tr class="text-left">
+                    <td colspan="3">
+                        <textarea  style="width:100%;" class="text-left" rows="10" cols="150">@entity.Evaluate </textarea>   
+                    </td>
+                </tr>
+                
+                 <tr class="text-left">
+                <td width="160" height="130" colspan="3">
+                @foreach(var picture in pictureList(entity.ID))
+                {
+                
+                
+                    <img src="@picture.Content" width="150" height="120"/>
+                  
+                }
+                </td>
+                <tr class="text-left">
+                   <td colspan="3">
+                   <audio controls>
+                   <source id="" src="@entity.Recording">
+                   </audio>
+                   </td>
+                </tr>              
+            </tbody>
+        </table>
+       <div style = "width:100%;
+                    height:60px;
+                    background-color:rgb(211, 217, 216)"></div>
+        } 
+
+      
+         <div class="text-center" style = "width:100%;
+                        height:180px;
+                        background-color:rgb(211, 217, 216);">
+             莫得拉不用往下拉了
+         <div/>
+           
+      
+        <div style="position: fixed;bottom:0; width:100%;">
+           <ul>
+            <li><a class="active" href="AddDaily?id=@user.ID">打卡</a></li>
+            <li><a href="GetUser?id=@user.ID">用户</a></li>
+            <li><a href="GetChouJiang?id=@user.ID">积分抽奖</a></li>
+            <li><a href="GetDaily?id=@user.ID">动态</a></li>
+            <li><a href="GetUser?id=@user.ID">我的</a></li>
+            </ul>
+        </div>
+    
+  </body>
+  <script>
+ $(document).ready(function(){
+   $("#search").click(function () {
+        var EffectID=$("#EffectID option:selected").text();       
+        var InfectionID=$("#InfectionID option:selected").text();
+        console.log(EffectID);
+        console.log(InfectionID);
+        var DiseaseID = "";
+        $("#DiseaseID option:selected").each(function () {
+            DiseaseID += $(this).text()+",";
+            console.log($(this).text());
+
+        });
+        console.log(DiseaseID)
+        var userid = $("#userid").val();
+        $.get("/Home/SearchDaily?EffectID=" + EffectID+"&InfectionID="+InfectionID+"&DiseaseID="+DiseaseID+"&userid="+userid,function(data,status){
+              //var html = "";
+              //  $("#list").html(html);
+              //  for(i in data)
+              //  {
+              //    html+="<tr>";
+              //          html+="<td>"+Object.values(data)[i].id+"</td>";
+              //          html+="<td>"+Object.values(data)[i].name+"</td>";
+              //          html+="<td>"+Object.values(data)[i].kindId+"</td>";
+              //          html+="<td>"+Object.values(data)[i].createUser+"</td>";
+              //          html+="<td>"+Object.values(data)[i].createUserID+"</td>";
+              //          html+="<td>"+Object.values(data)[i].createIP+"</td>";
+              //          html+="<td>"+Object.values(data)[i].createTime+"</td>";
+              //          html+="<td>"+Object.values(data)[i].updateUser+"</td>";
+              //          html+="<td>"+Object.values(data)[i].updateUserID+"</td>";
+              //          html+="<td>"+Object.values(data)[i].updateIP+"</td>";
+              //          html+="<td>"+Object.values(data)[i].updateTime+"</td>"   
+              //          if(Object.values(data)[i].remark==null)
+              //          html+="<td>"+""+"</td>";
+              //          else
+              //          html+="<td>"+Object.values(data)[i].remark+"</td>";
+              //          html+="<td class='text-center'>";
+              //          html+="<i class='glyphicon glyphicon-edit' style='color: blue;'></i>";
+              //          html+="<a href='/Projects/Course/Edit/"+Object.values(data)[i].id+"'"+" class='editcell' title='双击本行任意地方也可以进入编辑表单页'>编辑</a>";
+              //          html+="<i class='glyphicon glyphicon-remove' style='color: red;'></i>";
+              //          html+="<a href='/Projects/Course/Delete/"+Object.values(data)[i].id+"'"+" data-action=action data-time='data-confirm'='确认删除？'>删除</a>";
+              //          html+="</td>";
+              //     html+="<tr>";
+              //  }
+                 
+              //  $("#list").html(html);
+              $("#list").html(data);
+        });
+    });
+ });
+  </script>

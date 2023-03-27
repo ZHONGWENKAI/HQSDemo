@@ -1,0 +1,172 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = HQSDemo.Web
+build_property.RootNamespace = HQSDemo.Web
+build_property.ProjectDir = D:\Code\HQSDemo\Zero.Web\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Code\HQSDemo\Zero.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/Daily/Daily.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xEYWlseVxEYWlseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/Sum/Sum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xTdW1cU3VtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/UserCenter/GetUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xVc2VyQ2VudGVyXEdldFVzZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/UserCenter/GetUser2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xVc2VyQ2VudGVyXEdldFVzZXIyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xWaWV3U3RhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/NewMuen/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTmV3TXVlblxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/DailyOrSum/_Form_Body.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcRGFpbHlPclN1bVxfRm9ybV9Cb2R5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/DailyOrSum/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcRGFpbHlPclN1bVxfTGlzdF9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Member/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcTWVtYmVyXF9MaXN0X0RhdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Member/_List_Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcTWVtYmVyXF9MaXN0X1NlYXJjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Picture/_Form_Body.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcUGljdHVyZVxfRm9ybV9Cb2R5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Picture/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcUGljdHVyZVxfTGlzdF9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Product/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcUHJvZHVjdFxfTGlzdF9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Product/_List_Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcUHJvZHVjdFxfTGlzdF9TZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Product/_List_Toolbar_Batch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcUHJvZHVjdFxfTGlzdF9Ub29sYmFyX0JhdGNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Team/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVGVhbVxfTGlzdF9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Team/_List_Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVGVhbVxfTGlzdF9TZWFyY2guY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/Team/_List_Toolbar_Batch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVGVhbVxfTGlzdF9Ub29sYmFyX0JhdGNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/User/_Form_Body.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVXNlclxfRm9ybV9Cb2R5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/User/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVXNlclxfTGlzdF9EYXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/VersionPlan/_List_Data.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVmVyc2lvblBsYW5cX0xpc3RfRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/VersionPlan/_List_Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVmVyc2lvblBsYW5cX0xpc3RfU2VhcmNoLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/VersionPlan/_List_Toolbar_Batch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcVmVyc2lvblBsYW5cX0xpc3RfVG9vbGJhcl9CYXRjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Areas/Projects/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUHJvamVjdHNcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/AddDaily.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGREYWlseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/choujiang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjaG91amlhbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/EditUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VXNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/EditUserView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0VXNlclZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/GetDaily.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXREYWlseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/GetSum.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRTdW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/GetUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHZXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/SearchUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/SearchUserDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZWFyY2hVc2VyRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX0hlYWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/Home/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaGFyZWRcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/UserCenter/GetUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNlbnRlclxHZXRVc2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Code/HQSDemo/Zero.Web/Views/UserCenter/_Form_Body.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckNlbnRlclxfRm9ybV9Cb2R5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 

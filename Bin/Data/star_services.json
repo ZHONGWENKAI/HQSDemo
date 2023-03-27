@@ -1,0 +1,18 @@
+{
+    "Zero.WebApi": [],
+    "StarWeb": [
+        {
+            "ServiceName": "StarWeb",
+            "DisplayName": null,
+            "Client": "@7132",
+            "Version": "2.0.8300.26265",
+            "Address": "http://@7132:1999",
+            "Address2": null,
+            "Scope": null,
+            "Tag": "Production",
+            "Weight": 0,
+            "CreateTime": "2023-03-27 09:06:25",
+            "UpdateTime": "2023-03-27 09:55:29"
+        }
+    ]
+}

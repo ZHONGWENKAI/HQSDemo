@@ -1,0 +1,224 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj": {}
+  },
+  "projects": {
+    "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+      "version": "1.0.2023.327",
+      "restore": {
+        "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj",
+        "projectName": "Zero.Core",
+        "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj",
+        "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+        "outputPath": "D:\\Code\\HQSDemo\\Zero.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "NewLife.Core": {
+              "target": "Package",
+              "version": "[10.1.2023.203, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj": {
+      "version": "1.0.2023.327",
+      "restore": {
+        "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj",
+        "projectName": "Zero.Data",
+        "projectPath": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj",
+        "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+        "outputPath": "D:\\Code\\HQSDemo\\Zero.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+                "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "NewLife.Core": {
+              "target": "Package",
+              "version": "[10.1.2023.203, )"
+            },
+            "NewLife.Stardust": {
+              "target": "Package",
+              "version": "[2.6.2023.203, )"
+            },
+            "NewLife.XCode": {
+              "target": "Package",
+              "version": "[11.5.2023.203, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj": {
+      "version": "1.0.2023.327",
+      "restore": {
+        "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
+        "projectName": "HQSDemo.Web",
+        "projectPath": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
+        "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+        "outputPath": "D:\\Code\\HQSDemo\\Zero.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+                "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj"
+              },
+              "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj": {
+                "projectPath": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "NewLife.Cube.Core": {
+              "target": "Package",
+              "version": "[5.5.2023.205, )"
+            },
+            "NewLife.Redis": {
+              "target": "Package",
+              "version": "[5.1.2023.203, )"
+            },
+            "NewLife.Stardust.Extensions": {
+              "target": "Package",
+              "version": "[2.6.2023.203, )"
+            },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

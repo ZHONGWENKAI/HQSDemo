@@ -1,0 +1,51 @@
+﻿@using NewLife.Common;
+@{
+    var set = NewLife.Cube.Setting.Current;
+    var title = ViewBag.Title + "";
+    if (set.TitlePrefix && title != "" && !title.Contains(" - "))
+    {
+        title += " - " + NewLife.Common.SysConfig.Current.DisplayName;
+    }
+
+    var res = set.ResourceUrl;
+    if (String.IsNullOrEmpty(res)) res = "/Content";
+    res = res.TrimEnd('/');
+}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @*上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！*@
+    <title>@title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon">
+   
+    <link rel="icon" href="./img/login.ico" type="image/x-icon">
+    <link rel="Shortcut Icon" href="./img/login.ico" type="image/x-icon">
+
+    <!-- 页面内联样式 -->
+    @RenderSection("css", required: false)
+
+    <link rel="stylesheet" href="~/Content/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    @*@Html.Partial("_Layout_Header")*@
+
+    @*<div class="container">*@
+    @RenderBody()
+    @*</div>*@
+
+    @*@Html.Partial("_Layout_Footer")*@
+
+    <script src="~/Content/js/jquery-3.6.0.min.js"></script>
+    <script src="~/Content/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./JS/login.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

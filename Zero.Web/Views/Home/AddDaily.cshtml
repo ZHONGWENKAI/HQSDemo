@@ -1,0 +1,278 @@
+﻿ @model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var pictureList = Picture.FindAllByDailyOrSumID;
+    var findEffect = Effect.FindByID;
+    var findDiseaseByUserID = UserDisease.FindAllByUserID;
+    var findUserDisease = UserDisease.FindAllByUserID;
+}
+ @{
+    var DiseaseDic = Disease.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    var EffectDic = Effect.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    var InfectionDic = Infection.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    }
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="UserCenter/GetCommoncss">
+  <link rel="stylesheet" href="UserCenter/GetStylecss">
+  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
+  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
+  <title>日常打卡</title>
+</head>*@
+<body id="list">
+
+    
+
+    <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+ 
+   
+
+   
+    <input type = "hidden" id ="userid" value = "@Model.ID">
+        <table class="table table-bordered table-hover table-striped table-condensed" >
+            <tbody>
+                <tr class="text-center">                    
+                    <td class="text-center"  width="80" height="80"><img id="Avatar" src="@Model.Avatar" width="80" height="80"/></td>
+                    <td id="Name" class="text-left">@Model.Name</td>
+                    <td style="text-align:right;" class="text-right"></td>
+                </tr>
+              
+                <tr class="text-left"><td >评价效果</td><td text-center colspan="3"> @Html.ForDropDownList("EffectID", EffectDic, "", "效果评价", true)</td></tr>
+                <tr class="text-left">
+                    <td >慢性病类型</td>
+                    
+                        @{
+                        var diseaseContent = "";
+                        }
+                        @foreach (var disease in findUserDisease(Model.ID))
+                        {
+                            diseaseContent += @disease.DiseaseName + ",";
+                        }
+                   <td class="text-left">
+                        @diseaseContent
+                   </td>
+                </tr>
+                <tr class="text-left"><td >新冠感染</td><td text-center colspan="3">@Model.InfectionName</td></tr>
+                <tr class="text-left">
+                    <td colspan="3">
+                        <textarea id="Evaluate" style="width:100%;" class="text-left" rows="10" cols="150"></textarea>   
+                    </td>
+                </tr>
+                
+                 <tr class="text-left">
+                <td width="160" height="60" colspan="3">
+                <div>
+                    <label>录音</label>
+                    <div id="addAudio">
+                    @*<audio controls>
+                        <source id="RecordingAudio" src="" >
+                    </audio>     *@
+                    </div>      
+                <div>
+                <input id="Recording" name="Recording" type="hidden" value=""/></div>
+                <label></label>
+                <div>
+                <input id="Recordingpath" type="file" accept="audio/*"/> </div>  
+                </div>  
+                </td>
+
+                <tr class="text-left">
+                <td  width="160" height="130" colspan="3">
+                <div>
+                    <label>图片</label>
+                    <div id="addPicture">          
+                                                            
+                    </div>  
+                    <label></label>
+                    <div>
+                        <input id="Picturepath" type="file" accept="image/*" value="点击添加图片"/> </div>  
+                        <label></label>
+                   @* <div>
+                        <button id="pictureBtn" value="" >上传图片</button></div>  
+                </div>*@
+                </td>
+                </tr>  
+                
+            </tbody>
+        </table>
+
+        <a class="btn btn-success btn-sm"  id="saveDaily">保存</a>
+
+         <div class="text-center" style = "width:100%;
+                        height:250px;
+                        background-color:rgb(211, 217, 216);">
+         <div/>
+           
+      
+        <div style="position: fixed;bottom:0; width:100%;">
+            <ul>
+            <li><a class="active" href="AddDaily?id=@Model.ID">打卡</a></li>
+            <li><a href="GetSearchUser?id=@Model.ID">用户</a></li>
+            <li><a href="GetChouJiang?id=@Model.ID">积分抽奖</a></li>
+            <li><a href="GetDaily?id=@Model.ID">动态</a></li>
+            <li><a href="GetUser?id=@Model.ID">我的</a></li>
+            </ul>
+        </div>
+    
+  </body>
+
+  <script>
+    //更换音频
+        $("#Recordingpath").change(function () {
+            console.log($("#Recordingpath"))
+            var file = $("#Recordingpath").get(0).files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                // 图片格式为 base64
+                //console.log(e)
+               @* $("#image_show").attr("src", e.target.result);*@
+               $("#Recording").attr("value",e.target.result)
+               $("audio").remove()
+               $("#addAudio").append("<audio controls> <source id='RecordingAudio' src=''> </audio>")   
+               $("#RecordingAudio").attr("src",e.target.result)
+        }
+    })      
+    </script>
+  
+
+        <script>
+//添加图片
+    $(document).ready(function(){
+        $(".picture").dblclick(function(){
+        this.remove();
+        alert("这个图片被双击删除了。");      
+    });
+
+
+ 
+    $("#Picturepath").change(function () {
+            console.log($("#Picturepath"))
+            var file = $("#Picturepath").get(0).files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                // 图片格式为 base64
+                //console.log(e)
+               $("#addPicture").append("<img  class='picture' src='' value='hhh' title='双击删除' width='200' height='150'/> ")   
+                $(document).ready(function(){
+                    var lastIndex =$("#addPicture").children(':last-child')
+                    lastIndex.attr("src", e.target.result)
+                    lastIndex.dblclick(function(){
+                        this.remove();
+                        alert("这个图片被双击删除了。");      
+                    });
+               });
+            }
+        })    
+    });
+    </script>
+
+    <script>
+     $(document).ready(function(){
+        $("#pictureBtn").click(function(){
+            var fileList = $("#addPicture").children();
+            var pictureData = [];
+            var id = $("#DailyOrSum").val();
+                 for(var i = 0;i<fileList.length;i++)
+                {     
+                    //获取的都是undefind
+                    pictureData[i] = fileList[i].src;
+                    
+                }   
+               
+
+                $(document).ready(function(){
+
+                    $.post("insertPictureList",{
+			        pictureData:pictureData,
+                    dailyOrSumID:id,
+		            },
+		                function(data,status){
+			        alert("返回码"+status+":"+ data);
+		        });
+        });
+    });
+     
+});
+    </script>       
+    
+    <script>
+        $(document).ready(function(){
+            $("#saveDaily").click(function(){
+                var EffectID=$("#EffectID option:selected").text();       
+                var userid = $("#userid").val();
+
+                var fileList = $("#addPicture").children();
+                var pictureData = [];
+                
+                 for(var i = 0;i<fileList.length;i++)
+                {     
+                    //获取的都是undefind
+                    pictureData[i] = fileList[i].src;     
+                }       
+                var Evaluate = $("#Evaluate").val();
+                var Recording = $("#Recording").val();
+                
+                $.post("AddDailyDetail",{
+                    EffectText:EffectID,
+			        pictureData:pictureData,
+                    userid:userid,
+                    Evaluate:Evaluate,
+                    Recording:Recording,
+		            },
+		                function(data,status){
+			        alert("返回码"+status+":"+ data);
+		        });
+              });
+            });
+    </script>        

@@ -1,0 +1,138 @@
+﻿ @model IList<Zero.Data.Projects.User>
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var user = (Zero.Data.Projects.User)ViewData["user"];
+}
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="UserCenter/GetCommoncss">
+  <link rel="stylesheet" href="UserCenter/GetStylecss">
+  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
+  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
+  <title>日常打卡</title>
+</head>*@
+<body id="list">
+
+
+
+    <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+ 
+   
+
+     <div class="input-group">
+        <span class="input-group-addon">
+            <i class="ace-icon fa fa-check"></i>
+        </span>
+        <input name="q" type="search" id="q" class="form-control" placeholder="搜索关键字" />
+    <span class="input-group-btn">
+        <button type="submit" class="btn btn-purple btn-sm">
+            <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+            查询
+        </button>
+    </span>
+</div>
+          
+<table class="table table-bordered table-hover table-striped table-condensed">
+        <tbody>
+       <tr class = UserDetail>
+        @foreach (var entity in Model)
+        {
+            
+                
+                <td width="60" height="65" class="text-center">
+                    @if (entity.Avatar ==null)
+                    {
+                        <img src="User/GetDefalutAvatar" width="60" height="60"/>
+                    }
+                    else
+                    {
+                        <img src="@entity.Avatar" width="60" height="60"/>
+                    }    
+                </td>          
+                
+                <td class="text-left">@entity.Name</td>
+            
+                <td>
+                    <a class="btn btn-success btn-sm" href="GetSearchUserDetail?id=@entity.ID" id=DetailBtn>详情</a>
+                </td>
+        }
+      </tr>
+    </tbody>
+</table>
+
+      
+        <div style="position: fixed;bottom:0; width:100%;">
+            <ul>
+            <li><a class="active" href="AddDaily?id=@user.ID">打卡</a></li>
+            <li><a href="GetSearchUser?id=@user.ID">用户</a></li>
+            <li><a href="GetChouJiang?id=@user.ID">积分抽奖</a></li>
+            <li><a href="GetDaily?id=@user.ID">动态</a></li>
+            <li><a href="GetUser?id=@user.ID">我的</a></li>
+            </ul>
+        </div>
+    
+  </body>
+
+        
+  <script>
+    $(document).ready(function(){
+        $(".UserDetail").dblclick(function(){
+          
+             $(document).ready(function(){
+                 $.get("GetSearchUserDetail",function(data,status){
+			
+
+		    });
+       });            
+        alert("这个图片被双击删除了。");      
+    });
+  </script>      

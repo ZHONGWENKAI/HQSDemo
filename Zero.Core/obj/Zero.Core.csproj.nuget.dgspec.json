@@ -1,0 +1,69 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {}
+  },
+  "projects": {
+    "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+      "version": "1.0.2023.327",
+      "restore": {
+        "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj",
+        "projectName": "Zero.Core",
+        "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj",
+        "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+        "outputPath": "D:\\Code\\HQSDemo\\Zero.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "configFilePaths": [
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "NewLife.Core": {
+              "target": "Package",
+              "version": "[10.1.2023.203, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

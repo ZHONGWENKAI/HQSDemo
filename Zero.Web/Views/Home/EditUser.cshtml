@@ -1,0 +1,151 @@
+﻿@model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var findUserDisease = UserDisease.FindAllByUserID;
+    var user = (Zero.Data.Projects.User)ViewData["user"];
+
+    var act = Context.Request.Path + "";
+}
+
+ <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+     @{
+    var DiseaseDic = Disease.FindAllWithCache().ToDictionary(e => e.ID, e => e.Name + "");
+    
+    
+}
+
+<input type = "hidden" id ="userid" value = "@Model.ID">
+
+<a class="btn btn-success btn-sm" href="../GetUser?id=@Model.ID" id=saveBtn>保存</a>
+
+<table id="addTable" class="table table-bordered table-hover table-striped table-condensed">
+    <tbody>
+            <tr><td width="60" height="65">
+                   @* @if (Model.Avatar ==null)
+                    {
+                        <img src="User/GetDefalutAvatar" width="60" height="60"/>
+                    }*@
+                   @* else
+                    {*@
+                        <img src="@Model.Avatar" width="60" height="60"/>
+                    @*} *@   
+                </td>
+                <td class="text-left">
+                    @Model.Name
+                </td>
+                @*<input type="text" name="test" disabled="disabled" style="background:#CCCCCC" value="@Model.Sex"/>*@
+            </tr>
+</tbody>
+</table>
+<table id="inputList" class="table table-bordered table-hover table-striped table-condensed">
+    <tbody>
+       <div id="inputList">
+            <tr><td width="60" height="65" class="text-left">性别</td>
+                <td> <select id="Sex" class="multiselect" data-val="true" data-val-required="The Int64 field is required." id="Sex" name="Sex">
+                    <option value="0">未知</option>
+                    <option selected="selected" value="1">男</option>
+                    <option value="2">女</option>
+                    </select>
+               </td></tr>
+            <tr><td class="text-left">年龄</td><td class="text-center"><input id="Age" class="text-center" style="width:100%;" type="text" " value="@Model.Age" ></td></tr>         
+            <tr><td class="text-left">手机号</td><td class="text-center"><input id="Phone" class="text-center" style="width:100%;" type="text"  value="@Model.Phone" ></td></tr>         
+            <tr><td class="text-left">身高（cm）</td><td class="text-center"><input id="Height" class="text-center" style="width:100%;" type="text"  value="@Model.Height" ></td></tr>         
+            <tr><td class="text-left">体重（kg）</td><td class="text-center"><input id="Weight" class="text-center" style="width:100%;" type="text"  value="@Model.Weight" ></td></tr>         
+            <tr><td class="text-left" >慢性病类型</td>                 
+               
+                
+                <td>
+                  @Html.ForListBox("DiseaseID", DiseaseDic, "疾病类型")
+               </td>
+            </tr>         
+         </div>
+    </tbody>
+</table>
+
+  <div style="position: fixed;bottom:0; width:100%;">
+            <ul>
+            <li><a class="active" href="../AddDaily?id=@Model.ID">打卡</a></li>
+            <li><a href="../GetSearchUser?id=@Model.ID">用户</a></li>
+            <li><a href="../GetChouJiang?id=@Model.ID">积分抽奖</a></li>
+            <li><a href="../GetDaily?id=@Model.ID">动态</a></li>
+            <li><a href="../GetUser?id=@Model.ID">我的</a></li>
+            </ul>
+        </div>
+
+
+
+<script>
+    $(document).ready(function(){
+            $("#savebtn").click(function(){
+
+                var SexID=$("#Sex option:selected").val();
+                var Age =$("#Age").val();
+                var Phone =$("#Phone").val();
+                var Height =$("#Height").val();
+                var Weight =$("#Weight").val();
+                 $("#DiseaseID option:selected").each(function () {
+                    DiseaseID += $(this).text()+",";
+                    console.log($(this).text());
+
+                 });
+                var DiseaseID = "";
+                                
+                $.post("UpdateUser",{
+                    Sex:SexID,
+			        DiseaseText:DiseaseID,
+                    Age:Age,
+                    Phone:Phone,
+                    Height:Height.
+                    Weight:Weight,
+                    userid:userid,
+		            },
+		                function(data,status){
+			        alert("返回码"+status+":"+ data);
+		        });
+              });
+            });
+</script>

@@ -1,0 +1,42 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Zero.Core/1.0.2023.0313": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "Zero.Core.dll": {}
+        }
+      },
+      "NewLife.Core/10.1.2023.203": {
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Core.dll": {
+            "assemblyVersion": "10.1.2023.203",
+            "fileVersion": "10.1.2023.203"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Zero.Core/1.0.2023.0313": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewLife.Core/10.1.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lZBr3Dig6i3Th1cM8DBn0GuYPuq4eMRfGKSLugY0Oo5UKRn2adcgjOxL9lRM9kN7SqKkONil86JkmRTujZkUDw==",
+      "path": "newlife.core/10.1.2023.203",
+      "hashPath": "newlife.core.10.1.2023.203.nupkg.sha512"
+    }
+  }
+}

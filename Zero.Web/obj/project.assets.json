@@ -1,0 +1,688 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "NewLife.Core/10.1.2023.203": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/NewLife.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/NewLife.Core.dll": {}
+        }
+      },
+      "NewLife.Cube.Core/5.5.2023.205": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.IP": "2.0.2023.203",
+          "NewLife.Stardust": "2.6.2023.203",
+          "NewLife.XCode": "11.5.2023.203"
+        },
+        "compile": {
+          "lib/net6.0/NewLife.Cube.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/NewLife.Cube.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "buildTransitive/NewLife.Cube.Core.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/NewLife.Cube.Core.props": {}
+        }
+      },
+      "NewLife.IP/2.0.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/NewLife.IP.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.IP.dll": {}
+        }
+      },
+      "NewLife.Redis/5.1.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/NewLife.Redis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Redis.dll": {}
+        }
+      },
+      "NewLife.Remoting/2.0.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {}
+        }
+      },
+      "NewLife.Stardust/2.6.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Remoting": "2.0.2023.203"
+        },
+        "compile": {
+          "lib/net6.0/Stardust.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Stardust.dll": {}
+        }
+      },
+      "NewLife.Stardust.Extensions/2.6.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Stardust": "2.6.2023.203"
+        },
+        "compile": {
+          "lib/net6.0/Stardust.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Stardust.Extensions.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "NewLife.XCode/11.5.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/XCode.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/XCode.dll": {}
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "compile": {
+          "lib/net6.0/System.Drawing.Common.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {}
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
+      "Zero.Core/1.0.2023.327": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "bin/placeholder/Zero.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Zero.Core.dll": {}
+        }
+      },
+      "Zero.Data/1.0.2023.327": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Stardust": "2.6.2023.203",
+          "NewLife.XCode": "11.5.2023.203",
+          "Zero.Core": "1.0.2023.327"
+        },
+        "compile": {
+          "bin/placeholder/Zero.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Zero.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "type": "package",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
+        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.nuspec",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "NewLife.Core/10.1.2023.203": {
+      "sha512": "lZBr3Dig6i3Th1cM8DBn0GuYPuq4eMRfGKSLugY0Oo5UKRn2adcgjOxL9lRM9kN7SqKkONil86JkmRTujZkUDw==",
+      "type": "package",
+      "path": "newlife.core/10.1.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/NewLife.Core.dll",
+        "lib/net461/NewLife.Core.xml",
+        "lib/net5.0-windows7.0/NewLife.Core.dll",
+        "lib/net5.0-windows7.0/NewLife.Core.xml",
+        "lib/net5.0/NewLife.Core.dll",
+        "lib/net5.0/NewLife.Core.xml",
+        "lib/net6.0-windows7.0/NewLife.Core.dll",
+        "lib/net6.0-windows7.0/NewLife.Core.xml",
+        "lib/net6.0/NewLife.Core.dll",
+        "lib/net6.0/NewLife.Core.xml",
+        "lib/net7.0-windows7.0/NewLife.Core.dll",
+        "lib/net7.0-windows7.0/NewLife.Core.xml",
+        "lib/net7.0/NewLife.Core.dll",
+        "lib/net7.0/NewLife.Core.xml",
+        "lib/netcoreapp3.1/NewLife.Core.dll",
+        "lib/netcoreapp3.1/NewLife.Core.xml",
+        "lib/netstandard2.0/NewLife.Core.dll",
+        "lib/netstandard2.0/NewLife.Core.xml",
+        "lib/netstandard2.1/NewLife.Core.dll",
+        "lib/netstandard2.1/NewLife.Core.xml",
+        "newlife.core.10.1.2023.203.nupkg.sha512",
+        "newlife.core.nuspec"
+      ]
+    },
+    "NewLife.Cube.Core/5.5.2023.205": {
+      "sha512": "0T2TxfHqHoPjQ5VQ4Q7ZTGh/SAQYe2na9BbV5J6nSjPE4SX+5/yK7RtZ8VZ7cxfUjBkg2k/tEDbYKB6AzaMRsA==",
+      "type": "package",
+      "path": "newlife.cube.core/5.5.2023.205",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/NewLife.Cube.Core.props",
+        "buildMultiTargeting/NewLife.Cube.Core.props",
+        "buildTransitive/NewLife.Cube.Core.props",
+        "leaf.png",
+        "lib/net5.0/NewLife.Cube.Views.dll",
+        "lib/net5.0/NewLife.Cube.dll",
+        "lib/net5.0/NewLife.Cube.xml",
+        "lib/net5.0/zh_CN/NewLife.Cube.resources.dll",
+        "lib/net6.0/NewLife.Cube.dll",
+        "lib/net6.0/NewLife.Cube.xml",
+        "lib/net6.0/zh_CN/NewLife.Cube.resources.dll",
+        "lib/net7.0/NewLife.Cube.dll",
+        "lib/net7.0/NewLife.Cube.xml",
+        "lib/net7.0/zh_CN/NewLife.Cube.resources.dll",
+        "newlife.cube.core.5.5.2023.205.nupkg.sha512",
+        "newlife.cube.core.nuspec",
+        "staticwebassets/Content/Cube-bootstrap.css",
+        "staticwebassets/Content/Cube.css",
+        "staticwebassets/Content/Cube.js",
+        "staticwebassets/Content/DateTimePicker/bootstrap-datetimepicker.min.css",
+        "staticwebassets/Content/DateTimePicker/bootstrap-datetimepicker.min.js",
+        "staticwebassets/Content/DateTimePicker/bootstrap-datetimepicker.zhCN.js",
+        "staticwebassets/Content/DateTimePicker/locales/bootstrap-datetimepicker.zh_CN.js",
+        "staticwebassets/Content/ace/css/ace-fonts.min.css",
+        "staticwebassets/Content/ace/css/ace-ie.min.css",
+        "staticwebassets/Content/ace/css/ace-part2.min.css",
+        "staticwebassets/Content/ace/css/ace-skins.min.css",
+        "staticwebassets/Content/ace/css/ace.min.css",
+        "staticwebassets/Content/ace/css/images/pattern.jpg",
+        "staticwebassets/Content/ace/fonts/OpenSans-300.woff",
+        "staticwebassets/Content/ace/fonts/OpenSans-400.woff",
+        "staticwebassets/Content/ace/js/ace-elements.min.js",
+        "staticwebassets/Content/ace/js/ace-extra.min.js",
+        "staticwebassets/Content/ace/js/ace.min.js",
+        "staticwebassets/Content/ace/js/additional-methods.min.js",
+        "staticwebassets/Content/ace/js/bootbox.min.js",
+        "staticwebassets/Content/ace/js/chosen.jquery.min.js",
+        "staticwebassets/Content/ace/js/dropzone.min.js",
+        "staticwebassets/Content/ace/js/excanvas.min.js",
+        "staticwebassets/Content/ace/js/fullcalendar.min.js",
+        "staticwebassets/Content/ace/js/jquery.autosize.min.js",
+        "staticwebassets/Content/ace/js/pace.min.js",
+        "staticwebassets/Content/ace/js/prettify.min.js",
+        "staticwebassets/Content/ace/js/select2.min.js",
+        "staticwebassets/Content/ace/js/spin.min.js",
+        "staticwebassets/Content/ace/js/typeahead.jquery.min.js",
+        "staticwebassets/Content/artDialog/css/ui-dialog.css",
+        "staticwebassets/Content/artDialog/dist/dialog-min.js",
+        "staticwebassets/Content/artDialog/dist/dialog-plus-min.js",
+        "staticwebassets/Content/artDialog/dist/dialog.new.life.js",
+        "staticwebassets/Content/bootstrap-suggest.js",
+        "staticwebassets/Content/bootstrap/css/bootstrap-multiselect.css",
+        "staticwebassets/Content/bootstrap/css/bootstrap-responsive.min.css",
+        "staticwebassets/Content/bootstrap/css/bootstrap-theme.min.css",
+        "staticwebassets/Content/bootstrap/css/bootstrap.min.css",
+        "staticwebassets/Content/bootstrap/css/font-awesome.min.css",
+        "staticwebassets/Content/bootstrap/fonts/FontAwesome.otf",
+        "staticwebassets/Content/bootstrap/fonts/fontawesome-webfont.eot",
+        "staticwebassets/Content/bootstrap/fonts/fontawesome-webfont.svg",
+        "staticwebassets/Content/bootstrap/fonts/fontawesome-webfont.ttf",
+        "staticwebassets/Content/bootstrap/fonts/fontawesome-webfont.woff",
+        "staticwebassets/Content/bootstrap/fonts/fontawesome-webfont.woff2",
+        "staticwebassets/Content/bootstrap/fonts/glyphicons-halflings-regular.eot",
+        "staticwebassets/Content/bootstrap/fonts/glyphicons-halflings-regular.svg",
+        "staticwebassets/Content/bootstrap/fonts/glyphicons-halflings-regular.ttf",
+        "staticwebassets/Content/bootstrap/fonts/glyphicons-halflings-regular.woff",
+        "staticwebassets/Content/bootstrap/fonts/glyphicons-halflings-regular.woff2",
+        "staticwebassets/Content/bootstrap/js/bootstrap-colorpicker.min.js",
+        "staticwebassets/Content/bootstrap/js/bootstrap-multiselect.min.js",
+        "staticwebassets/Content/bootstrap/js/bootstrap-tag.min.js",
+        "staticwebassets/Content/bootstrap/js/bootstrap-wysiwyg.min.js",
+        "staticwebassets/Content/bootstrap/js/bootstrap.min.js",
+        "staticwebassets/Content/bootstrap_switch/bootstrap-switch.min.css",
+        "staticwebassets/Content/bootstrap_switch/bootstrap-switch.min.js",
+        "staticwebassets/Content/city_picker/city-picker.css",
+        "staticwebassets/Content/city_picker/city-picker.js",
+        "staticwebassets/Content/city_picker/images/clear.png",
+        "staticwebassets/Content/city_picker/images/drop-arrow.png",
+        "staticwebassets/Content/echarts/bmap.min.js",
+        "staticwebassets/Content/echarts/dataTool.min.js",
+        "staticwebassets/Content/echarts/echarts.min.js",
+        "staticwebassets/Content/echarts/theme/chalk.js",
+        "staticwebassets/Content/echarts/theme/dark.js",
+        "staticwebassets/Content/echarts/theme/essos.js",
+        "staticwebassets/Content/echarts/theme/infographic.js",
+        "staticwebassets/Content/echarts/theme/macarons.js",
+        "staticwebassets/Content/echarts/theme/purple-passion.js",
+        "staticwebassets/Content/echarts/theme/roma.js",
+        "staticwebassets/Content/echarts/theme/shine.js",
+        "staticwebassets/Content/echarts/theme/vintage.js",
+        "staticwebassets/Content/echarts/theme/walden.js",
+        "staticwebassets/Content/echarts/theme/westeros.js",
+        "staticwebassets/Content/echarts/theme/wonderland.js",
+        "staticwebassets/Content/images/logo/Alipay.png",
+        "staticwebassets/Content/images/logo/Baidu.png",
+        "staticwebassets/Content/images/logo/Ding.png",
+        "staticwebassets/Content/images/logo/Github.png",
+        "staticwebassets/Content/images/logo/Microsoft.png",
+        "staticwebassets/Content/images/logo/NewLife.png",
+        "staticwebassets/Content/images/logo/QQ.png",
+        "staticwebassets/Content/images/logo/QyWeiXin.png",
+        "staticwebassets/Content/images/logo/Taobao.png",
+        "staticwebassets/Content/images/logo/Weibo.png",
+        "staticwebassets/Content/images/logo/Weixin.png",
+        "staticwebassets/Content/js/html5shiv.min.js",
+        "staticwebassets/Content/js/jquery-2.1.3.min.js",
+        "staticwebassets/Content/js/jquery-3.6.0.min.js",
+        "staticwebassets/Content/js/jquery-ui.custom.min.js",
+        "staticwebassets/Content/js/jquery.ui.touch-punch.min.js",
+        "staticwebassets/Content/js/md5.js",
+        "staticwebassets/Content/js/respond.min.js",
+        "staticwebassets/Content/layui/css/layui.css",
+        "staticwebassets/Content/layui/css/layui_cube.css",
+        "staticwebassets/Content/layui/css/layui_main_cube.css",
+        "staticwebassets/Content/layui/css/modules/code.css",
+        "staticwebassets/Content/layui/css/modules/laydate/default/laydate.css",
+        "staticwebassets/Content/layui/css/modules/layer/default/icon-ext.png",
+        "staticwebassets/Content/layui/css/modules/layer/default/icon.png",
+        "staticwebassets/Content/layui/css/modules/layer/default/layer.css",
+        "staticwebassets/Content/layui/css/modules/layer/default/loading-0.gif",
+        "staticwebassets/Content/layui/css/modules/layer/default/loading-1.gif",
+        "staticwebassets/Content/layui/css/modules/layer/default/loading-2.gif",
+        "staticwebassets/Content/layui/font/iconfont.eot",
+        "staticwebassets/Content/layui/font/iconfont.svg",
+        "staticwebassets/Content/layui/font/iconfont.ttf",
+        "staticwebassets/Content/layui/font/iconfont.woff",
+        "staticwebassets/Content/layui/font/iconfont.woff2",
+        "staticwebassets/Content/layui/layui.js",
+        "staticwebassets/Content/layui/layui_cube.js",
+        "staticwebassets/Content/layui/layui_main_cube.js",
+        "staticwebassets/Content/layui/modules/all.js",
+        "staticwebassets/Content/layui/modules/carousel.js",
+        "staticwebassets/Content/layui/modules/code.js",
+        "staticwebassets/Content/layui/modules/colorpicker.js",
+        "staticwebassets/Content/layui/modules/demo.js",
+        "staticwebassets/Content/layui/modules/dropdown.js",
+        "staticwebassets/Content/layui/modules/element.js",
+        "staticwebassets/Content/layui/modules/element_cube.js",
+        "staticwebassets/Content/layui/modules/flow.js",
+        "staticwebassets/Content/layui/modules/form.js",
+        "staticwebassets/Content/layui/modules/jquery.js",
+        "staticwebassets/Content/layui/modules/lay.js",
+        "staticwebassets/Content/layui/modules/laydate.js",
+        "staticwebassets/Content/layui/modules/layedit.js",
+        "staticwebassets/Content/layui/modules/layer.js",
+        "staticwebassets/Content/layui/modules/laypage.js",
+        "staticwebassets/Content/layui/modules/laytpl.js",
+        "staticwebassets/Content/layui/modules/layui.all.js",
+        "staticwebassets/Content/layui/modules/mobile.js",
+        "staticwebassets/Content/layui/modules/rate.js",
+        "staticwebassets/Content/layui/modules/slider.js",
+        "staticwebassets/Content/layui/modules/table.js",
+        "staticwebassets/Content/layui/modules/transfer.js",
+        "staticwebassets/Content/layui/modules/tree.js",
+        "staticwebassets/Content/layui/modules/upload.js",
+        "staticwebassets/Content/layui/modules/util.js",
+        "staticwebassets/favicon.ico"
+      ]
+    },
+    "NewLife.IP/2.0.2023.203": {
+      "sha512": "xkcetLgOheU5uL7WX60pmV2vNwSgRtUwfMTcQqFQU+hp45ml2Z28fO06zphB/XtnYsSaFTnQCgXt/C2lrSmebQ==",
+      "type": "package",
+      "path": "newlife.ip/2.0.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "leaf.png",
+        "lib/net461/NewLife.IP.dll",
+        "lib/net461/NewLife.IP.xml",
+        "lib/netstandard2.0/NewLife.IP.dll",
+        "lib/netstandard2.0/NewLife.IP.xml",
+        "lib/netstandard2.1/NewLife.IP.dll",
+        "lib/netstandard2.1/NewLife.IP.xml",
+        "newlife.ip.2.0.2023.203.nupkg.sha512",
+        "newlife.ip.nuspec"
+      ]
+    },
+    "NewLife.Redis/5.1.2023.203": {
+      "sha512": "Fkjef3M1PgQtlOexerJXjLUKkggVx3jvSzjvMOmCm9NkO+MocjXOYP2V1TdHdxt0k8WP1wQ95jTeaQKwtefw/A==",
+      "type": "package",
+      "path": "newlife.redis/5.1.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/NewLife.Redis.dll",
+        "lib/net461/NewLife.Redis.xml",
+        "lib/netstandard2.0/NewLife.Redis.dll",
+        "lib/netstandard2.0/NewLife.Redis.xml",
+        "lib/netstandard2.1/NewLife.Redis.dll",
+        "lib/netstandard2.1/NewLife.Redis.xml",
+        "newlife.redis.5.1.2023.203.nupkg.sha512",
+        "newlife.redis.nuspec"
+      ]
+    },
+    "NewLife.Remoting/2.0.2023.203": {
+      "sha512": "QYplHxbYG7/awwi1ph/p0mnU/RDlYoM0UvpBaJvUZmsgvt56uant004fKDOu/Psym2YtI2woiPmj+BCnaWSvKw==",
+      "type": "package",
+      "path": "newlife.remoting/2.0.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/NewLife.Remoting.dll",
+        "lib/net461/NewLife.Remoting.xml",
+        "lib/netstandard2.0/NewLife.Remoting.dll",
+        "lib/netstandard2.0/NewLife.Remoting.xml",
+        "lib/netstandard2.1/NewLife.Remoting.dll",
+        "lib/netstandard2.1/NewLife.Remoting.xml",
+        "newlife.remoting.2.0.2023.203.nupkg.sha512",
+        "newlife.remoting.nuspec"
+      ]
+    },
+    "NewLife.Stardust/2.6.2023.203": {
+      "sha512": "kS7CNXlNTpELMPNTBYnB0v2bKxWnF7QbPw+sy7ry+akRYNUBQt1nnP3NQzo6NDwnqX7CoW0xv/U6PTC20+9rMQ==",
+      "type": "package",
+      "path": "newlife.stardust/2.6.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/Stardust.dll",
+        "lib/net461/Stardust.xml",
+        "lib/net5.0/Stardust.dll",
+        "lib/net5.0/Stardust.xml",
+        "lib/net6.0/Stardust.dll",
+        "lib/net6.0/Stardust.xml",
+        "lib/net7.0/Stardust.dll",
+        "lib/net7.0/Stardust.xml",
+        "lib/netcoreapp3.1/Stardust.dll",
+        "lib/netcoreapp3.1/Stardust.xml",
+        "lib/netstandard2.0/Stardust.dll",
+        "lib/netstandard2.0/Stardust.xml",
+        "lib/netstandard2.1/Stardust.dll",
+        "lib/netstandard2.1/Stardust.xml",
+        "newlife.stardust.2.6.2023.203.nupkg.sha512",
+        "newlife.stardust.nuspec"
+      ]
+    },
+    "NewLife.Stardust.Extensions/2.6.2023.203": {
+      "sha512": "a0Z2XeDA0kV3XOipbu7O4lJ+bwXuY38QYhqv8yy1I+52tKJj4llonWjwl3WqD7GP9VJJzryfD+4HCys3NjQTCg==",
+      "type": "package",
+      "path": "newlife.stardust.extensions/2.6.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net5.0/Stardust.Extensions.dll",
+        "lib/net5.0/Stardust.Extensions.pdb",
+        "lib/net5.0/Stardust.Extensions.xml",
+        "lib/net6.0/Stardust.Extensions.dll",
+        "lib/net6.0/Stardust.Extensions.pdb",
+        "lib/net6.0/Stardust.Extensions.xml",
+        "lib/net7.0/Stardust.Extensions.dll",
+        "lib/net7.0/Stardust.Extensions.pdb",
+        "lib/net7.0/Stardust.Extensions.xml",
+        "lib/netcoreapp3.1/Stardust.Extensions.dll",
+        "lib/netcoreapp3.1/Stardust.Extensions.pdb",
+        "lib/netcoreapp3.1/Stardust.Extensions.xml",
+        "newlife.stardust.extensions.2.6.2023.203.nupkg.sha512",
+        "newlife.stardust.extensions.nuspec"
+      ]
+    },
+    "NewLife.XCode/11.5.2023.203": {
+      "sha512": "DpwRuz66zdBfFYRwJv1UDpD6xJ/b6DlfrjyJy9qvBfGmvB2UgwmIdiJr1TOMuCLQBx++ECQzqbFF1/goWen9dA==",
+      "type": "package",
+      "path": "newlife.xcode/11.5.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "content/Entity/Model.xml",
+        "leaf.png",
+        "lib/net461/XCode.dll",
+        "lib/net461/XCode.xml",
+        "lib/netstandard2.0/XCode.dll",
+        "lib/netstandard2.0/XCode.xml",
+        "lib/netstandard2.1/XCode.dll",
+        "lib/netstandard2.1/XCode.xml",
+        "newlife.xcode.11.5.2023.203.nupkg.sha512",
+        "newlife.xcode.nuspec"
+      ]
+    },
+    "System.Drawing.Common/7.0.0": {
+      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "type": "package",
+      "path": "system.drawing.common/7.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.xml",
+        "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
+        "system.drawing.common.7.0.0.nupkg.sha512",
+        "system.drawing.common.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Zero.Core/1.0.2023.327": {
+      "type": "project",
+      "path": "../Zero.Core/Zero.Core.csproj",
+      "msbuildProject": "../Zero.Core/Zero.Core.csproj"
+    },
+    "Zero.Data/1.0.2023.327": {
+      "type": "project",
+      "path": "../Zero.Data/Zero.Data.csproj",
+      "msbuildProject": "../Zero.Data/Zero.Data.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "NewLife.Cube.Core >= 5.5.2023.205",
+      "NewLife.Redis >= 5.1.2023.203",
+      "NewLife.Stardust.Extensions >= 2.6.2023.203",
+      "System.Drawing.Common >= 7.0.0",
+      "Zero.Core >= 1.0.2023.327",
+      "Zero.Data >= 1.0.2023.327"
+    ]
+  },
+  "packageFolders": {
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {}
+  },
+  "project": {
+    "version": "1.0.2023.327",
+    "restore": {
+      "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
+      "projectName": "HQSDemo.Web",
+      "projectPath": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
+      "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+      "outputPath": "D:\\Code\\HQSDemo\\Zero.Web\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+              "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj"
+            },
+            "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj": {
+              "projectPath": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "dependencies": {
+          "NewLife.Cube.Core": {
+            "target": "Package",
+            "version": "[5.5.2023.205, )"
+          },
+          "NewLife.Redis": {
+            "target": "Package",
+            "version": "[5.1.2023.203, )"
+          },
+          "NewLife.Stardust.Extensions": {
+            "target": "Package",
+            "version": "[2.6.2023.203, )"
+          },
+          "System.Drawing.Common": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+﻿@model IList<DailyOrSum>
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var pictureList = Picture.FindAllByDailyOrSumID;
+    var findEffect = Effect.FindByID;
+    var findDiseaseByUserID = UserDisease.FindAllByUserID;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="UserCenter/GetCommoncss">
+  <link rel="stylesheet" href="UserCenter/GetStylecss">
+  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
+  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
+  <title>日常打卡</title>
+</head>
+<body>
+
+ 
+        @foreach (var entity in Model)
+        {
+        <table class="table table-bordered table-hover table-striped table-condensed">
+            <tbody>
+                <tr class="text-center">                    
+                    <td class="text-left"  width="80" height="80"><img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="60" height="60"/></td>
+                    <td class="text-left">@findUserByID(entity.UserID).Name</td>
+                    <td class="text-right">@entity.EvaluateTime</td>
+                </tr>
+              
+                <tr class="text-left"><td>评价效果</td><td colspan="3">@findEffect(entity.EffectID)</td></tr>
+                <tr class="text-left">
+                    <td>慢性病类型</td>
+                    <td colspan="3">
+                    @foreach (var disease in findDiseaseByUserID(entity.UserID))
+                    {
+                        <span>@disease.DiseaseName</span>
+                        <span>,</span>
+                    }
+                </td>
+                </tr>
+                <tr class="text-left"><td>新冠感染</td><td colspan="3">@findUserByID(entity.UserID).Infection</td></tr>
+                <tr class="text-left">
+                    <td colspan="3">
+                        <textarea  rows="10" cols="150"> @entity.Evaluate </textarea> 
+                    </td>
+                </tr>
+                
+                 <tr class="text-left">
+                <td  colspan="3">
+                @foreach(var picture in pictureList(entity.ID))
+                {
+                
+                
+                    <img src="@picture.Content" width="150" height="120"/>
+                  
+                }
+                </td>
+                <tr class="text-left">
+                   <td colspan="3">
+                   <audio controls>
+                   <source id="" src="@entity.Recording">
+                   </audio>
+                   </td>
+                </tr>              
+               </tr> 
+       
+            </tbody>
+        </table>
+       <div width="60" heigeh="60"></div>
+        } 
+  </body>

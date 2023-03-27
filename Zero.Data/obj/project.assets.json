@@ -1,0 +1,256 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETStandard,Version=v2.1": {
+      "NewLife.Core/10.1.2023.203": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.1/NewLife.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Core.dll": {}
+        }
+      },
+      "NewLife.Remoting/2.0.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {}
+        }
+      },
+      "NewLife.Stardust/2.6.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Remoting": "2.0.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/Stardust.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Stardust.dll": {}
+        }
+      },
+      "NewLife.XCode/11.5.2023.203": {
+        "type": "package",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "lib/netstandard2.1/XCode.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/XCode.dll": {}
+        }
+      },
+      "Zero.Core/1.0.2023.327": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "compile": {
+          "bin/placeholder/Zero.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Zero.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NewLife.Core/10.1.2023.203": {
+      "sha512": "lZBr3Dig6i3Th1cM8DBn0GuYPuq4eMRfGKSLugY0Oo5UKRn2adcgjOxL9lRM9kN7SqKkONil86JkmRTujZkUDw==",
+      "type": "package",
+      "path": "newlife.core/10.1.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/NewLife.Core.dll",
+        "lib/net461/NewLife.Core.xml",
+        "lib/net5.0-windows7.0/NewLife.Core.dll",
+        "lib/net5.0-windows7.0/NewLife.Core.xml",
+        "lib/net5.0/NewLife.Core.dll",
+        "lib/net5.0/NewLife.Core.xml",
+        "lib/net6.0-windows7.0/NewLife.Core.dll",
+        "lib/net6.0-windows7.0/NewLife.Core.xml",
+        "lib/net6.0/NewLife.Core.dll",
+        "lib/net6.0/NewLife.Core.xml",
+        "lib/net7.0-windows7.0/NewLife.Core.dll",
+        "lib/net7.0-windows7.0/NewLife.Core.xml",
+        "lib/net7.0/NewLife.Core.dll",
+        "lib/net7.0/NewLife.Core.xml",
+        "lib/netcoreapp3.1/NewLife.Core.dll",
+        "lib/netcoreapp3.1/NewLife.Core.xml",
+        "lib/netstandard2.0/NewLife.Core.dll",
+        "lib/netstandard2.0/NewLife.Core.xml",
+        "lib/netstandard2.1/NewLife.Core.dll",
+        "lib/netstandard2.1/NewLife.Core.xml",
+        "newlife.core.10.1.2023.203.nupkg.sha512",
+        "newlife.core.nuspec"
+      ]
+    },
+    "NewLife.Remoting/2.0.2023.203": {
+      "sha512": "QYplHxbYG7/awwi1ph/p0mnU/RDlYoM0UvpBaJvUZmsgvt56uant004fKDOu/Psym2YtI2woiPmj+BCnaWSvKw==",
+      "type": "package",
+      "path": "newlife.remoting/2.0.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/NewLife.Remoting.dll",
+        "lib/net461/NewLife.Remoting.xml",
+        "lib/netstandard2.0/NewLife.Remoting.dll",
+        "lib/netstandard2.0/NewLife.Remoting.xml",
+        "lib/netstandard2.1/NewLife.Remoting.dll",
+        "lib/netstandard2.1/NewLife.Remoting.xml",
+        "newlife.remoting.2.0.2023.203.nupkg.sha512",
+        "newlife.remoting.nuspec"
+      ]
+    },
+    "NewLife.Stardust/2.6.2023.203": {
+      "sha512": "kS7CNXlNTpELMPNTBYnB0v2bKxWnF7QbPw+sy7ry+akRYNUBQt1nnP3NQzo6NDwnqX7CoW0xv/U6PTC20+9rMQ==",
+      "type": "package",
+      "path": "newlife.stardust/2.6.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "leaf.png",
+        "lib/net461/Stardust.dll",
+        "lib/net461/Stardust.xml",
+        "lib/net5.0/Stardust.dll",
+        "lib/net5.0/Stardust.xml",
+        "lib/net6.0/Stardust.dll",
+        "lib/net6.0/Stardust.xml",
+        "lib/net7.0/Stardust.dll",
+        "lib/net7.0/Stardust.xml",
+        "lib/netcoreapp3.1/Stardust.dll",
+        "lib/netcoreapp3.1/Stardust.xml",
+        "lib/netstandard2.0/Stardust.dll",
+        "lib/netstandard2.0/Stardust.xml",
+        "lib/netstandard2.1/Stardust.dll",
+        "lib/netstandard2.1/Stardust.xml",
+        "newlife.stardust.2.6.2023.203.nupkg.sha512",
+        "newlife.stardust.nuspec"
+      ]
+    },
+    "NewLife.XCode/11.5.2023.203": {
+      "sha512": "DpwRuz66zdBfFYRwJv1UDpD6xJ/b6DlfrjyJy9qvBfGmvB2UgwmIdiJr1TOMuCLQBx++ECQzqbFF1/goWen9dA==",
+      "type": "package",
+      "path": "newlife.xcode/11.5.2023.203",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Readme.MD",
+        "content/Entity/Model.xml",
+        "leaf.png",
+        "lib/net461/XCode.dll",
+        "lib/net461/XCode.xml",
+        "lib/netstandard2.0/XCode.dll",
+        "lib/netstandard2.0/XCode.xml",
+        "lib/netstandard2.1/XCode.dll",
+        "lib/netstandard2.1/XCode.xml",
+        "newlife.xcode.11.5.2023.203.nupkg.sha512",
+        "newlife.xcode.nuspec"
+      ]
+    },
+    "Zero.Core/1.0.2023.327": {
+      "type": "project",
+      "path": "../Zero.Core/Zero.Core.csproj",
+      "msbuildProject": "../Zero.Core/Zero.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETStandard,Version=v2.1": [
+      "NewLife.Core >= 10.1.2023.203",
+      "NewLife.Stardust >= 2.6.2023.203",
+      "NewLife.XCode >= 11.5.2023.203",
+      "Zero.Core >= 1.0.2023.327"
+    ]
+  },
+  "packageFolders": {
+    "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {}
+  },
+  "project": {
+    "version": "1.0.2023.327",
+    "restore": {
+      "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj",
+      "projectName": "Zero.Data",
+      "projectPath": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj",
+      "packagesPath": "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages",
+      "outputPath": "D:\\Code\\HQSDemo\\Zero.Data\\obj\\",
+      "projectStyle": "PackageReference",
+      "crossTargeting": true,
+      "configFilePaths": [
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netstandard2.1"
+      ],
+      "sources": {
+        "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "projectReferences": {
+            "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj": {
+              "projectPath": "D:\\Code\\HQSDemo\\Zero.Core\\Zero.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
+        "dependencies": {
+          "NewLife.Core": {
+            "target": "Package",
+            "version": "[10.1.2023.203, )"
+          },
+          "NewLife.Stardust": {
+            "target": "Package",
+            "version": "[2.6.2023.203, )"
+          },
+          "NewLife.XCode": {
+            "target": "Package",
+            "version": "[11.5.2023.203, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

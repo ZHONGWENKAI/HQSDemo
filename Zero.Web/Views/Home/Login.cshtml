@@ -1,0 +1,70 @@
+@{
+    Layout = "_Layout";
+}
+<body>
+<header>
+  <a class="login" href="#">
+    <i class="fa fa-user-circle"></i>
+  </a>
+</header>
+<main>
+  <div class="flip-modal login">
+    <div class="modal modal-login">
+      <a class="close" href="#">
+        <i class="fa fa-close"></i>
+      </a>
+      <div class="tabs">
+        <a class="login active "href="#">µÇÂ¼</a>
+        <a class="register" href="#">×¢²á</a>
+      </div>
+      <div class="content">
+        <div class="errormsg"></div>
+        <form action="/login" method="post">
+          <div class="input-field">
+            <i class="fa fa-user-o"></i>
+            <input name="username" type="text" placeholder="ÓÃ»§Ãû">
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input name="password" type="password" placeholder="ÃÜÂë">
+          </div>
+          <div class="input-field">
+            <input type="submit" value="µÇÂ¼">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal-register">
+      <a class="close fa fa-close" href="#"></a>
+      <div class="tabs">
+        <a class="login" href="#">µÇÂ¼</a>
+        <a class="register active" href="#">×¢²á</a>
+      </div>
+      <div class="content">
+        <div class="errormsg"></div>
+        <form class="" action="/register" method="post">
+          <div class="input-field">
+            <i class="fa fa-user-o"></i>
+            <input name="username" type="text" placeholder="ÊäÈëÓÃ»§Ãû">
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input name="passeord" type="password" placeholder="ÊäÈëÃÜÂë">
+          </div>
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input name="passeord2" type="password" placeholder="ÇëÔÙ´ÎÊäÈëÃÜÂë">
+          </div>
+          <div class="input-field">
+            <input type="submit" value="×¢²á">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+</body>
+<script>
+
+</script>

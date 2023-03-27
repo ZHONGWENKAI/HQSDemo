@@ -1,0 +1,254 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HQSDemo.Web/1.0.2023.0324": {
+        "dependencies": {
+          "NewLife.Cube.Core": "5.5.2023.205",
+          "NewLife.Redis": "5.1.2023.203",
+          "NewLife.Stardust.Extensions": "2.6.2023.203",
+          "System.Drawing.Common": "7.0.0",
+          "Zero.Core": "1.0.2023.324",
+          "Zero.Data": "1.0.2023.324"
+        },
+        "runtime": {
+          "HQSDemo.Web.dll": {}
+        }
+      },
+      "Microsoft.Win32.SystemEvents/7.0.0": {
+        "runtime": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "NewLife.Core/10.1.2023.203": {
+        "runtime": {
+          "lib/net6.0/NewLife.Core.dll": {
+            "assemblyVersion": "10.1.2023.203",
+            "fileVersion": "10.1.2023.203"
+          }
+        }
+      },
+      "NewLife.Cube.Core/5.5.2023.205": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.IP": "2.0.2023.203",
+          "NewLife.Stardust": "2.6.2023.203",
+          "NewLife.XCode": "11.5.2023.203"
+        },
+        "runtime": {
+          "lib/net6.0/NewLife.Cube.dll": {
+            "assemblyVersion": "5.5.8436.11800",
+            "fileVersion": "5.5.2023.205"
+          }
+        }
+      },
+      "NewLife.IP/2.0.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.IP.dll": {
+            "assemblyVersion": "2.0.8434.25712",
+            "fileVersion": "2.0.2023.203"
+          }
+        }
+      },
+      "NewLife.Redis/5.1.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Redis.dll": {
+            "assemblyVersion": "5.1.8434.26690",
+            "fileVersion": "5.1.2023.203"
+          }
+        }
+      },
+      "NewLife.Remoting/2.0.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {
+            "assemblyVersion": "2.0.8434.25360",
+            "fileVersion": "2.0.2023.203"
+          }
+        }
+      },
+      "NewLife.Stardust/2.6.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Remoting": "2.0.2023.203"
+        },
+        "runtime": {
+          "lib/net6.0/Stardust.dll": {
+            "assemblyVersion": "2.6.8434.26612",
+            "fileVersion": "2.6.2023.203"
+          }
+        }
+      },
+      "NewLife.Stardust.Extensions/2.6.2023.203": {
+        "dependencies": {
+          "NewLife.Stardust": "2.6.2023.203"
+        },
+        "runtime": {
+          "lib/net6.0/Stardust.Extensions.dll": {
+            "assemblyVersion": "2.6.8434.26618",
+            "fileVersion": "2.6.2023.203"
+          }
+        }
+      },
+      "NewLife.XCode/11.5.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/XCode.dll": {
+            "assemblyVersion": "11.5.8434.26188",
+            "fileVersion": "11.5.2023.203"
+          }
+        }
+      },
+      "System.Drawing.Common/7.0.0": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "7.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        }
+      },
+      "Zero.Core/1.0.2023.324": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "Zero.Core.dll": {}
+        }
+      },
+      "Zero.Data/1.0.2023.324": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Stardust": "2.6.2023.203",
+          "NewLife.XCode": "11.5.2023.203",
+          "Zero.Core": "1.0.2023.324"
+        },
+        "runtime": {
+          "Zero.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HQSDemo.Web/1.0.2023.0324": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
+      "path": "microsoft.win32.systemevents/7.0.0",
+      "hashPath": "microsoft.win32.systemevents.7.0.0.nupkg.sha512"
+    },
+    "NewLife.Core/10.1.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lZBr3Dig6i3Th1cM8DBn0GuYPuq4eMRfGKSLugY0Oo5UKRn2adcgjOxL9lRM9kN7SqKkONil86JkmRTujZkUDw==",
+      "path": "newlife.core/10.1.2023.203",
+      "hashPath": "newlife.core.10.1.2023.203.nupkg.sha512"
+    },
+    "NewLife.Cube.Core/5.5.2023.205": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0T2TxfHqHoPjQ5VQ4Q7ZTGh/SAQYe2na9BbV5J6nSjPE4SX+5/yK7RtZ8VZ7cxfUjBkg2k/tEDbYKB6AzaMRsA==",
+      "path": "newlife.cube.core/5.5.2023.205",
+      "hashPath": "newlife.cube.core.5.5.2023.205.nupkg.sha512"
+    },
+    "NewLife.IP/2.0.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xkcetLgOheU5uL7WX60pmV2vNwSgRtUwfMTcQqFQU+hp45ml2Z28fO06zphB/XtnYsSaFTnQCgXt/C2lrSmebQ==",
+      "path": "newlife.ip/2.0.2023.203",
+      "hashPath": "newlife.ip.2.0.2023.203.nupkg.sha512"
+    },
+    "NewLife.Redis/5.1.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Fkjef3M1PgQtlOexerJXjLUKkggVx3jvSzjvMOmCm9NkO+MocjXOYP2V1TdHdxt0k8WP1wQ95jTeaQKwtefw/A==",
+      "path": "newlife.redis/5.1.2023.203",
+      "hashPath": "newlife.redis.5.1.2023.203.nupkg.sha512"
+    },
+    "NewLife.Remoting/2.0.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYplHxbYG7/awwi1ph/p0mnU/RDlYoM0UvpBaJvUZmsgvt56uant004fKDOu/Psym2YtI2woiPmj+BCnaWSvKw==",
+      "path": "newlife.remoting/2.0.2023.203",
+      "hashPath": "newlife.remoting.2.0.2023.203.nupkg.sha512"
+    },
+    "NewLife.Stardust/2.6.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kS7CNXlNTpELMPNTBYnB0v2bKxWnF7QbPw+sy7ry+akRYNUBQt1nnP3NQzo6NDwnqX7CoW0xv/U6PTC20+9rMQ==",
+      "path": "newlife.stardust/2.6.2023.203",
+      "hashPath": "newlife.stardust.2.6.2023.203.nupkg.sha512"
+    },
+    "NewLife.Stardust.Extensions/2.6.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a0Z2XeDA0kV3XOipbu7O4lJ+bwXuY38QYhqv8yy1I+52tKJj4llonWjwl3WqD7GP9VJJzryfD+4HCys3NjQTCg==",
+      "path": "newlife.stardust.extensions/2.6.2023.203",
+      "hashPath": "newlife.stardust.extensions.2.6.2023.203.nupkg.sha512"
+    },
+    "NewLife.XCode/11.5.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DpwRuz66zdBfFYRwJv1UDpD6xJ/b6DlfrjyJy9qvBfGmvB2UgwmIdiJr1TOMuCLQBx++ECQzqbFF1/goWen9dA==",
+      "path": "newlife.xcode/11.5.2023.203",
+      "hashPath": "newlife.xcode.11.5.2023.203.nupkg.sha512"
+    },
+    "System.Drawing.Common/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
+      "path": "system.drawing.common/7.0.0",
+      "hashPath": "system.drawing.common.7.0.0.nupkg.sha512"
+    },
+    "Zero.Core/1.0.2023.324": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Zero.Data/1.0.2023.324": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

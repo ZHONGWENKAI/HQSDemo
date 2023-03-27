@@ -1,0 +1,113 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Zero.Data/1.0.2023.0323": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Stardust": "2.6.2023.203",
+          "NewLife.XCode": "11.5.2023.203",
+          "Zero.Core": "1.0.2023.323"
+        },
+        "runtime": {
+          "Zero.Data.dll": {}
+        }
+      },
+      "NewLife.Core/10.1.2023.203": {
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Core.dll": {
+            "assemblyVersion": "10.1.2023.203",
+            "fileVersion": "10.1.2023.203"
+          }
+        }
+      },
+      "NewLife.Remoting/2.0.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/NewLife.Remoting.dll": {
+            "assemblyVersion": "2.0.8434.25360",
+            "fileVersion": "2.0.2023.203"
+          }
+        }
+      },
+      "NewLife.Stardust/2.6.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203",
+          "NewLife.Remoting": "2.0.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Stardust.dll": {
+            "assemblyVersion": "2.6.8434.26611",
+            "fileVersion": "2.6.2023.203"
+          }
+        }
+      },
+      "NewLife.XCode/11.5.2023.203": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "lib/netstandard2.1/XCode.dll": {
+            "assemblyVersion": "11.5.8434.26188",
+            "fileVersion": "11.5.2023.203"
+          }
+        }
+      },
+      "Zero.Core/1.0.2023.323": {
+        "dependencies": {
+          "NewLife.Core": "10.1.2023.203"
+        },
+        "runtime": {
+          "Zero.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Zero.Data/1.0.2023.0323": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NewLife.Core/10.1.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lZBr3Dig6i3Th1cM8DBn0GuYPuq4eMRfGKSLugY0Oo5UKRn2adcgjOxL9lRM9kN7SqKkONil86JkmRTujZkUDw==",
+      "path": "newlife.core/10.1.2023.203",
+      "hashPath": "newlife.core.10.1.2023.203.nupkg.sha512"
+    },
+    "NewLife.Remoting/2.0.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QYplHxbYG7/awwi1ph/p0mnU/RDlYoM0UvpBaJvUZmsgvt56uant004fKDOu/Psym2YtI2woiPmj+BCnaWSvKw==",
+      "path": "newlife.remoting/2.0.2023.203",
+      "hashPath": "newlife.remoting.2.0.2023.203.nupkg.sha512"
+    },
+    "NewLife.Stardust/2.6.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kS7CNXlNTpELMPNTBYnB0v2bKxWnF7QbPw+sy7ry+akRYNUBQt1nnP3NQzo6NDwnqX7CoW0xv/U6PTC20+9rMQ==",
+      "path": "newlife.stardust/2.6.2023.203",
+      "hashPath": "newlife.stardust.2.6.2023.203.nupkg.sha512"
+    },
+    "NewLife.XCode/11.5.2023.203": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DpwRuz66zdBfFYRwJv1UDpD6xJ/b6DlfrjyJy9qvBfGmvB2UgwmIdiJr1TOMuCLQBx++ECQzqbFF1/goWen9dA==",
+      "path": "newlife.xcode/11.5.2023.203",
+      "hashPath": "newlife.xcode.11.5.2023.203.nupkg.sha512"
+    },
+    "Zero.Core/1.0.2023.323": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

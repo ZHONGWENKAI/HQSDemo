@@ -1,0 +1,662 @@
+﻿#Software: 数据中间件工具
+#ProcessID: 7268 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+13:52:07.156  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+13:52:07.157  1 N - NewLife组件核心库 ©2002-2022 NewLife
+13:52:07.157  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+13:52:07.158  1 N - 数据中间件工具 ©2002-2022 NewLife
+13:52:07.158  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+13:52:07.170  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+13:52:07.170  1 N - NewLife数据中间件 ©2002-2022 NewLife
+13:52:07.170  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+13:52:07.214  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+13:52:07.221  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.230  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.245  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.246  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.246  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.247  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.248  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.248  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.249  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.250  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.251  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.252  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.255  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.257  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.258  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.261  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.264  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.265  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.265  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.266  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.268  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.270  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.271  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.272  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.273  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.274  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.276  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+13:52:07.277  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.278  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.279  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.280  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.281  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.282  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.283  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.284  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.287  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.288  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.289  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.290  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.291  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.293  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+13:52:07.293  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.294  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.295  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.296  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.297  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.298  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.299  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.300  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.302  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.304  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.305  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.307  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.310  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+13:52:07.311  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+13:52:07.312  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.313  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.314  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.314  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.315  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.315  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.316  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.317  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.317  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.318  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.318  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.319  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.319  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+13:52:07.333  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+13:52:07.333  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.334  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.335  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.337  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.337  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.337  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.338  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.338  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.339  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.339  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.339  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.340  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+13:52:07.340  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+
+#Software: 数据中间件工具
+#ProcessID: 12816 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+15:17:05.308  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+15:17:05.309  1 N - NewLife组件核心库 ©2002-2022 NewLife
+15:17:05.309  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+15:17:05.309  1 N - 数据中间件工具 ©2002-2022 NewLife
+15:17:05.309  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:17:05.322  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+15:17:05.322  1 N - NewLife数据中间件 ©2002-2022 NewLife
+15:17:05.323  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+15:17:05.365  1 N - 修正模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:17:05.366  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+15:17:05.373  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.383  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.397  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.398  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.399  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.400  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.400  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.401  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.402  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.403  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.404  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.405  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.406  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.407  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.409  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.410  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.411  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.413  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.413  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.415  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.416  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.418  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.419  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.420  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.421  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.422  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.423  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+15:17:05.424  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.426  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.427  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.428  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.429  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.430  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.433  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.434  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.435  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.436  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.439  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.442  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.443  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.445  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+15:17:05.445  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.446  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.448  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.449  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.450  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.451  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.452  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.453  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.454  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.455  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.456  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.457  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.458  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:17:05.460  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+15:17:05.460  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.462  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.464  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.464  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.465  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.465  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.466  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.466  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.467  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.467  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.467  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.468  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.468  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:17:05.482  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+15:17:05.482  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.484  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.487  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.488  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.488  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.489  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.489  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.489  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.490  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.490  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.491  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.491  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:17:05.491  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+
+#Software: 数据中间件工具
+#ProcessID: 14040 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+15:22:18.182  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+15:22:18.183  1 N - NewLife组件核心库 ©2002-2022 NewLife
+15:22:18.184  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+15:22:18.184  1 N - 数据中间件工具 ©2002-2022 NewLife
+15:22:18.184  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:22:18.196  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+15:22:18.196  1 N - NewLife数据中间件 ©2002-2022 NewLife
+15:22:18.197  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+15:22:18.238  1 N - 修正模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:22:18.240  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+15:22:18.246  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.256  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.271  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.272  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.272  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.273  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.274  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.275  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.277  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.278  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.279  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.280  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.281  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.283  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.284  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.285  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.286  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.287  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.288  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.289  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.290  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.293  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.294  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.295  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.296  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.297  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.299  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+15:22:18.300  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.301  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.302  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.303  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.305  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.306  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.307  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.310  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.311  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.314  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.318  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.319  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.320  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.322  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+15:22:18.322  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.323  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.323  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.326  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.328  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.329  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.330  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.331  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.332  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.334  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.335  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.336  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.337  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:22:18.338  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+15:22:18.339  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.341  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.341  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.342  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.342  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.343  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.343  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.344  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.344  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.344  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.345  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.345  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.345  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:22:18.359  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+15:22:18.359  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.362  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.364  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.365  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.365  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.366  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.366  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.367  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.367  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.367  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.368  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.368  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:22:18.368  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+
+#Software: 数据中间件工具
+#ProcessID: 20216 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+15:28:55.580  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+15:28:55.580  1 N - NewLife组件核心库 ©2002-2022 NewLife
+15:28:55.581  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+15:28:55.582  1 N - 数据中间件工具 ©2002-2022 NewLife
+15:28:55.582  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:28:55.594  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+15:28:55.595  1 N - NewLife数据中间件 ©2002-2022 NewLife
+15:28:55.595  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+15:28:55.635  1 N - 修正模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:28:55.637  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+15:28:55.644  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.653  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.668  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.668  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.669  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.670  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.670  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.671  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.672  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.674  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.675  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.677  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.678  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.680  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.681  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.683  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.683  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.684  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.685  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.686  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.687  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.689  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.689  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.692  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.693  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.695  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.696  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+15:28:55.696  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.697  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.698  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.699  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.700  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.701  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.702  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.703  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.705  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.711  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.712  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.713  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.714  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.715  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+15:28:55.716  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.717  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.718  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.719  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.720  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.721  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.723  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.724  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.725  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.726  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.727  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.728  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.729  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:28:55.731  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+15:28:55.731  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.733  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.733  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.734  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.734  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.734  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.735  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.735  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.736  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.736  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.736  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.738  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.739  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:28:55.752  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+15:28:55.755  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.757  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.758  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.758  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.759  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.759  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.760  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.760  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.761  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.761  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.761  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.762  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:28:55.762  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+
+#Software: 数据中间件工具
+#ProcessID: 24356 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+15:29:35.287  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+15:29:35.287  1 N - NewLife组件核心库 ©2002-2022 NewLife
+15:29:35.288  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+15:29:35.288  1 N - 数据中间件工具 ©2002-2022 NewLife
+15:29:35.288  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:29:35.301  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+15:29:35.301  1 N - NewLife数据中间件 ©2002-2022 NewLife
+15:29:35.301  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+15:29:35.343  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+15:29:35.350  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.360  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.373  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.374  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.375  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.377  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.378  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.379  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.380  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.382  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.383  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.384  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.385  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.386  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.387  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.388  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.389  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.390  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.391  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.393  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.394  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.397  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.397  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.399  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.399  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.400  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.402  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+15:29:35.403  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.404  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.406  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.409  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.410  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.414  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.415  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.416  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.417  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.418  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.419  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.420  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.421  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.422  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+15:29:35.423  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.424  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.425  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.426  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.429  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.430  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.431  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.432  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.433  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.434  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.435  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.436  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.437  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:29:35.438  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+15:29:35.439  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.440  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.441  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.441  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.442  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.442  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.444  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.444  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.445  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.445  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.445  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.446  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.446  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:29:35.462  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+15:29:35.463  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.465  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.466  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.466  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.466  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.467  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.467  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.468  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.468  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.468  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.469  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.469  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:29:35.470  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+
+#Software: 数据中间件工具
+#ProcessID: 3420 x64
+#AppDomain: xcodetool
+#FileName: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#BaseDirectory: D:\Code\HQSDemo\Zero.Data\Projects\
+#BasePath: D:\Code\HQSDemo\Zero.Data\Projects
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Zero.Data\Projects\xcodetool.exe
+#ApplicationType: Console
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=False, LatencyMode=Interactive
+#ThreadPool: Min=16/16, Max=32767/1000, Available=32764/1000
+#Date: 2023-03-16
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+15:47:55.826  1 N - NewLife.Core v10.0.2022.1001 Build 2023-10-01 .NETCoreApp,Version=v6.0
+15:47:55.827  1 N - NewLife组件核心库 ©2002-2022 NewLife
+15:47:55.827  1 N - xcodetool v11.3.2022.1013 Build 2022-10-13 15:30:00 .NETCoreApp,Version=v6.0
+15:47:55.827  1 N - 数据中间件工具 ©2002-2022 NewLife
+15:47:55.827  1 N - 导入模型：D:\Code\HQSDemo\Zero.Data\Projects\Model.xml
+15:47:55.840  1 N - XCode v11.3.2022.1013 Build 2022-10-13 15:28:18 .NETStandard,Version=v2.1
+15:47:55.840  1 N - NewLife数据中间件 ©2002-2022 NewLife
+15:47:55.840  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+15:47:55.882  1 N - 生成实体类 D:\Code\HQSDemo\Zero.Data\Projects
+15:47:55.889  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.898  1 N - 生成 Team 团队 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.913  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.914  1 N - 生成 Member 成员 {"BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.915  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.916  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.916  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.918  1 N - 生成 Product 产品 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.919  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.922  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.923  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.925  1 N - 生成 Story 故事 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.926  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.927  1 N - 生成 User 用户 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.928  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.929  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.930  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.931  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.931  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.933  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.939  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.941  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.941  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.942  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.943  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.945  1 N - 生成 Picture 图片 {"BaseClass":"Entity","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.947  1 N - 生成简易模型类 D:\Code\HQSDemo\Zero.Data\Models\
+15:47:55.947  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.948  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Dto","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.950  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.951  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.953  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.954  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.955  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.956  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.957  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.958  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.959  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.960  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.961  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Model","BaseClass":"I{name}","ModelNameForCopy":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.964  1 N - 生成简易接口 D:\Code\HQSDemo\Zero.Data\Interfaces\
+15:47:55.965  1 N - 生成 Team 团队 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.966  1 N - 生成 Member 成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.967  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.968  1 N - 生成 Product 产品 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.969  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.969  1 N - 生成 Story 故事 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.970  1 N - 生成 User 用户 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.971  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.971  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.972  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.972  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.973  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.974  1 N - 生成 Picture 图片 {"ClassNameTemplate":"I{name}","Namespace":"Zero.Data.Projects"}
+15:47:55.975  1 N - 生成数据字典 D:\Code\HQSDemo\Zero.Data\Projects\Zero.htm
+15:47:55.975  1 N - 生成 Team 团队 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.977  1 N - 生成 Member 成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.977  1 N - 生成 TeamMember 团队成员 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.977  1 N - 生成 Product 产品 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.978  1 N - 生成 VersionPlan 版本计划 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.978  1 N - 生成 Story 故事 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.979  1 N - 生成 User 用户 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.979  1 N - 生成 UserDisease 用户疾病 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.979  1 N - 生成 Disease 疾病类型 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.980  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.980  1 N - 生成 Effect 评价种类 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.980  1 N - 生成 Infection 新冠感染状态 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.981  1 N - 生成 Picture 图片 {"BaseClass":"Entity","Namespace":"Zero.Data.Projects"}
+15:47:55.995  1 N - 生成控制器 D:\Code\HQSDemo\Zero.Web\Areas\Projects\Controllers
+15:47:55.995  1 N - 生成 Team 团队 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:55.996  1 N - 生成 Member 成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:55.996  1 N - 生成 TeamMember 团队成员 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.000  1 N - 生成 Product 产品 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.001  1 N - 生成 VersionPlan 版本计划 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.001  1 N - 生成 Story 故事 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.001  1 N - 生成 User 用户 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.002  1 N - 生成 UserDisease 用户疾病 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.002  1 N - 生成 Disease 疾病类型 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.002  1 N - 生成 DailyOrSum 打卡记录与用户疗程 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.003  1 N - 生成 Effect 评价种类 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.003  1 N - 生成 Infection 新冠感染状态 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}
+15:47:56.004  1 N - 生成 Picture 图片 {"ClassNameTemplate":"{name}Controller","BaseClass":"EntityController","Namespace":"Zero.Data.Projects"}

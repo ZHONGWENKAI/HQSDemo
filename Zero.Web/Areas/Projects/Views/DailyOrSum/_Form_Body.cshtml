@@ -1,0 +1,219 @@
+﻿@using NewLife;
+@using NewLife.Cube.ViewModels
+@using XCode;
+@using XCode.Configuration;
+@using Zero.Data.Projects
+@{
+    var entity = Model as IEntity;
+    var fields = ViewBag.Fields as FieldCollection;
+    var groupFields = fields.GroupByCategory(entity);
+}
+
+         
+   
+@if (groupFields.Count > 1)
+{
+    var i = 0;
+    var j = 0;
+    <ul class="nav nav-tabs" role="tablist">
+        @foreach (var item in groupFields)
+        {
+            <li class="@(i==0?"active":"")"><a href="@("#item"+i)" data-toggle="tab">@item.Key</a></li>
+            i++;
+        }
+    </ul>
+    <div class="tab-content">
+        @foreach (var group in groupFields)
+        {
+            <div class="tab-pane fade in @(j==0?"active":"")" id="@("item"+j)">
+                <div class="row">
+                    @foreach (var item in group.Value)
+                    {
+                        if ((!item.PrimaryKey || item.Field != null && !item.Field.IsIdentity) && (item.DataVisible == null || item.DataVisible(entity)))
+                        {
+                            if (item is FormField formField && !formField.GroupView.IsNullOrEmpty())
+                                @await Html.PartialAsync(formField.GroupView, new ValueTuple<IEntity, DataField>(entity, item)) 
+                            else
+                                @await Html.PartialAsync("_Form_Group", new ValueTuple<IEntity, DataField>(entity, item))
+                        }
+                    }
+                </div>
+            </div>
+            j++;
+        }
+    </div>
+}
+else
+{
+    
+        // 表单页显示非主键或非自增字段
+    foreach (var item in fields)
+    {        
+        if ((!item.PrimaryKey || item.Field != null && !item.Field.IsIdentity) && (item.DataVisible == null || item.DataVisible(entity))&&item.Name !="Recording")
+        {
+            
+            if (item is FormField formField && !formField.GroupView.IsNullOrEmpty())
+                @await Html.PartialAsync(formField.GroupView, new ValueTuple<IEntity, DataField>(entity, item))  
+            else
+                @await Html.PartialAsync("_Form_Group", new ValueTuple<IEntity, DataField>(entity, item))
+        }
+            
+    }
+           
+}
+ @*<div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-2 col-sm-2">头像</label>
+    <div class="input-group col-xs-12 col-sm-6">
+        <input class="form-control" id="Avatar" name="Avatar" type="file" value="" /></div>*@
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">录音</label>
+        <div class="form-group col-xs-9 col-sm-9" id="addAudio">
+            <audio controls>
+                   <source id="RecordingAudio" src="@entity.GetValue("Recording")" >
+            </audio>     
+        </div>      
+         <div>
+        <input id="Recording" name="Recording" type="hidden" value="@entity.GetValue("Recording")"/></div>
+        <label class="control-label col-xs-3 col-sm-3"></label>
+        <div  class="form-group col-xs-9 col-sm-9">
+            <input id="Recordingpath" type="file" accept="audio/*"/> </div>  
+        </div>  
+
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">图片</label>
+        <div class="form-group col-xs-9 col-sm-9" id="addPicture">
+            @foreach(var picture in Picture.FindAllByDailyOrSumID(entity.GetValue("ID").ToInt()))
+           {    
+                <img class="picture"  src="@picture.Content" title="双击删除" width="200" height="150"/>                                             
+           }     
+       </div>  
+            <label class="control-label col-xs-3 col-sm-3"></label>
+            <div  class="form-group col-xs-9 col-sm-9">
+            <input id="Picturepath" type="file" accept="image/*" value="点击添加图片"/> </div>  
+            <label class="control-label col-xs-3 col-sm-3"></label>
+            <div  class="form-group col-xs-9 col-sm-9">
+            <label id="pictureBtn" value="" >上传图片</label></div>  
+        </div>
+
+        
+        <input id=DailyOeSum value=@entity.GetValue("ID") type="hidden" reason="//获取DailyOrSumId"/>
+        
+
+
+@*    <script>
+
+          //获取的图片的blos 
+        $(document).ready(function(){
+            $("#Avatarpath").change(function(){
+            var url = null;  
+            var fileObj = document.getElementById("Avatarpath").files[0];
+          
+            if (window.webkitURL != undefined) {  
+                url = window.webkitURL.createObjectURL(fileObj);  
+                
+            }else if (window.URL != undefined) {  
+                url = window.URL.createObjectURL(fileObj);  
+            }
+                
+            $("#Avatarimg").attr("src",url);
+            $('#Avatarimg').attr("style","display:inline");
+              
+            $('#Avatar').attr("value",url); 
+            alert(url);
+  });
+});
+
+    </script>*@
+
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+
+
+      <script>
+    //更换音频
+        $("#Recordingpath").change(function () {
+            console.log($("#Recordingpath"))
+            var file = $("#Recordingpath").get(0).files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                // 图片格式为 base64
+                //console.log(e)
+               @* $("#image_show").attr("src", e.target.result);*@
+               $("#Recording").attr("value",e.target.result)
+               $("audio").remove()
+               $("#addAudio").append("<audio controls> <source id='RecordingAudio' src=''> </audio>")   
+               $("#RecordingAudio").attr("src",e.target.result)
+        }
+    })
+
+       
+
+    </script>
+
+
+   
+    <script>
+//添加图片
+    $(document).ready(function(){
+        $(".picture").dblclick(function(){
+        this.remove();
+        alert("这个图片被双击删除了。");      
+    });
+
+
+ 
+    $("#Picturepath").change(function () {
+            console.log($("#Picturepath"))
+            var file = $("#Picturepath").get(0).files[0];
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                // 图片格式为 base64
+                //console.log(e)
+               $("#addPicture").append("<img  class='picture' src='' value='hhh' title='双击删除' width='200' height='150'/> ")   
+                $(document).ready(function(){
+                    var lastIndex =$("#addPicture").children(':last-child')
+                    lastIndex.attr("src", e.target.result)
+                    lastIndex.dblclick(function(){
+                        this.remove();
+                        alert("这个图片被双击删除了。");      
+                    });
+               });
+            }
+        })    
+    });
+    </script>
+
+   //将图片数据发送给后台
+    <script>
+     $(document).ready(function(){
+        $("#pictureBtn").click(function(){
+            var fileList = $("#addPicture").children();
+            var pictureData = [];
+            var id = $("#DailyOeSum").val();
+                 for(var i = 0;i<fileList.length;i++)
+                {     
+                    //获取的都是undefind
+                    pictureData[i] = fileList[i].src;
+                    
+                }   
+                @*alert(pictureData);*@
+
+                $(document).ready(function(){
+
+                    $.post("../insertPictureList",{
+			        pictureData:pictureData,
+                    dailyOrSumID:id,
+		            },
+		                function(data,status){
+			        alert("返回码"+status+":"+ data);
+		        });
+        });
+    });
+     
+});
+    </script>        
+

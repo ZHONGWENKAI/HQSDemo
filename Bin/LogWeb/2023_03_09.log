@@ -1,0 +1,906 @@
+﻿#Software: Web管理平台
+#ProcessID: 5676 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 08:45:45.0620000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:02:15.084  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:02:15.084  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:02:15.085  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:02:14 .NETCoreApp,Version=v6.0
+18:02:15.085  1 N - Web管理平台 ©2002-2023 NewLife
+18:02:15.085  1 N - 正在初始化星尘……
+18:02:15.165  1 N - 星尘探测：http://192.168.1.120:6600
+18:02:15.166  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@5676
+18:02:15.170  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:02:15.195  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:02:15.195  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:02:15.196  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:02:15.327  8 Y - 接入星尘服务端：
+18:02:15.331  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:02:15.591  1 N - ================================ Start 配置魔方 ================================
+18:02:15.592  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:02:15.592  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:02:15.899  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:02:15.900  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.32467, Culture=neutral, PublicKeyToken=null
+18:02:15.928  1 N - [Membership]待检查数据表：AppModule
+18:02:15.939  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:02:15.958  1 N - [Membership] select * from sqlite_master
+18:02:15.960  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:02:16.028  1 N - [Membership] Select * From AppModule
+18:02:16.035  1 N - ================================ End   配置魔方 ================================
+18:02:16.101  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:02:16.115  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:02:16.116  1 N - [Zero] select * from sqlite_master
+18:02:16.117  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:02:16.124  1 N - ================================ Start 初始化魔方 ================================
+18:02:16.125  1 N - [Membership] select * from sqlite_master
+18:02:16.131  1 N - 初始化ManageProvider
+18:02:16.132  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:02:16.134  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:02:16.134  1 N - [Membership] select * from sqlite_master
+18:02:16.143  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 0
+18:02:16.145  1 N - [Membership] Select Count(*) From User
+18:02:16.149  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 0
+18:02:16.150  1 N - [Membership] Select Count(*) From Role
+18:02:16.151  1 N - [Membership] Select * From Role
+18:02:16.162  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 0
+18:02:16.162  1 N - [Membership] Select Count(*) From Department
+18:02:16.164  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:02:16.166  1 N - [Membership]待检查数据表：UserOnline,Log
+18:02:16.166  1 N - [Membership] select * from sqlite_master
+18:02:16.169  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:02:16.172  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:02:16.172  1 N - [Membership] select * from sqlite_master
+18:02:16.177  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 0
+18:02:16.177  1 N - [Membership] Select Count(*) From OAuthConfig
+18:02:16.184  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:02:16.185  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:02:16.186  1 N - 注册魔方区域路由
+18:02:16.194  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:02:16.210  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:02:16.211 13 Y P start------初始化[Projects]的菜单体系------start
+18:02:16.212 13 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 0
+18:02:16.214 13 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:02:16.216 13 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:02:16.236 13 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:02:16.248  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:02:16.269 13 Y P end---------初始化[Projects]的菜单体系---------end
+18:02:16.318  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:02:16.319  6 Y P start------初始化[Nodes]的菜单体系------start
+18:02:16.330 12 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:02:16.337  6 Y P end---------初始化[Nodes]的菜单体系---------end
+18:02:16.464  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:02:16.465 13 Y P start------初始化[Admin]的菜单体系------start
+18:02:16.494 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:02:16.499 13 Y P end---------初始化[Admin]的菜单体系---------end
+18:02:16.499  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:02:16.499 13 Y P start------初始化[Cube]的菜单体系------start
+18:02:16.513  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:02:16.518 13 Y P end---------初始化[Cube]的菜单体系---------end
+18:02:16.518  1 N - ================================ End   初始化魔方 ================================
+18:02:16.519 13 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:02:16.525 13 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@5676","MinVersion":null,"Tag":null}
+18:02:16.541  7 Y - StarWeb: 
+18:02:16.613  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@5676","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.32467","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:02:16.625  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@5676","Version":"1.0.8468.32467","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:02:16","UpdateTime":"2023-03-09 18:02:16"}
+18:02:17.550 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 0
+18:02:17.560  6 W T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@5676","MinVersion":null,"Tag":null}
+18:02:17.568  8 Y - Zero.WebApi服务信息：[]
+18:02:17.573  8 Y - Zero.WebApi服务地址：
+18:02:18.348  9 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:02:20.199 12 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@5676
+18:02:25.929 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:02:25.929 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:02:25.929 10 N T 对象缓存<UserStat>(0)       总次数          3	[NewLife.Cube.Entity.UserStat]
+18:02:25.930 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:02:25.930 10 N T 对象缓存<UserOnline>(0)     总次数          6，命中          5（83.33%）	[NewLife.Cube.Entity.UserOnline]
+18:02:25.930 10 N T 实体缓存<Menu>(42)          总次数        159，命中        158（99.37%）	[XCode.Membership.Menu]
+18:02:25.930 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+
+#Software: Web管理平台
+#ProcessID: 21868 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 08:47:05.5150000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:03:35.532  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:03:35.532  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:03:35.533  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:03:34 .NETCoreApp,Version=v6.0
+18:03:35.533  1 N - Web管理平台 ©2002-2023 NewLife
+18:03:35.533  1 N - 正在初始化星尘……
+18:03:35.613  1 N - 星尘探测：http://192.168.1.120:6600
+18:03:35.614  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@21868
+18:03:35.619  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:03:35.642  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:03:35.642  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:03:35.642  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:03:35.775  8 Y - 接入星尘服务端：
+18:03:35.779  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:03:35.927  1 N - ================================ Start 配置魔方 ================================
+18:03:35.928  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:03:35.928  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:03:36.208  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:03:36.209  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.32507, Culture=neutral, PublicKeyToken=null
+18:03:36.237  1 N - [Membership]待检查数据表：AppModule
+18:03:36.247  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:03:36.266  1 N - [Membership] select * from sqlite_master
+18:03:36.269  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:03:36.338  1 N - [Membership] Select * From AppModule
+18:03:36.345  1 N - ================================ End   配置魔方 ================================
+18:03:36.410  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:03:36.426  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:03:36.426  1 N - [Zero] select * from sqlite_master
+18:03:36.427  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:03:36.434  1 N - ================================ Start 初始化魔方 ================================
+18:03:36.435  1 N - [Membership] select * from sqlite_master
+18:03:36.441  1 N - 初始化ManageProvider
+18:03:36.442  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:03:36.445  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:03:36.445  1 N - [Membership] select * from sqlite_master
+18:03:36.454  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+18:03:36.456  1 N - [Membership] Select Count(*) From User
+18:03:36.460  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+18:03:36.462  1 N - [Membership] Select Count(*) From Role
+18:03:36.464  1 N - [Membership] Select * From Role
+18:03:36.474  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+18:03:36.474  1 N - [Membership] Select Count(*) From Department
+18:03:36.477  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:03:36.478  1 N - [Membership]待检查数据表：UserOnline,Log
+18:03:36.478  1 N - [Membership] select * from sqlite_master
+18:03:36.482  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:03:36.484  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:03:36.484  1 N - [Membership] select * from sqlite_master
+18:03:36.489  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+18:03:36.489  1 N - [Membership] Select Count(*) From OAuthConfig
+18:03:36.496  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:03:36.496  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:03:36.498  1 N - 注册魔方区域路由
+18:03:36.506  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:03:36.531  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:03:36.532  6 Y P start------初始化[Projects]的菜单体系------start
+18:03:36.532  6 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 42
+18:03:36.534  6 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:03:36.536  6 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:03:36.577  6 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:03:36.655 16 Y P 新增了菜单，需要检查权限
+18:03:36.673 16 Y P 没有任何角色拥有菜单[DailyOrSum]的权限
+18:03:36.673 16 Y P 没有任何角色拥有菜单[Disease]的权限
+18:03:36.673 16 Y P 没有任何角色拥有菜单[Effect]的权限
+18:03:36.674 16 Y P 没有任何角色拥有菜单[Infection]的权限
+18:03:36.674 16 Y P 没有任何角色拥有菜单[User]的权限
+18:03:36.674 16 Y P 没有任何角色拥有菜单[UserDisease]的权限
+18:03:36.676 16 Y P 共有6个菜单，没有任何角色拥有权限，准备授权第一系统角色[管理员]拥有其完全管理权！
+18:03:36.682 16 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:03:36.687  6 Y P end---------初始化[Projects]的菜单体系---------end
+18:03:36.722  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:03:36.723 20 Y P start------初始化[Nodes]的菜单体系------start
+18:03:36.732 13 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:03:36.737 20 Y P end---------初始化[Nodes]的菜单体系---------end
+18:03:36.859  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:03:36.859 20 Y P start------初始化[Admin]的菜单体系------start
+18:03:36.884 23 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:03:36.890 20 Y P end---------初始化[Admin]的菜单体系---------end
+18:03:36.890  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:03:36.890 21 Y P start------初始化[Cube]的菜单体系------start
+18:03:36.903 13 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:03:36.909 21 Y P end---------初始化[Cube]的菜单体系---------end
+18:03:36.909  1 N - ================================ End   初始化魔方 ================================
+18:03:36.910 21 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:03:36.916 21 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@21868","MinVersion":null,"Tag":null}
+18:03:36.931  7 Y - StarWeb: 
+18:03:37.006  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@21868","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.32507","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:03:37.019  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@21868","Version":"1.0.8468.32507","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:03:36","UpdateTime":"2023-03-09 18:03:36"}
+18:03:37.999 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+18:03:38.009  9 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@21868","MinVersion":null,"Tag":null}
+18:03:38.017  7 Y - Zero.WebApi服务信息：[]
+18:03:38.020  7 Y - Zero.WebApi服务地址：
+18:03:38.820  6 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:03:40.656  9 W T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@21868
+18:03:41.254 12 W P Team.Count 快速计算表记录数（非精确）[Team/Zero] 参考值 0
+18:03:41.254 12 W P [Zero] Select Count(*) From Team
+18:03:41.257 12 W P [Zero] Select Count(*) From Team
+18:03:42.698 23 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 -2
+18:03:42.698 23 W P [Zero] Select * From DailyOrSum Order By ID Desc limit 1
+18:03:42.701 23 W P [Zero] Select Count(*) From DailyOrSum
+18:03:42.702 23 W P [Zero] Select Count(*) From DailyOrSum
+18:03:43.867 13 W P Member.Count 快速计算表记录数（非精确）[Member/Zero] 参考值 0
+18:03:43.867 13 W P [Zero] Select Count(*) From Member
+18:03:43.869 13 W P [Zero] Select Count(*) From Member
+18:03:43.876 13 W P [Zero] Select * From Team
+18:03:43.884  6 Y P [Zero] Select Count(ID) as group_count,Kind From Member Where CreateTime>'2023-02-07 00:00:00' Group By Kind Order By group_count desc limit 50
+18:03:45.002 12 W P [Zero] Select Count(*) From DailyOrSum
+18:03:46.221 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:03:46.221 10 N T 对象缓存<UserStat>(0)       总次数          3	[NewLife.Cube.Entity.UserStat]
+18:03:46.222 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:03:46.222 10 N T 实体缓存<Menu>(48)          总次数        206，命中        193（93.69%）	[XCode.Membership.Menu]
+18:03:46.222 10 N T 对象缓存<UserOnline>(1)     总次数         10，命中          8（80.00%）	[NewLife.Cube.Entity.UserOnline]
+18:03:46.222 10 N T 实体缓存<Team>(0)           总次数          1	[Zero.Data.Projects.Team]
+18:03:46.223 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:03:46.223 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:03:46.223 10 N T 统计字段<Member>(0)         总次数          1	[Zero.Data.Projects.Member]
+18:05:19.736  6 Y P [Zero] Select Count(*) From Member
+18:05:19.736  9 W P [Zero] Select Count(*) From Member
+18:05:19.739  9 W P [Zero] Select * From Team
+18:05:19.741 16 Y P [Zero] Select Count(ID) as group_count,Kind From Member Where CreateTime>'2023-02-07 00:00:00' Group By Kind Order By group_count desc limit 50
+18:05:20.392 20 W P Product.Count 快速计算表记录数（非精确）[Product/Zero] 参考值 0
+18:05:20.393 20 W P [Zero] Select Count(*) From Product
+18:05:20.395 20 W P [Zero] Select Count(*) From Product
+18:05:20.404  6 Y P [Zero] Select Count(ID) as group_count,Kind From Product Where CreateTime>'2023-02-07 00:00:00' Group By Kind Order By group_count desc limit 50
+18:05:20.992 13 W P VersionPlan.Count 快速计算表记录数（非精确）[VersionPlan/Zero] 参考值 0
+18:05:20.993 13 W P [Zero] Select Count(*) From VersionPlan
+18:05:20.995 13 W P [Zero] Select Count(*) From VersionPlan
+18:05:33.420  9 W P User.Count 快速计算表记录数（非精确）[User/Zero] 参考值 -2
+18:05:33.420  9 W P [Zero] Select * From User Order By ID Desc limit 1
+18:05:33.422  9 W P [Zero] Select Count(*) From User
+18:05:33.424  9 W P [Zero] Select Count(*) From User
+18:05:34.056 34 W P UserDisease.Count 快速计算表记录数（非精确）[UserDisease/Zero] 参考值 -2
+18:05:34.056 34 W P [Zero] Select * From UserDisease Order By ID Desc limit 1
+18:05:34.058 34 W P [Zero] Select Count(*) From UserDisease
+18:05:34.060 34 W P [Zero] Select Count(*) From UserDisease
+18:05:43.098 12 W P Disease.Count 快速计算表记录数（非精确）[Disease/Zero] 参考值 -2
+18:05:43.098 12 W P [Zero] Select * From Disease Order By ID Desc limit 1
+18:05:43.100 12 W P [Zero] Select Count(*) From Disease
+18:05:43.102 12 W P [Zero] Select Count(*) From Disease
+18:06:01.898  9 W P [Zero] Insert Into Disease(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('心脑血管','管理员',1,'::1','2023-03-09 18:05:48','管理员',1,'::1','2023-03-09 18:06:01',null);Select last_insert_rowid() newid
+18:06:01.906 12 W P [Zero] Select Count(*) From Disease
+18:06:01.908 12 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:06:12.333 34 W P [Zero] Insert Into Disease(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('糖尿病','管理员',1,'::1','2023-03-09 18:06:03','管理员',1,'::1','2023-03-09 18:06:12',null);Select last_insert_rowid() newid
+18:06:12.346  6 W P [Zero] Select Count(*) From Disease
+18:06:12.348  6 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:06:32.342  6 W P [Zero] Insert Into Disease(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('乙型肝病','管理员',1,'::1','2023-03-09 18:06:13','管理员',1,'::1','2023-03-09 18:06:32',null);Select last_insert_rowid() newid
+18:06:32.347 12 W P [Zero] Select Count(*) From Disease
+18:06:32.349 12 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:06:44.253 12 W P [Zero] Insert Into Disease(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('高胆固醇','管理员',1,'::1','2023-03-09 18:06:33','管理员',1,'::1','2023-03-09 18:06:43',null);Select last_insert_rowid() newid
+18:06:44.259 12 W P [Zero] Select Count(*) From Disease
+18:06:44.259  6 Y P [Zero] Select Count(*) From Disease
+18:06:44.265 12 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:06:57.708 36 W P [Zero] Insert Into Disease(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('二型糖尿病','管理员',1,'::1','2023-03-09 18:06:44','管理员',1,'::1','2023-03-09 18:06:57',null);Select last_insert_rowid() newid
+18:06:57.714  6 W P [Zero] Select Count(*) From Disease
+18:06:57.715  6 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:07:10.494  9 W P [Zero] Select Count(*) From Disease
+18:07:10.496  9 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:07:12.737  9 W P [Zero] Select Count(*) From Disease
+18:07:12.739  9 W P [Zero] Select * From Disease Order By ID limit 20
+18:07:22.085 41 W P Effect.Count 快速计算表记录数（非精确）[Effect/Zero] 参考值 -2
+18:07:22.086 41 W P [Zero] Select * From Effect Order By ID Desc limit 1
+18:07:22.087 41 W P [Zero] Select Count(*) From Effect
+18:07:22.089 41 W P [Zero] Select Count(*) From Effect
+18:08:09.480 41 W P [Zero] Insert Into Effect(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('效果一般','管理员',1,'::1','2023-03-09 18:08:00','管理员',1,'::1','2023-03-09 18:08:09',null);Select last_insert_rowid() newid
+18:08:09.485  6 W P [Zero] Select Count(*) From Effect
+18:08:09.487  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:08:22.560 20 W P [Zero] Insert Into Effect(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('效果显著','管理员',1,'::1','2023-03-09 18:08:10','管理员',1,'::1','2023-03-09 18:08:22',null);Select last_insert_rowid() newid
+18:08:22.564  6 W P [Zero] Select Count(*) From Effect
+18:08:22.564  9 Y P [Zero] Select Count(*) From Effect
+18:08:22.566  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:08:37.731  6 W P [Zero] Insert Into Effect(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('效果不明显','管理员',1,'::1','2023-03-09 18:08:23','管理员',1,'::1','2023-03-09 18:08:37',null);Select last_insert_rowid() newid
+18:08:37.737 12 W P [Zero] Select Count(*) From Effect
+18:08:37.739 12 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:08:38.840 40 W P Infection.Count 快速计算表记录数（非精确）[Infection/Zero] 参考值 -2
+18:08:38.841 40 W P [Zero] Select * From Infection Order By ID Desc limit 1
+18:08:38.842 40 W P [Zero] Select Count(*) From Infection
+18:08:38.844 40 W P [Zero] Select Count(*) From Infection
+18:09:30.456 13 W P [Zero] Insert Into Infection(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('未感染','管理员',1,'::1','2023-03-09 18:09:26','管理员',1,'::1','2023-03-09 18:09:30',null);Select last_insert_rowid() newid
+18:09:30.462  9 W P [Zero] Select Count(*) From Infection
+18:09:30.464  9 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:09:39.427  9 W Device [Zero] Insert Into Infection(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('无症状阳性','管理员',1,'::1','2023-03-09 18:09:31','管理员',1,'::1','2023-03-09 18:09:39',null);Select last_insert_rowid() newid
+18:09:39.432  6 W P [Zero] Select Count(*) From Infection
+18:09:39.433  9 Y Device [Zero] Select Count(*) From Infection
+18:09:39.436  6 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:09:49.643 35 W P [Zero] Insert Into Infection(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('已确诊','管理员',1,'::1','2023-03-09 18:09:43','管理员',1,'::1','2023-03-09 18:09:49',null);Select last_insert_rowid() newid
+18:09:49.648  6 W P [Zero] Select Count(*) From Infection
+18:09:49.650  6 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:10:15.472  6 W P [Zero] Insert Into Infection(Name,CreateUser,CreateUserID,CreateIP,CreateTime,UpdateUser,UpdateUserID,UpdateIP,UpdateTime,Remark) Values('已康复','管理员',1,'::1','2023-03-09 18:09:51','管理员',1,'::1','2023-03-09 18:10:14',null);Select last_insert_rowid() newid
+18:10:15.476  9 W P [Zero] Select Count(*) From Infection
+18:10:15.478  9 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:10:18.096 13 W P [Zero] Select Count(*) From Infection
+18:10:18.098 13 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:11:16.330 12 W P [Zero] Select Count(*) From DailyOrSum
+18:11:16.330  6 Y P [Zero] Select Count(*) From DailyOrSum
+18:11:17.217 13 W P [Zero] Select Count(*) From User
+18:11:17.217  6 Y P [Zero] Select Count(*) From User
+18:11:17.785  6 W P [Zero] Select Count(*) From UserDisease
+18:11:17.785  7 Y P [Zero] Select Count(*) From UserDisease
+18:11:18.728  9 W P [Zero] Select Count(*) From Disease
+18:11:18.728  7 Y P [Zero] Select Count(*) From Disease
+18:11:18.730  9 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:11:19.449  6 W P [Zero] Select Count(*) From Effect
+18:11:19.449  9 W P [Zero] Select Count(*) From Effect
+18:11:19.451  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:11:20.667  9 W P [Zero] Select Count(*) From Infection
+18:11:20.668  6 W P [Zero] Select Count(*) From Infection
+18:11:20.675  9 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:11:22.785  6 W P [Zero] Select Count(*) From Effect
+18:11:22.787  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:11:23.344 12 W P [Zero] Select Count(*) From Disease
+18:11:23.346 12 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:11:24.744 13 W P [Zero] Select Count(*) From Effect
+18:11:24.746 13 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:11:25.288  6 W P [Zero] Select Count(*) From Infection
+18:11:25.290  6 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:11:26.712 20 W P [Zero] Select Count(*) From UserDisease
+18:11:27.960  6 W P [Zero] Select Count(*) From User
+18:11:28.400 12 W P [Zero] Select Count(*) From DailyOrSum
+18:11:30.434  6 W P [Zero] Select Count(*) From User
+18:11:30.904  6 W P [Zero] Select Count(*) From UserDisease
+18:13:46.219 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:13:46.219 10 N T 对象缓存<UserStat>(1)       总次数         23，命中          9（39.13%）	[NewLife.Cube.Entity.UserStat]
+18:13:46.220 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:13:46.221 10 N T 实体缓存<Menu>(48)          总次数      1,177，命中      1,123（95.41%）	[XCode.Membership.Menu]
+18:13:46.221 10 N T 对象缓存<UserOnline>(0)     总次数         87，命中         62（71.26%）	[NewLife.Cube.Entity.UserOnline]
+18:13:46.221 10 N T 实体缓存<Team>(0)           总次数          4，命中          2（50.00%）	[Zero.Data.Projects.Team]
+18:13:46.222 10 N T 实体缓存<Role>(4)           总次数        132，命中         81（61.36%）	[XCode.Membership.Role]
+18:13:46.222 10 N T 实体缓存<User>(1)           总次数         72，命中         59（81.94%）	[XCode.Membership.User]
+18:13:46.222 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:13:46.223 10 N T 统计字段<Product>(0)        总次数          2，命中          1（50.00%）	[Zero.Data.Projects.Product]
+18:13:46.223 10 N T 统计字段<Member>(0)         总次数          2	[Zero.Data.Projects.Member]
+
+#Software: Web管理平台
+#ProcessID: 2376 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 08:58:35.3280000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:15:05.348  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:15:05.349  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:15:05.349  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:15:04 .NETCoreApp,Version=v6.0
+18:15:05.349  1 N - Web管理平台 ©2002-2023 NewLife
+18:15:05.349  1 N - 正在初始化星尘……
+18:15:05.430  1 N - 星尘探测：http://192.168.1.120:6600
+18:15:05.431  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@2376
+18:15:05.435  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:15:05.458  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:15:05.459  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:15:05.459  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:15:05.589  8 Y - 接入星尘服务端：
+18:15:05.593  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:15:05.732  1 N - ================================ Start 配置魔方 ================================
+18:15:05.733  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:15:05.734  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:15:06.036  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:15:06.036  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.32852, Culture=neutral, PublicKeyToken=null
+18:15:06.064  1 N - [Membership]待检查数据表：AppModule
+18:15:06.074  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:15:06.092  1 N - [Membership] select * from sqlite_master
+18:15:06.094  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:15:06.158  1 N - [Membership] Select * From AppModule
+18:15:06.164  1 N - ================================ End   配置魔方 ================================
+18:15:06.263  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:15:06.279  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:15:06.280  1 N - [Zero] select * from sqlite_master
+18:15:06.281  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:15:06.289  1 N - ================================ Start 初始化魔方 ================================
+18:15:06.289  1 N - [Membership] select * from sqlite_master
+18:15:06.296  1 N - 初始化ManageProvider
+18:15:06.297  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:15:06.300  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:15:06.300  1 N - [Membership] select * from sqlite_master
+18:15:06.310  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+18:15:06.312  1 N - [Membership] Select Count(*) From User
+18:15:06.316  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+18:15:06.316  1 N - [Membership] Select Count(*) From Role
+18:15:06.319  1 N - [Membership] Select * From Role
+18:15:06.329  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+18:15:06.330  1 N - [Membership] Select Count(*) From Department
+18:15:06.332  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:15:06.334  1 N - [Membership]待检查数据表：UserOnline,Log
+18:15:06.334  1 N - [Membership] select * from sqlite_master
+18:15:06.337  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:15:06.340  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:15:06.340  1 N - [Membership] select * from sqlite_master
+18:15:06.345  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+18:15:06.346  1 N - [Membership] Select Count(*) From OAuthConfig
+18:15:06.354  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:15:06.354  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:15:06.355  1 N - 注册魔方区域路由
+18:15:06.364  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:15:06.390  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:15:06.391 12 Y P start------初始化[Projects]的菜单体系------start
+18:15:06.392 12 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 42
+18:15:06.394 12 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:15:06.396 12 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:15:06.418 12 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:15:06.440 21 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:15:06.460 12 Y P end---------初始化[Projects]的菜单体系---------end
+18:15:06.500  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:15:06.500 12 Y P start------初始化[Nodes]的菜单体系------start
+18:15:06.509 13 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:15:06.514 12 Y P end---------初始化[Nodes]的菜单体系---------end
+18:15:06.642  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:15:06.643 13 Y P start------初始化[Admin]的菜单体系------start
+18:15:06.671 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:15:06.676 13 Y P end---------初始化[Admin]的菜单体系---------end
+18:15:06.676  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:15:06.677 13 Y P start------初始化[Cube]的菜单体系------start
+18:15:06.690 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:15:06.695 13 Y P end---------初始化[Cube]的菜单体系---------end
+18:15:06.696  1 N - ================================ End   初始化魔方 ================================
+18:15:06.697 20 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:15:06.703 20 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@2376","MinVersion":null,"Tag":null}
+18:15:06.717  7 Y - StarWeb: 
+18:15:06.791  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@2376","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.32852","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:15:06.802  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@2376","Version":"1.0.8468.32852","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:15:06","UpdateTime":"2023-03-09 18:15:06"}
+18:15:07.731 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+18:15:07.740 20 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@2376","MinVersion":null,"Tag":null}
+18:15:07.746  7 Y - Zero.WebApi服务信息：[]
+18:15:07.750  7 Y - Zero.WebApi服务地址：
+18:15:08.593  9 W T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:15:10.470  9 W T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@2376
+18:15:13.681 12 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 0
+18:15:13.682 12 W P [Zero] Select Count(*) From DailyOrSum
+18:15:13.685 12 W P [Zero] Select Count(*) From DailyOrSum
+18:15:15.002 16 W P User.Count 快速计算表记录数（非精确）[User/Zero] 参考值 0
+18:15:15.002 16 W P [Zero] Select Count(*) From User
+18:15:15.004 16 W P [Zero] Select Count(*) From User
+18:15:15.569  9 W P UserDisease.Count 快速计算表记录数（非精确）[UserDisease/Zero] 参考值 0
+18:15:15.570  9 W P [Zero] Select Count(*) From UserDisease
+18:15:15.572  9 W P [Zero] Select Count(*) From UserDisease
+18:15:16.061 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:15:16.061 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:15:16.061 10 N T 实体缓存<Menu>(48)          总次数        184，命中        183（99.46%）	[XCode.Membership.Menu]
+18:15:16.062 10 N T 对象缓存<UserOnline>(1)     总次数          9，命中          7（77.78%）	[NewLife.Cube.Entity.UserOnline]
+18:15:16.062 10 N T 对象缓存<UserStat>(0)       总次数          3	[NewLife.Cube.Entity.UserStat]
+18:15:16.062 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:15:16.063 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:15:44.217  9 W P Infection.Count 快速计算表记录数（非精确）[Infection/Zero] 参考值 4
+18:15:44.217  9 W P [Zero] Select Count(*) From Infection
+18:15:44.219  9 W P [Zero] Select Count(*) From Infection
+18:15:44.221  9 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:15:46.498  9 W P Effect.Count 快速计算表记录数（非精确）[Effect/Zero] 参考值 3
+18:15:46.498  9 W P [Zero] Select Count(*) From Effect
+18:15:46.500  9 W P [Zero] Select Count(*) From Effect
+18:15:46.502  9 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:15:48.139 12 W P [Zero] Select Count(*) From Effect
+18:15:48.141 12 W P [Zero] Select * From Effect Order By ID limit 20
+18:15:49.313  9 W P [Zero] Select Count(*) From Effect
+18:15:49.315  9 W P [Zero] Select * From Effect Order By ID limit 20
+18:15:49.972  6 W P [Zero] Select Count(*) From Effect
+18:15:49.974  6 W P [Zero] Select * From Effect Order By ID limit 20
+18:15:50.425  9 W P [Zero] Select Count(*) From Effect
+18:15:50.427  9 W P [Zero] Select * From Effect Order By ID limit 20
+18:15:50.848 13 W P [Zero] Select Count(*) From Effect
+18:15:50.850 13 W P [Zero] Select * From Effect Order By ID limit 20
+18:15:51.665  6 W P [Zero] Select Count(*) From Infection
+18:15:51.667  6 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:15:52.384 13 W P [Zero] Select Count(*) From Infection
+18:15:52.386 13 W P [Zero] Select * From Infection Order By ID limit 20
+18:15:52.849 13 W P [Zero] Select Count(*) From Infection
+18:15:52.850 13 W P [Zero] Select * From Infection Order By ID limit 20
+18:15:53.236  6 W P [Zero] Select Count(*) From Infection
+18:15:53.237  6 W P [Zero] Select * From Infection Order By ID limit 20
+18:15:53.842 12 W P [Zero] Select Count(*) From Effect
+18:15:53.844 12 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:15:54.208 12 W P Disease.Count 快速计算表记录数（非精确）[Disease/Zero] 参考值 5
+18:15:54.208 12 W P [Zero] Select Count(*) From Disease
+18:15:54.210 12 W P [Zero] Select Count(*) From Disease
+18:15:54.212 12 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:15:54.905 12 W P [Zero] Select Count(*) From Disease
+18:15:54.907 12 W P [Zero] Select * From Disease Order By ID limit 20
+18:15:55.410 20 W P [Zero] Select Count(*) From Disease
+18:15:55.412 20 W P [Zero] Select * From Disease Order By ID limit 20
+18:15:56.193  9 W P [Zero] Select Count(*) From UserDisease
+18:15:56.785  6 W P [Zero] Select Count(*) From UserDisease
+
+#Software: Web管理平台
+#ProcessID: 5280 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 09:06:30.2650000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:23:00.290  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:23:00.290  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:23:00.291  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:22:58 .NETCoreApp,Version=v6.0
+18:23:00.291  1 N - Web管理平台 ©2002-2023 NewLife
+18:23:00.291  1 N - 正在初始化星尘……
+18:23:00.373  1 N - 星尘探测：http://192.168.1.120:6600
+18:23:00.373  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@5280
+18:23:00.378  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:23:00.402  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:23:00.402  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:23:00.402  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:23:00.532  8 Y - 接入星尘服务端：
+18:23:00.536  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:23:00.728  1 N - ================================ Start 配置魔方 ================================
+18:23:00.729  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:23:00.730  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:23:01.007  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:23:01.008  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.33089, Culture=neutral, PublicKeyToken=null
+18:23:01.038  1 N - [Membership]待检查数据表：AppModule
+18:23:01.048  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:23:01.068  1 N - [Membership] select * from sqlite_master
+18:23:01.071  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:23:01.136  1 N - [Membership] Select * From AppModule
+18:23:01.142  1 N - ================================ End   配置魔方 ================================
+18:23:01.217  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:23:01.231  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:23:01.232  1 N - [Zero] select * from sqlite_master
+18:23:01.233  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:23:01.240  1 N - ================================ Start 初始化魔方 ================================
+18:23:01.241  1 N - [Membership] select * from sqlite_master
+18:23:01.247  1 N - 初始化ManageProvider
+18:23:01.248  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:23:01.251  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:23:01.251  1 N - [Membership] select * from sqlite_master
+18:23:01.260  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+18:23:01.262  1 N - [Membership] Select Count(*) From User
+18:23:01.267  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+18:23:01.267  1 N - [Membership] Select Count(*) From Role
+18:23:01.269  1 N - [Membership] Select * From Role
+18:23:01.280  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+18:23:01.281  1 N - [Membership] Select Count(*) From Department
+18:23:01.283  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:23:01.284  1 N - [Membership]待检查数据表：UserOnline,Log
+18:23:01.285  1 N - [Membership] select * from sqlite_master
+18:23:01.288  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:23:01.291  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:23:01.291  1 N - [Membership] select * from sqlite_master
+18:23:01.295  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+18:23:01.296  1 N - [Membership] Select Count(*) From OAuthConfig
+18:23:01.303  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:23:01.303  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:23:01.304  1 N - 注册魔方区域路由
+18:23:01.312  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:23:01.338  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:23:01.339 12 Y P start------初始化[Projects]的菜单体系------start
+18:23:01.339 12 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 48
+18:23:01.342 12 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:23:01.343 12 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:23:01.364 12 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:23:01.385  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:01.406 12 Y P end---------初始化[Projects]的菜单体系---------end
+18:23:01.441  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:23:01.442  6 Y P start------初始化[Nodes]的菜单体系------start
+18:23:01.451 12 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:01.456  6 Y P end---------初始化[Nodes]的菜单体系---------end
+18:23:01.577  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:23:01.577 12 Y P start------初始化[Admin]的菜单体系------start
+18:23:01.606 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:01.611 12 Y P end---------初始化[Admin]的菜单体系---------end
+18:23:01.611  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:23:01.611 12 Y P start------初始化[Cube]的菜单体系------start
+18:23:01.624  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:01.629 12 Y P end---------初始化[Cube]的菜单体系---------end
+18:23:01.630  1 N - ================================ End   初始化魔方 ================================
+18:23:01.630 12 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:23:01.636 12 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@5280","MinVersion":null,"Tag":null}
+18:23:01.648  7 Y - StarWeb: 
+18:23:01.726  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@5280","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.33089","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:23:01.739  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@5280","Version":"1.0.8468.33089","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:23:01","UpdateTime":"2023-03-09 18:23:01"}
+18:23:02.665 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+18:23:02.674  6 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@5280","MinVersion":null,"Tag":null}
+18:23:02.684  7 Y - Zero.WebApi服务信息：[]
+18:23:02.688  7 Y - Zero.WebApi服务地址：
+18:23:03.521 12 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:23:05.412  6 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@5280
+18:23:06.760  9 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 0
+18:23:06.760  9 W P [Zero] Select Count(*) From DailyOrSum
+18:23:06.763  9 W P [Zero] Select Count(*) From DailyOrSum
+18:23:07.723  9 W P User.Count 快速计算表记录数（非精确）[User/Zero] 参考值 0
+18:23:07.724  9 W P [Zero] Select Count(*) From User
+18:23:07.725  9 W P [Zero] Select Count(*) From User
+18:23:08.209 12 W P UserDisease.Count 快速计算表记录数（非精确）[UserDisease/Zero] 参考值 0
+18:23:08.209 12 W P [Zero] Select Count(*) From UserDisease
+18:23:08.211 12 W P [Zero] Select Count(*) From UserDisease
+18:23:08.672  6 W P Effect.Count 快速计算表记录数（非精确）[Effect/Zero] 参考值 3
+18:23:08.672  6 W P [Zero] Select Count(*) From Effect
+18:23:08.674  6 W P [Zero] Select Count(*) From Effect
+18:23:08.676  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:23:09.650  6 W P Disease.Count 快速计算表记录数（非精确）[Disease/Zero] 参考值 5
+18:23:09.650  6 W P [Zero] Select Count(*) From Disease
+18:23:09.652  6 W P [Zero] Select Count(*) From Disease
+18:23:09.654  6 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:23:11.031 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:23:11.031 10 N T 对象缓存<UserStat>(0)       总次数          3，命中          1（33.33%）	[NewLife.Cube.Entity.UserStat]
+18:23:11.031 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:23:11.032 10 N T 实体缓存<User>(1)           总次数          8，命中          7（87.50%）	[XCode.Membership.User]
+18:23:11.032 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:23:11.032 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:23:11.032 10 N T 实体缓存<Menu>(48)          总次数        190，命中        189（99.47%）	[XCode.Membership.Menu]
+18:23:11.033 10 N T 对象缓存<UserOnline>(1)     总次数         11，命中          9（81.82%）	[NewLife.Cube.Entity.UserOnline]
+18:23:11.330 16 W P [Zero] Select Count(*) From DailyOrSum
+
+#Software: Web管理平台
+#ProcessID: 13124 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 09:07:25.5780000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:23:55.560  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:23:55.560  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:23:55.561  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:23:54 .NETCoreApp,Version=v6.0
+18:23:55.561  1 N - Web管理平台 ©2002-2023 NewLife
+18:23:55.561  1 N - 正在初始化星尘……
+18:23:55.643  1 N - 星尘探测：http://192.168.1.120:6600
+18:23:55.643  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@13124
+18:23:55.647  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:23:55.729  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:23:55.729  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:23:55.730  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:23:55.857  6 Y P 接入星尘服务端：
+18:23:55.861  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:23:56.011  1 N - ================================ Start 配置魔方 ================================
+18:23:56.012  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:23:56.013  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:23:56.319  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:23:56.319  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.33117, Culture=neutral, PublicKeyToken=null
+18:23:56.353  1 N - [Membership]待检查数据表：AppModule
+18:23:56.366  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:23:56.385  1 N - [Membership] select * from sqlite_master
+18:23:56.387  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:23:56.450  1 N - [Membership] Select * From AppModule
+18:23:56.456  1 N - ================================ End   配置魔方 ================================
+18:23:56.521  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:23:56.535  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:23:56.535  1 N - [Zero] select * from sqlite_master
+18:23:56.536  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:23:56.543  1 N - ================================ Start 初始化魔方 ================================
+18:23:56.544  1 N - [Membership] select * from sqlite_master
+18:23:56.550  1 N - 初始化ManageProvider
+18:23:56.551  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:23:56.553  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:23:56.554  1 N - [Membership] select * from sqlite_master
+18:23:56.562  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+18:23:56.564  1 N - [Membership] Select Count(*) From User
+18:23:56.568  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+18:23:56.569  1 N - [Membership] Select Count(*) From Role
+18:23:56.571  1 N - [Membership] Select * From Role
+18:23:56.581  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+18:23:56.581  1 N - [Membership] Select Count(*) From Department
+18:23:56.584  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:23:56.585  1 N - [Membership]待检查数据表：UserOnline,Log
+18:23:56.585  1 N - [Membership] select * from sqlite_master
+18:23:56.588  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:23:56.591  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:23:56.591  1 N - [Membership] select * from sqlite_master
+18:23:56.596  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+18:23:56.596  1 N - [Membership] Select Count(*) From OAuthConfig
+18:23:56.603  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:23:56.603  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:23:56.605  1 N - 注册魔方区域路由
+18:23:56.612  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:23:56.637  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:23:56.639 13 Y P start------初始化[Projects]的菜单体系------start
+18:23:56.640 13 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 48
+18:23:56.643 13 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:23:56.645 13 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:23:56.665 13 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:23:56.688  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:56.709 13 Y P end---------初始化[Projects]的菜单体系---------end
+18:23:56.749  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:23:56.750 12 Y P start------初始化[Nodes]的菜单体系------start
+18:23:56.759  6 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:56.764 12 Y P end---------初始化[Nodes]的菜单体系---------end
+18:23:56.890  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:23:56.891 21 Y P start------初始化[Admin]的菜单体系------start
+18:23:56.952 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:56.958 21 Y P end---------初始化[Admin]的菜单体系---------end
+18:23:56.959  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:23:56.959 13 Y P start------初始化[Cube]的菜单体系------start
+18:23:56.977 21 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:23:56.983 13 Y P end---------初始化[Cube]的菜单体系---------end
+18:23:56.983  1 N - ================================ End   初始化魔方 ================================
+18:23:56.984 13 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:23:56.991 13 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@13124","MinVersion":null,"Tag":null}
+18:23:57.014  7 Y - StarWeb: 
+18:23:57.085  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@13124","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.33117","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:23:57.093  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@13124","Version":"1.0.8468.33117","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:23:56","UpdateTime":"2023-03-09 18:23:56"}
+18:23:58.021 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+18:23:58.035  6 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@13124","MinVersion":null,"Tag":null}
+18:23:58.043  7 Y - Zero.WebApi服务信息：[]
+18:23:58.049  7 Y - Zero.WebApi服务地址：
+18:23:58.796 12 Y T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:24:00.749  9 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@13124
+18:24:01.199  9 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 0
+18:24:01.199  9 W P [Zero] Select Count(*) From DailyOrSum
+18:24:01.202  9 W P [Zero] Select Count(*) From DailyOrSum
+18:24:02.074  9 W P User.Count 快速计算表记录数（非精确）[User/Zero] 参考值 0
+18:24:02.074  9 W P [Zero] Select Count(*) From User
+18:24:02.076  9 W P [Zero] Select Count(*) From User
+18:24:02.682 13 W P UserDisease.Count 快速计算表记录数（非精确）[UserDisease/Zero] 参考值 0
+18:24:02.682 13 W P [Zero] Select Count(*) From UserDisease
+18:24:02.684 13 W P [Zero] Select Count(*) From UserDisease
+18:24:03.426  6 W P Disease.Count 快速计算表记录数（非精确）[Disease/Zero] 参考值 5
+18:24:03.427  6 W P [Zero] Select Count(*) From Disease
+18:24:03.428  6 W P [Zero] Select Count(*) From Disease
+18:24:03.430  6 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:24:06.356 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:24:06.356 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:24:06.357 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:24:06.357 10 N T 对象缓存<UserStat>(0)       总次数          3	[NewLife.Cube.Entity.UserStat]
+18:24:06.357 10 N T 对象缓存<UserOnline>(1)     总次数         10，命中          8（80.00%）	[NewLife.Cube.Entity.UserOnline]
+18:24:06.357 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:24:06.358 10 N T 实体缓存<Menu>(48)          总次数        187，命中        186（99.47%）	[XCode.Membership.Menu]
+18:24:08.643  6 W P Effect.Count 快速计算表记录数（非精确）[Effect/Zero] 参考值 3
+18:24:08.644  6 W P [Zero] Select Count(*) From Effect
+18:24:08.645  6 W P [Zero] Select Count(*) From Effect
+18:24:08.647  6 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:24:10.169  9 W P Infection.Count 快速计算表记录数（非精确）[Infection/Zero] 参考值 4
+18:24:10.169  9 W P [Zero] Select Count(*) From Infection
+18:24:10.171  9 W P [Zero] Select Count(*) From Infection
+18:24:10.172  9 W P [Zero] Select * From Infection Order By ID Desc limit 20
+18:24:13.242 22 W P [Zero] Select Count(*) From Effect
+18:24:13.243 22 W P [Zero] Select * From Effect Order By ID Desc limit 20
+18:24:13.891  9 W P [Zero] Select Count(*) From Disease
+18:24:13.893  9 W P [Zero] Select * From Disease Order By ID Desc limit 20
+18:24:14.265  6 W P [Zero] Select Count(*) From UserDisease
+18:24:15.065  6 W P [Zero] Select Count(*) From User
+18:24:15.658 13 W P [Zero] Select Count(*) From DailyOrSum
+
+#Software: Web管理平台
+#ProcessID: 22692 x64
+#AppDomain: HQSDemo.Web
+#FileName: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.exe
+#BaseDirectory: D:\Code\HQSDemo\Bin\Web\
+#CurrentDirectory: D:\Code\HQSDemo\Zero.Web
+#TempPath: C:\Users\Administrator\AppData\Local\Temp\
+#CommandLine: D:\Code\HQSDemo\Bin\Web\HQSDemo.Web.dll
+#ApplicationType: Web
+#CLR: 6.0.5, .NET 6.0.5
+#OS: Microsoft Windows NT 10.0.19041.0, OYX/Administrator
+#CPU: 16
+#GC: IsServerGC=True, LatencyMode=Interactive
+#ThreadPool: Min=32/32, Max=32767/1000, Available=32764/1000
+#SystemStarted: 09:22:36.9530000
+#Date: 2023-03-09
+#详解：https://newlifex.com/core/log
+#字段: 时间 线程ID 线程池Y/网页W/普通N/定时T 线程名/任务ID 消息内容
+#Fields: Time ThreadID Kind Name Message
+18:39:06.967  1 N - NewLife.Core v10.1.2023.0203 Build 2023-02-03 .NET 6.0
+18:39:06.967  1 N - NewLife组件核心库 ©2002-2023 NewLife
+18:39:06.967  1 N - HQSDemo.Web v1.0.2023.0309 Build 2023-03-09 18:39:04 .NETCoreApp,Version=v6.0
+18:39:06.968  1 N - Web管理平台 ©2002-2023 NewLife
+18:39:06.968  1 N - 正在初始化星尘……
+18:39:07.049  1 N - 星尘探测：http://192.168.1.120:6600
+18:39:07.049  1 N - 星尘分布式服务 Server=http://192.168.1.120:6600 AppId=HQSDemo.Web ClientId=192.168.1.120@22692
+18:39:07.054  1 N - 初始化星尘监控中心，采样并定期上报应用性能埋点数据，包括Api接口、Http请求、数据库操作、Redis操作等。可用于监控系统健康状态，分析分布式系统的性能瓶颈。
+18:39:07.079  1 N - XCode v11.5.2023.0203 Build 2023-02-03 14:32:56 .NET Standard 2.1
+18:39:07.079  1 N - NewLife数据中间件 ©2002-2023 NewLife
+18:39:07.079  1 N - 当前配置为输出SQL日志，如果觉得日志过多，可以修改配置关闭[Config/XCode.config:ShowSQL=false]。
+18:39:07.210  8 Y - 接入星尘服务端：
+18:39:07.214  1 N - 初始化星尘配置中心，提供集中配置管理能力，自动从配置中心加载配置数据，包括XCode数据库连接。配置中心同时支持分配应用实例的唯一WorkerId，确保Snowflake算法能够生成绝对唯一的雪花Id
+18:39:07.357  1 N - ================================ Start 配置魔方 ================================
+18:39:07.358  1 N - NewLife.Cube v5.5.2023.0205 Build 2023-02-05 06:33:20 .NET 6.0
+18:39:07.359  1 N - 魔方快速开发平台 ©2002-2023 NewLife
+18:39:07.647  1 N - 注册区域视图程序集：NewLife.Cube, Version=5.5.8436.11800, Culture=neutral, PublicKeyToken=8343210f0b524456
+18:39:07.648  1 N - 注册区域视图程序集：HQSDemo.Web, Version=1.0.8468.33572, Culture=neutral, PublicKeyToken=null
+18:39:07.687  1 N - [Membership]待检查数据表：AppModule
+18:39:07.698  1 N - [System.Data.SQLite.SQLite]驱动 D:\Code\HQSDemo\Bin\Web\Plugins\System.Data.SQLite.dll 版本v1.0.116.0
+18:39:07.717  1 N - [Membership] select * from sqlite_master
+18:39:07.719  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Membership.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:39:07.781  1 N - [Membership] Select * From AppModule
+18:39:07.787  1 N - ================================ End   配置魔方 ================================
+18:39:07.851  1 N - 初始化数据库：Zero/SQLite 实体类：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:39:07.862  1 N - [Zero]待检查数据表：Node,Product,Team,TeamMember,User,DailyOrSum,Disease,Member,Story,Infection,VersionPlan,UserDisease,Effect
+18:39:07.863  1 N - [Zero] select * from sqlite_master
+18:39:07.863  1 N - Data Source=D:\Code\HQSDemo\Bin\Data\Zero.db;Cache Size=-524288;Synchronous=Off;Journal Mode=WAL
+18:39:07.871  1 N - ================================ Start 初始化魔方 ================================
+18:39:07.871  1 N - [Membership] select * from sqlite_master
+18:39:07.877  1 N - 初始化ManageProvider
+18:39:07.878  1 N - 初始化数据库：Membership/SQLite 实体类：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:39:07.880  1 N - [Membership]待检查数据表：UserToken,UserStat,UserConnect,User,Menu,Role,Department
+18:39:07.881  1 N - [Membership] select * from sqlite_master
+18:39:07.889  1 N - User.Count 快速计算表记录数（非精确）[User/Membership] 参考值 1
+18:39:07.891  1 N - [Membership] Select Count(*) From User
+18:39:07.895  1 N - Role.Count 快速计算表记录数（非精确）[Role/Membership] 参考值 4
+18:39:07.896  1 N - [Membership] Select Count(*) From Role
+18:39:07.898  1 N - [Membership] Select * From Role
+18:39:07.908  1 N - Department.Count 快速计算表记录数（非精确）[Department/Membership] 参考值 7
+18:39:07.908  1 N - [Membership] Select Count(*) From Department
+18:39:07.911  1 N - 初始化数据库：Log/SQLite 实体类：UserOnline,Log
+18:39:07.912  1 N - [Membership]待检查数据表：UserOnline,Log
+18:39:07.912  1 N - [Membership] select * from sqlite_master
+18:39:07.915  1 N - 初始化数据库：Cube/SQLite 实体类：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,App,ModelColumn,ModelTable,Attachment
+18:39:07.918  1 N - [Membership]待检查数据表：OAuthLog,OAuthConfig,PrincipalAgent,CronJob,AppModule,AppLog,OAuthApp,ModelColumn,ModelTable,Attachment
+18:39:07.918  1 N - [Membership] select * from sqlite_master
+18:39:07.923  1 N - OAuthConfig.Count 快速计算表记录数（非精确）[OAuthConfig/Cube] 参考值 9
+18:39:07.923  1 N - [Membership] Select Count(*) From OAuthConfig
+18:39:07.930  1 N - ContentRootPath=D:\Code\HQSDemo\Zero.Web\
+18:39:07.931  1 N - WebRootPath=D:\Code\HQSDemo\Bin\Web\wwwroot
+18:39:07.932  1 N - 注册魔方区域路由
+18:39:07.940  1 N - 注册实体模型绑定器：NewLife.Cube.EntityModelBinderProvider
+18:39:07.966  1 N - 开始注册权限管理区域[Projects]，控制器命名空间[Zero.Web.Areas.Projects.Controllers]
+18:39:07.966  6 Y P start------初始化[Projects]的菜单体系------start
+18:39:07.967  6 Y P Menu.Count 快速计算表记录数（非精确）[Menu/Membership] 参考值 48
+18:39:07.969  6 Y P ModelTable.Count 快速计算表记录数（非精确）[ModelTable/Cube] 参考值 0
+18:39:07.971  6 Y P ModelColumn.Count 快速计算表记录数（非精确）[ModelColumn/Cube] 参考值 0
+18:39:07.992  6 Y P 注册过滤器：NewLife.Cube.EntityAuthorizeAttribute
+18:39:08.013 12 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:39:08.033  6 Y P end---------初始化[Projects]的菜单体系---------end
+18:39:08.071  1 N - 开始注册权限管理区域[Nodes]，控制器命名空间[Zero.Web.Areas.Nodes.Controllers]
+18:39:08.071 12 Y P start------初始化[Nodes]的菜单体系------start
+18:39:08.080 21 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:39:08.085 12 Y P end---------初始化[Nodes]的菜单体系---------end
+18:39:08.206  1 N - 开始注册权限管理区域[Admin]，控制器命名空间[NewLife.Cube.Admin.Controllers]
+18:39:08.207 12 Y P start------初始化[Admin]的菜单体系------start
+18:39:08.234 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:39:08.239 12 Y P end---------初始化[Admin]的菜单体系---------end
+18:39:08.240  1 N - 开始注册权限管理区域[Cube]，控制器命名空间[NewLife.Cube.Cube.Controllers]
+18:39:08.240  6 Y P start------初始化[Cube]的菜单体系------start
+18:39:08.253 22 Y P 新增了菜单，需要检查权限。二次检查，双重保障
+18:39:08.258  6 Y P end---------初始化[Cube]的菜单体系---------end
+18:39:08.258  1 N - ================================ End   初始化魔方 ================================
+18:39:08.259  6 Y P 初始化星尘注册中心，提供服务注册与发布能力
+18:39:08.265  6 Y P 消费服务 {"ServiceName":"StarWeb","ClientId":"192.168.1.120@22692","MinVersion":null,"Tag":null}
+18:39:08.277  7 Y - StarWeb: 
+18:39:08.352  1 N - 注册服务 {"ServiceName":"Zero.Web","ClientId":"192.168.1.120@22692","IP":"192.168.1.120,172.24.208.1","Version":"1.0.8468.33572","Address":"https://localhost:6001,http://localhost:6000","Health":null,"Tag":"Development"}
+18:39:08.364  7 Y - 注册完成 {"ServiceName":"Zero.Web","DisplayName":null,"Client":"192.168.1.120@22692","Version":"1.0.8468.33572","Address":"https://localhost:6001,http://localhost:6000","Address2":null,"Scope":null,"Tag":"Development","Weight":0,"CreateTime":"2023-03-09 18:39:08","UpdateTime":"2023-03-09 18:39:08"}
+18:39:09.298 10 N T CronJob.Count 快速计算表记录数（非精确）[CronJob/Cube] 参考值 2
+18:39:09.307  6 Y T 消费服务 {"ServiceName":"Zero.WebApi","ClientId":"192.168.1.120@22692","MinVersion":null,"Tag":null}
+18:39:09.315  7 Y - Zero.WebApi服务信息：[]
+18:39:09.318  7 Y - Zero.WebApi服务地址：
+18:39:09.706 12 W T UserOnline.Count 快速计算表记录数（非精确）[UserOnline/Log] 参考值 1
+18:39:11.962  6 W P DailyOrSum.Count 快速计算表记录数（非精确）[DailyOrSum/Zero] 参考值 0
+18:39:11.962  6 W P [Zero] Select Count(*) From DailyOrSum
+18:39:11.965  6 W P [Zero] Select Count(*) From DailyOrSum
+18:39:12.095  9 Y T 星尘监控中心 Server=http://192.168.1.120:6600/ AppId=HQSDemo.Web ClientId=192.168.1.120@22692
+18:39:17.689 10 N T 对象缓存<UserOnline>(0)     总次数          7，命中          6（85.71%）	[NewLife.Cube.Entity.UserOnline]
+18:39:17.690 10 N T 实体缓存<Role>(4)           总次数          9，命中          8（88.89%）	[XCode.Membership.Role]
+18:39:17.690 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+18:39:17.690 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+18:39:17.691 10 N T 对象缓存<UserStat>(0)       总次数          3，命中          1（33.33%）	[NewLife.Cube.Entity.UserStat]
+18:39:17.691 10 N T 实体缓存<OAuthConfig>(9)    总次数          3，命中          2（66.67%）	[NewLife.Cube.Entity.OAuthConfig]
+18:39:17.691 10 N T 实体缓存<Menu>(48)          总次数        178，命中        177（99.44%）	[XCode.Membership.Menu]

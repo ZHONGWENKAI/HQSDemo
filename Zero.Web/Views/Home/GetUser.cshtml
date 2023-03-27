@@ -1,0 +1,112 @@
+﻿@model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var findUserDisease = UserDisease.FindAllByUserID;
+
+    var act = Context.Request.Path + "";
+}
+
+ <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+<a class="btn btn-success btn-sm" id=UserEdit href="EditUser/@Model.ID">编辑</a>
+
+<table id="addTable" class="table table-bordered table-hover table-striped table-condensed">
+    <tbody>
+            <tr><td width="60" height="65">
+                    @if (Model.Avatar ==null)
+                    {
+                        <img src="User/GetDefalutAvatar" width="60" height="60"/>
+                    }
+                    else
+                    {
+                        <img src="@Model.Avatar" width="60" height="60"/>
+                    }    
+                </td>
+                <td class="text-left">
+                    @Model.Name
+                </td>
+                @*<input type="text" name="test" disabled="disabled" style="background:#CCCCCC" value="@Model.Sex"/>*@
+            </tr>
+</tbody>
+</table>
+<table id="inputList" class="table table-bordered table-hover table-striped table-condensed">
+    <tbody>
+       <div id="inputList">
+            <tr><td width="60" height="65" class="text-left">性别</td><td class="text-center"><input class="text-center" style="width:100%;" type="text"  value="@Model.Sex" readonly></td><tr/>
+            <tr><td class="text-left">年龄</td><td class="text-center"><input class="text-center" style="width:100%;" type="text" " value="@Model.Age" readonly></td><tr/>         
+            <tr><td class="text-left">手机号</td><td class="text-center"><input class="text-center" style="width:100%;" type="text"  value="@Model.Phone" readonly></td><tr/>         
+            <tr><td class="text-left">身高（cm）</td><td class="text-center"><input class="text-center" style="width:100%;" type="text"  value="@Model.Height" readonly></td><tr/>         
+            <tr><td class="text-left">体重（kg）</td><td class="text-center"><input class="text-center" style="width:100%;" type="text"  value="@Model.Weight" readonly></td><tr/>         
+            <tr><td class="text-left" >慢性病类型</td>                 
+               
+                @{
+                    var diseaseContent = "";
+                }
+                @foreach (var disease in findUserDisease(Model.ID))
+                  {
+                        diseaseContent += @disease.DiseaseName + ",";
+                   }
+                <td>
+                   <input class="text-center" style="width:100%;" type="text" name="input1" value="@diseaseContent" readonly>
+               </td>
+            <tr/>         
+         </div>
+    </tbody>
+</table>
+
+  <div style="position: fixed;bottom:0; width:100%;">
+            <ul>
+            <li><a class="active" href="AddDaily?id=@Model.ID">打卡</a></li>
+            <li><a href="GetSearchUser?id=@Model.ID">用户</a></li>
+            <li><a href="GetChouJiang?id=@Model.ID">积分抽奖</a></li>
+            <li><a href="GetDaily?id=@Model.ID">动态</a></li>
+            <li><a href="GetUser?id=@Model.ID">我的</a></li>
+            </ul>
+        </div>
+
+<script>
+    
+</script>

@@ -1,0 +1,154 @@
+﻿@model IList<DailyOrSum>
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+    var pictureList = Picture.FindAllByDailyOrSumID;
+    var findEffect = Effect.FindByID;
+    var findDiseaseByUserID = UserDisease.FindAllByUserID;
+
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://unpkg.com/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="UserCenter/GetCommoncss">
+  <link rel="stylesheet" href="UserCenter/GetStylecss">
+  <link rel="icon" href="UserCenter/GetLoginImg" type="image/x-icon">
+  <link rel="Shortcut Icon" UserCenter/GetLoginImg" type="image/x-icon">
+  <title>日常打卡</title>
+</head>
+<body>
+
+
+    <style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        width: 465px;
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+ 
+    <ul>
+        <li><a class="active" href="#home">日常打卡</a></li>
+        <li><a href="#contact">疗程总结</a></li>
+    </ul>
+
+
+
+        @foreach (var entity in Model)
+        {
+        <table class="table table-bordered table-hover table-striped table-condensed" >
+            <tbody>
+                <tr class="text-center">                    
+                    <td class="text-center"  width="80" height="80"><img src="@Zero.Data.Projects.User.FindByID(entity.UserID).Avatar" width="80" height="80"/></td>
+                    <td style="background-color:rgb(220, 180, 255);" class="text-left">@findUserByID(entity.UserID).Name</td>
+                    <td style="background-color:rgb(220, 180, 255);text-align:right;" class="text-right">@entity.EvaluateTime</td>
+                </tr>
+              
+                <tr class="text-left"><td style="background-color:rgb(210, 160, 255);">评价效果</td><td style="background-color:rgb(210, 160, 255);" text-center colspan="3">@findEffect(entity.EffectID)</td></tr>
+                <tr class="text-left">
+                    <td style="background-color:rgb(200, 140, 255);">慢性病类型</td>
+                    <td style="background-color:rgb(200, 140, 255);" text-center colspan="3">
+                    @foreach (var disease in findDiseaseByUserID(entity.UserID))
+                    {
+                        <span>@disease.DiseaseName</span>
+                        <span>,</span>
+                    }
+                </td>
+                </tr>
+                <tr class="text-left"><td style="background-color:rgb(190, 120, 255);">新冠感染</td><td  style="background-color:rgb(190, 120, 255);" text-center colspan="3">@findUserByID(entity.UserID).Infection</td></tr>
+                <tr class="text-left">
+                    <td  style="background-color:rgb(180, 100, 255);" colspan="3">
+                        <textarea  class="text-left" rows="10" cols="150">@entity.Evaluate </textarea>   
+                    </td>
+                </tr>
+                
+                 <tr class="text-left">
+                <td style="background-color:rgb(170, 80, 255);" width="160" height="130" colspan="3">
+                @foreach(var picture in pictureList(entity.ID))
+                {
+                
+                
+                    <img src="@picture.Content" width="150" height="120"/>
+                  
+                }
+                </td>
+                <tr class="text-left">
+                   <td style="background-color:rgb(160, 60, 255);" colspan="3">
+                   <audio controls>
+                   <source id="" src="@entity.Recording">
+                   </audio>
+                   </td>
+                </tr>              
+               
+       
+            </tbody>
+        </table>
+       <div style = "width:1102px;
+                    height:60px;
+                    background-color:rgb(211, 217, 216)"></div>
+        } 
+
+      
+         <div  style = "width:1102px;
+                    height:180px;">
+             莫得拉不用往下拉了
+         <div/>
+           
+      
+        <div style="position: fixed;bottom:0;">
+            <ul>
+            <li><a class="active" href="#home">打卡</a></li>
+            <li><a href="UserCenter/GetUser">用户</a></li>
+            <li><a href="#contact">积分抽奖</a></li>
+            <li><a href="#contact">动态</a></li>
+            <li><a href="#contact">我的</a></li>
+            </ul>
+        </div>
+
+
+         <div >
+             
+         <div/>
+  </body>

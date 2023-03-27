@@ -1,0 +1,52 @@
+﻿@model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube; 
+我是积分抽奖页面
+
+<style>
+    td{
+        /*border: 1px solid black;*/
+        padding:15px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(190, 120, 255);
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+       
+    }
+
+    li a:hover {
+        background-color: rgb(190, 120, 255);
+}
+
+    </style>
+
+  <div style="position: fixed;bottom:0; width:100%;">
+            <ul>
+            <li><a class="active" href="AddDaily?id=@Model.ID">打卡</a></li>
+            <li><a href="GetSearchUser?id=@Model.ID">用户</a></li>
+            <li><a href="GetChouJiang?id=@Model.ID">积分抽奖</a></li>
+            <li><a href="GetDaily?id=@Model.ID">动态</a></li>
+            <li><a href="GetUser?id=@Model.ID">我的</a></li>
+            </ul>
+        </div>

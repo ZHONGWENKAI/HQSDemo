@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Tables xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:schemaLocation="https://newlifex.com https://newlifex.com/Model2022.xsd" NameSpace="Zero.Data.Projects" ConnName="Zero" DisplayName="花青素后台管理" Output="" BaseClass="Entity" ModelClass="{name}Model" ModelInterface="I{name}" CubeOutput="../../Zero.Web/Areas/Projects" Version="11.3.2022.1013" Document="https://newlifex.com/xcode/model" xmlns="https://newlifex.com/Model2022.xsd">
+  <Table Name="Team" Description="团队。管理一系列相关的产品和应用系统">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="Code" DataType="String" Description="编码" />
+      <Column Name="LeaderId" DataType="Int32" Description="组长" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Products" DataType="Int32" Description="产品数" />
+      <Column Name="Versions" DataType="Int32" Description="版本数" />
+      <Column Name="Members" DataType="Int32" Description="成员数。主要成员" />
+      <Column Name="AssistMembers" DataType="Int32" Description="协助成员数。其它团队临时协助该团队的成员" />
+      <Column Name="WebHook" DataType="String" Length="200" Description="机器人" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+      <Index Columns="Code" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="Member" Description="成员。所有可用团队成员" ModelClass="{name}Dto" ModelInterface="I{name}">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="Kind" DataType="String" Description="类型" />
+      <Column Name="TeamId" DataType="Int32" Description="团队。所属主团队" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Teams" DataType="Int32" Description="团队数。所在团队总数，含协助团队" />
+      <Column Name="UserId" DataType="Int32" Description="用户。所属登录用户" />
+      <Column Name="UserName" DataType="String" Description="用户名" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="TeamMember" Description="团队成员。每个团队拥有哪些成员，每个成员有一个主力团队">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="TeamId" DataType="Int32" Description="团队" />
+      <Column Name="MemberId" DataType="Int32" Description="成员" />
+      <Column Name="Kind" DataType="String" Description="类型" />
+      <Column Name="Major" DataType="Boolean" Description="主要。是否该成员的主要团队" />
+      <Column Name="Leader" DataType="Boolean" Description="组长。该团队组长" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="TeamId" />
+      <Index Columns="MemberId" />
+    </Indexes>
+  </Table>
+  <Table Name="Product" Description="产品">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="TeamId" DataType="Int32" Description="团队" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="Kind" DataType="String" Description="类型" />
+      <Column Name="LeaderId" DataType="Int32" Description="负责人" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Versions" DataType="Int32" Description="版本数" />
+      <Column Name="Stories" DataType="Int32" Description="故事数" />
+      <Column Name="Completed" DataType="Boolean" Description="完成" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="VersionPlan" Description="版本计划">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="TeamId" DataType="Int32" Description="团队" />
+      <Column Name="ProductId" DataType="Int32" Description="产品" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称。版本号" />
+      <Column Name="Kind" DataType="String" Description="类型" />
+      <Column Name="StartDate" DataType="DateTime" Description="开始日期" />
+      <Column Name="EndDate" DataType="DateTime" Description="结束日期" />
+      <Column Name="ManHours" DataType="Int32" Description="工时" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="Completed" DataType="Boolean" Description="完成" />
+      <Column Name="Stories" DataType="Int32" Description="故事数" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="TeamId" />
+      <Index Columns="ProductId" />
+    </Indexes>
+  </Table>
+  <Table Name="Story" Description="故事。用户故事的目标是将特定价值提供给客户，不必是传统意义上的外部最终用户，也可以是依赖您团队的组织内部客户或同事。用户故事是简单语言中的几句话，概述了所需的结果。">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="ProductId" DataType="Int32" Description="产品" />
+      <Column Name="VersionId" DataType="Int32" Description="版本" />
+      <Column Name="MemberId" DataType="Int32" Description="处理人" />
+      <Column Name="Title" DataType="String" Master="True" Description="事项" />
+      <Column Name="StartDate" DataType="DateTime" Description="开始日期" />
+      <Column Name="EndDate" DataType="DateTime" Description="结束日期" />
+      <Column Name="ManHours" DataType="Int32" Description="工时" />
+      <Column Name="Enable" DataType="Boolean" Description="启用" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="VersionId" />
+      <Index Columns="MemberId" />
+    </Indexes>
+  </Table>
+  <Table Name="User" Description="用户。存储用户信息">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Password" DataType="String" Nullable="False" Description="密码" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="Avatar" DataType="String" Length="1000000" Description="头像" />
+      <Column Name="Sex" DataType="Int32" Description="性别" Type="XCode.Membership.SexKinds" />
+      <Column Name="Age" DataType="Int32" Description="年龄" />
+      <Column Name="BirthDay" DataType="DateTime" Nullable="False" Description="出生日期" />
+      <Column Name="Phone" DataType="String" Nullable="False" Description="手机" />
+      <Column Name="Height" DataType="Int32" Description="身高cm" />
+      <Column Name="Weight" DataType="Int32" Description="体重kg" />
+      <Column Name="InfectionID" DataType="Int32" Description="新冠感染情况" />
+      <Column Name="UsageAmount" DataType="Int32" Description="服用数量" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="UserDisease" Description="用户疾病。用户疾病对应表">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="UserID" DataType="Int32" Description="用户ID" />
+      <Column Name="DiseaseID" DataType="Int32" Description="疾病ID" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="UserID" />
+      <Index Columns="DiseaseID" />
+    </Indexes>
+  </Table>
+  <Table Name="Disease" Description="疾病类型。存储疾病类型">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="DailyOrSum" Description="打卡记录与用户疗程。存储用户疗程和打卡记录">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="UserID" DataType="Int32" Master="True" Description="用户ID" />
+      <Column Name="EffectID" DataType="Int32" Master="True" Description="效果ID" />
+      <Column Name="EvaluateTime" DataType="DateTime" Nullable="False" Description="评价时间" />
+      <Column Name="Evaluate" DataType="String" Description="文字评论" />
+      <Column Name="Recording" DataType="String" Length="1000000" Description="录音" />
+      <Column Name="Type" DataType="Int32" Description="类型" Type="Data.Projects.DailyOrSum.Kind" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="UserID" />
+      <Index Columns="EffectID" />
+    </Indexes>
+  </Table>
+  <Table Name="Effect" Description="评价种类。评价效果种类">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="Infection" Description="新冠感染状态">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Name" DataType="String" Master="True" Nullable="False" Description="名称" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+    <Indexes>
+      <Index Columns="Name" Unique="True" />
+    </Indexes>
+  </Table>
+  <Table Name="Picture" Description="图片。打卡记录与疗程总结里的图片">
+    <Columns>
+      <Column Name="ID" DataType="Int32" Identity="True" PrimaryKey="True" Description="编号" />
+      <Column Name="Content" DataType="String" Length="1000000" Nullable="False" Description="名称" />
+      <Column Name="DailyOrSumID" DataType="Int32" Description="打卡总结表编号" />
+      <Column Name="CreateUser" DataType="String" Description="创建者" Model="False" />
+      <Column Name="CreateUserID" DataType="Int32" Description="创建人" Model="False" />
+      <Column Name="CreateIP" DataType="String" Description="创建地址" Model="False" />
+      <Column Name="CreateTime" DataType="DateTime" Description="创建时间" Model="False" />
+      <Column Name="UpdateUser" DataType="String" Description="更新者" Model="False" />
+      <Column Name="UpdateUserID" DataType="Int32" Description="更新人" Model="False" />
+      <Column Name="UpdateIP" DataType="String" Description="更新地址" Model="False" />
+      <Column Name="UpdateTime" DataType="DateTime" Description="更新时间" Model="False" />
+      <Column Name="Remark" DataType="String" Length="500" Description="备注" />
+    </Columns>
+  </Table>
+</Tables>

@@ -1,0 +1,107 @@
+﻿@model IList<Zero.Data.Projects.User>
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+@{
+    var fact = ViewBag.Factory as IEntityFactory;
+    var page = ViewBag.Page as Pager;
+    var fields = ViewBag.Fields as IList<FieldItem>;
+    var set = ViewBag.PageSetting as PageSetting;
+    var provider = ManageProvider.Provider;
+    var findUserByID = Zero.Data.Projects.User.FindByID;
+}
+
+<table class="table table-bordered table-hover table-striped table-condensed">
+    <thead>
+        <tr>
+            @if (set.EnableSelect)
+            {
+                <th class="text-center" style="width:10px;"><input type="checkbox" id="chkAll" title="全选" /></th>
+            }
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("ID"))">编号</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UserAvatar"))">名称</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UserName"))">头像</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("EvaluateTime"))">性别</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Evaluate"))">年龄</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Recording"))">出生日期</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Picture"))">手机</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UsageAmount"))">身高</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Type"))">体重</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Type"))">新冠感染情况</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("Type"))">服用数量</a></th>
+            @*  <th class="text-center" style="min-width:134px;"><a href="@Html.Raw(page.GetSortUrl("CreateTime"))">创建时间</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UpdateUser"))">更新者</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UpdateUserID"))">更新人</a></th>
+            <th class="text-center"><a href="@Html.Raw(page.GetSortUrl("UpdateIP"))">更新地址</a></th>
+            <th class="text-center" style="min-width:134px;"><a href="@Html.Raw(page.GetSortUrl("UpdateTime"))">更新时间</a></th>*@
+            @if (this.Has(PermissionFlags.Detail, PermissionFlags.Update, PermissionFlags.Delete))
+            {
+                <th class="text-center">操作</th>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var entity in Model)
+        {
+            <tr>
+                @if (set.EnableSelect)
+                {
+                    <td class="text-center"><input type="checkbox" name="keys" value="@entity.ID" /></td>
+                }
+                <td class="text-center">@entity.ID</td>
+                <td class="text-center">@entity.Name</td>
+                <td class="text-center">
+                    @if (entity.Avatar ==null)
+                    {
+                        <img src="User/GetDefalutAvatar" width="60" height="60"/>
+                    }
+                    else
+                    {
+                        <img src="@entity.Avatar" width="60" height="60"/>
+                    }    
+                </td>               
+                <td class="text-center">@entity.Sex</td>
+                <td class="text-center">@entity.Age</td>
+                <td class="text-center">@entity.BirthDay</td>               
+                <td class="text-center">@entity.Phone</td>
+                <td class="text-center">@entity.Height</td>
+                <td class="text-center">@entity.Weight</td>
+                <td class="text-center">@entity.InfectionName</td>
+                <td class="text-center">@entity.UsageAmount</td>
+              @*  <td class="text-center">@entity.CreateTime.ToFullString("")</td>
+                <td>@entity.UpdateUser</td>
+                <td class="text-center">@provider.FindByID(entity.UpdateUserID)</td>
+                <td class="text-center" title="@entity.UpdateIP.IPToAddress()">@entity.UpdateIP</td>
+                <td class="text-center">@entity.UpdateTime.ToFullString("")</td>*@
+                @if (this.Has(PermissionFlags.Detail, PermissionFlags.Update, PermissionFlags.Delete))
+                {
+                    <td class="text-center">
+                        @await Html.PartialAsync("_List_Data_Action", (Object)entity)
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+     $(document).ready(function(){
+        $('input[type=file]').change(function(){    
+            
+            $.post("/Projects/User/UpLoadAvatar",{
+			name:"菜鸟教程",
+			url:"http://www.runoob.com"
+		},
+		function(data,status){
+			alert("数据: \n" + data + "\n状态: " + status);
+		});
+        alert(this.file);
+        });
+    });       
+</script>*@

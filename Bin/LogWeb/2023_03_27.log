@@ -206,3 +206,17 @@ index IU_User_Name already exists
 09:48:52.606  6 W P Picture.Count 快速计算表记录数（非精确）[Picture/Zero] 参考值 5
 09:48:52.606  6 W P [Zero] Select Count(*) From Picture
 09:48:52.609  6 W P [Zero] Select * From Picture
+09:57:24.997 10 N T 实体缓存<Picture>(5)        总次数          5，命中          4（80.00%）	[Zero.Data.Projects.Picture]
+09:57:24.997 10 N T 对象缓存<UserOnline>(0)     总次数          8，命中          4（50.00%）	[NewLife.Cube.Entity.UserOnline]
+09:57:24.997 10 N T 实体缓存<Infection>(4)      总次数          4，命中          2（50.00%）	[Zero.Data.Projects.Infection]
+09:57:24.997 10 N T 实体缓存<DailyOrSum>(6)     总次数          1	[Zero.Data.Projects.DailyOrSum]
+09:57:24.998 10 N T 对象缓存<UserStat>(1)       总次数         22，命中          9（40.91%）	[NewLife.Cube.Entity.UserStat]
+09:57:24.998 10 N T 实体缓存<User>(2)           总次数          1	[XCode.Membership.User]
+09:57:24.998 10 N T 实体缓存<UserDisease>(2)    总次数          7，命中          5（71.43%）	[Zero.Data.Projects.UserDisease]
+09:57:24.998 10 N T 实体缓存<User>(1)           总次数         20，命中         18（90.00%）	[Zero.Data.Projects.User]
+09:57:24.999 10 N T 实体缓存<Effect>(3)         总次数          5，命中          3（60.00%）	[Zero.Data.Projects.Effect]
+09:57:24.999 10 N T 实体缓存<CronJob>(2)        总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.CronJob]
+09:57:24.999 10 N T 实体缓存<Menu>(53)          总次数        125，命中        124（99.20%）	[XCode.Membership.Menu]
+09:57:24.999 10 N T 实体缓存<OAuthConfig>(9)    总次数          2，命中          1（50.00%）	[NewLife.Cube.Entity.OAuthConfig]
+09:57:25.000 10 N T 实体缓存<AppModule>(0)      总次数          1	[NewLife.Cube.Entity.AppModule]
+09:57:25.000 10 N T 实体缓存<Disease>(5)        总次数          6，命中          4（66.67%）	[Zero.Data.Projects.Disease]

@@ -19,7 +19,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\css\**" />
+    <Compile Remove="Views\Home\img\**" />
+    <Compile Remove="Views\Home\JS\**" />
+    <Content Remove="Views\Home\css\**" />
+    <Content Remove="Views\Home\img\**" />
+    <Content Remove="Views\Home\JS\**" />
+    <EmbeddedResource Remove="Views\Home\css\**" />
+    <EmbeddedResource Remove="Views\Home\img\**" />
+    <EmbeddedResource Remove="Views\Home\JS\**" />
+    <None Remove="Views\Home\css\**" />
+    <None Remove="Views\Home\img\**" />
+    <None Remove="Views\Home\JS\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Home\Login.cshtml" />
     <Content Remove="Views\login.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\index.html" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,10 +52,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Zero.Core\Zero.Core.csproj" />
     <ProjectReference Include="..\Zero.Data\Zero.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Views\Home\Login.cshtml" />
   </ItemGroup>
 
 </Project>

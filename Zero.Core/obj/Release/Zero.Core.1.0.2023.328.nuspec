@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Zero.Core</id>
+    <version>1.0.2023.328</version>
+    <authors>Zero.Core</authors>
+    <description>Web应用、微服务、应用服务、大数据计算和客户端等多个端共用的类库，例如模型类等。原则上要求最少依赖第三方</description>
+    <copyright>©2002-2023 NewLife</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="NewLife.Core" version="10.1.2023.203" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Code\HQSDemo\Zero.Core\bin\Release\netstandard2.1\Zero.Core.dll" target="lib\netstandard2.1\Zero.Core.dll" />
+  </files>
+</package>

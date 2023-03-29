@@ -48,7 +48,7 @@
           "lib/netstandard2.1/XCode.dll": {}
         }
       },
-      "Zero.Core/1.0.2023.327": {
+      "Zero.Core/1.0.2023.329": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -163,7 +163,7 @@
         "newlife.xcode.nuspec"
       ]
     },
-    "Zero.Core/1.0.2023.327": {
+    "Zero.Core/1.0.2023.329": {
       "type": "project",
       "path": "../Zero.Core/Zero.Core.csproj",
       "msbuildProject": "../Zero.Core/Zero.Core.csproj"
@@ -174,14 +174,14 @@
       "NewLife.Core >= 10.1.2023.203",
       "NewLife.Stardust >= 2.6.2023.203",
       "NewLife.XCode >= 11.5.2023.203",
-      "Zero.Core >= 1.0.2023.327"
+      "Zero.Core >= 1.0.2023.329"
     ]
   },
   "packageFolders": {
     "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {}
   },
   "project": {
-    "version": "1.0.2023.327",
+    "version": "1.0.2023.329",
     "restore": {
       "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Data\\Zero.Data.csproj",
       "projectName": "Zero.Data",

@@ -1,0 +1,10 @@
+D:\Code\HQSDemo\Zero.Core\bin\Release\netstandard2.1\Zero.Core.deps.json
+D:\Code\HQSDemo\Zero.Core\bin\Release\netstandard2.1\Zero.Core.dll
+D:\Code\HQSDemo\Zero.Core\bin\Release\netstandard2.1\Zero.Core.pdb
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.csproj.AssemblyReference.cache
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.AssemblyInfoInputs.cache
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.AssemblyInfo.cs
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.csproj.CoreCompileInputs.cache
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.dll
+D:\Code\HQSDemo\Zero.Core\obj\Release\netstandard2.1\Zero.Core.pdb

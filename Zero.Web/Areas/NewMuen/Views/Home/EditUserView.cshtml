@@ -1,0 +1,306 @@
+﻿ @model Zero.Data.Projects.User
+@using Zero.Data.Projects
+@using NewLife;
+@using NewLife.Web;
+@using XCode;
+@using XCode.Configuration;
+@using XCode.Membership;
+@using NewLife.Cube;
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="新生命团队,NewLife,魔方,Cube,XCode" />
+    <title></title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- 页面内联样式 -->
+    
+
+        <link rel="stylesheet" href="/Content/bootstrap/css/bootstrap-multiselect.css">
+
+    <link rel="stylesheet" href="/Content/DateTimePicker/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" href="/Content/bootstrap_switch/bootstrap-switch.min.css">
+
+    <!-- 最后引入基本样式 -->
+    <link rel="stylesheet" href="/Content/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/bootstrap/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/Content/bootstrap/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/Content/bootstrap/css/bootstrap-responsive.min.css">
+
+    <!-- 文本字体 -->
+    <link rel="stylesheet" href="/Content/ace/css/ace-fonts.min.css">
+    <!-- ace 样式 -->
+    <link rel="stylesheet" href="/Content/ace/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style">
+    <link href="/Content/artDialog/css/ui-dialog.css" rel="stylesheet" />
+
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="/Content/Cube.css?v=5.5.8436.11800">
+    <!-- JQuery作为一等公民，页面内部随时可能使用 -->
+    <script src="/Content/js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="panel panel-default">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                个人信息采集</li>
+            <li>
+            <a href="/Home/GetUser/@Model.ID">个人中心</a>
+            </li>
+
+        </ul>
+    <div class="hidden-xs" style="float: right; margin-left: 40px;max-width:1000px;overflow:hidden;white-space: nowrap;text-overflow: ellipsis;" title="用户。存储用户信息">用户。存储用户信息</div>
+    </div>
+        <div class="page-content">
+        <div class="page-content">
+        <section class="content-wrapper main-content clear-fix">
+                
+    <div class="form-horizontal">
+    
+    <form action="/Home/EditUser/@Model.ID" method="post">        <ul>
+
+    </ul>
+
+   <div class="form-group col-xs-9 col-sm-9">
+    
+        <img id=Avatarimg src="@Model.Avatar" width="60" height="60"/> 
+    
+</div>
+         
+   
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">名称</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Name" name="Name" type="text" value="@Model.Name" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">性别</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <select class="multiselect" data-val="true" data-val-required="The Int64 field is required." id="Sex" name="Sex"><option selected="selected" value="@Model.Sex">@Model.Sex</option>
+            <option value="1">男</option>
+            <option value="2">女</option>
+        </select></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">年龄</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Age" name="Age" role="number" type="text" value="@Model.Age" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">出生日期</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+    <input autocomplete="off" class="form-control date form_datetime" dateformat="yyyy-MM-dd" id="BirthDay" name="BirthDay" type="text" value="@Model.BirthDay" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">手机</label>
+        <div class="input-group col-xs-9 col-sm-9">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+        <input class="form-control" id="Phone" name="Phone" type="tel" value="@Model.Phone" />
+    </div>
+</div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">身高cm</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Height" name="Height" role="number" type="text" value="@Model.Height" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">体重kg</label>
+    <div class="input-group col-xs-9 col-sm-9">
+    <input class="form-control" id="Weight" name="Weight" role="number" type="text" value="@Model.Weight" /></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">新冠感染情况</label>
+    <div class="input-group col-xs-9 col-sm-9">
+    <select class="multiselect" id="InfectionID" name="InfectionID"><option selected="selected" value="@Model.Infection">@Model.Infection.Name</option>
+    <option value="1">未感染</option>
+    <option value="2">无症状阳性</option>
+    <option value="3">已确诊</option>
+    <option value="4">已康复</option>
+    </select></div>
+
+    </div>
+    <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">服用数量</label>
+        <div class="input-group col-xs-9 col-sm-9">
+    <input class="form-control" id="UsageAmount" name="UsageAmount" role="number" type="text" value="@Model.UsageAmount" /></div>
+
+
+
+        
+
+        <div class="form-group col-xs-12 col-sm-6">
+        <label class="control-label col-xs-3 col-sm-3">头像</label>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatar" name="Avatar" type="hidden"/></div>
+        <div class="input-group col-xs-9 col-sm-9">
+        <input class="form-control" id="Avatarpath" type="file" accept="image/*" value="" /></div>
+        </div>
+
+
+
+         <div class="clearfix form-actions col-xs-12 col-sm-12 col-md-12">
+        <label class="control-label col-xs-4 col-sm-5 col-md-5"></label>
+        <button type="submit" class="btn btn-success btn-sm"><i class="glyphicon glyphicon-plus"></i><strong>编辑</strong></button>
+        <button type="button" class="btn btn-danger btn-sm" onclick="history.go(-1);"><i class="glyphicon glyphicon-remove"></i><strong>取消</strong></button>
+    </div>
+</body>
+
+<script>
+        $("#Avatarpath").change(function () {
+        console.log($("#Avatarpath"))
+        var file = $("#Avatarpath").get(0).files[0];
+        
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+        // 图片格式为 base64
+        //console.log(e)
+       
+       $("#Avatar").attr("value",e.target.result)
+       $("#Avatarimg").attr("src",e.target.result)
+       
+        
+    }
+})
+    </script>
+ <!-- 最早引入基本脚本 -->
+    <script src="/Content/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/Content/bootstrap/js/bootstrap-multiselect.min.js"></script>
+
+    
+
+    <!--日历控件支持-->
+    <script src="/Content/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="/Content/DateTimePicker/bootstrap-datetimepicker.zhCN.js"></script>
+    <script>
+        $(function () {
+            $('.form_datetime').each(function () {
+                var df = $(this).attr('dateformat');
+                if (!df) {
+                    $(this).attr('dateformat', 'yyyy-mm-dd hh:ii:ss');
+                    $(this).width(140);
+                }
+                else {
+                    // 把C#标准格式化替换为控件格式
+                    df = df.replace('mm', 'ii').replace('MM', 'mm').replace('HH', 'hh');
+                    $(this).attr('dateformat', df);
+
+                    // 根据时间日期格式，锁定日期输入框宽度
+                    if (df.indexOf('hh') >= 0)
+                        $(this).width(140);
+                    else
+                        $(this).width(80);
+                }
+
+                //根据日期格式自动推算日期选择view显示的范围
+                var sv = 2;
+                var mv = 2;
+                var autoView = $(this).attr('autoView');
+                if (autoView != 'false') {
+                    df = $(this).attr('dateformat');
+                    if (df.indexOf('ii') >= 0) {
+                        mv = 0;
+                        if (df.indexOf('dd') >= 0) {
+                            sv = 2;
+                        } else {
+                            sv = 1;
+                        }
+                    } else if (df.indexOf('hh') >= 0) {
+                        mv = 1;
+                        if (df.indexOf('dd') >= 0) {
+                            sv = 2;
+                        } else {
+                            sv = 1;
+                        }
+                    } else if (df.indexOf('dd') >= 0) {
+                        mv = 2;
+                        sv = 2;
+                    } else if (df.indexOf('mm') >= 0) {
+                        mv = 3;
+                        sv = 3;
+                    } else if (df.indexOf('yyyy') >= 0) {
+                        mv = 4;
+                        sv = 4;
+                    }
+                }
+
+                $(this).attr('startview', sv);
+                $(this).attr('minview', mv);
+            });
+            $("[dateformat]").each(function () {
+                $(this).datetimepicker({
+                    format: $(this).attr("dateformat"),
+                    autoclose: true,
+                    language: "zh-CN",
+                    forceParse: false,
+                    startView: parseInt($(this).attr('startview')),
+                    minView: parseInt($(this).attr('minview'))
+                });
+            });
+
+                    $('.multiselect').each(function () {
+                        $(this).multiselect({
+                            // 下拉列表仅在列表项比较多时显示过滤框
+                            enableFiltering: $(this).children().length > 10,
+                            buttonClass: 'btn btn-white btn-primary',
+                            templates: {
+                                button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"></button>',
+                                ul: '<ul class="multiselect-container dropdown-menu"></ul>',
+                                filter: '<li class="multiselect-item filter"><div class="input-group"><span class="input-group-addon"><i class="fa fa-search"></i></span><input class="form-control multiselect-search" type="text"></div></li>',
+                                filterClearBtn: '<span class="input-group-btn"><button class="btn btn-default btn-white btn-grey multiselect-clear-filter" type="button"><i class="fa fa-times-circle red2"></i></button></span>',
+                                li: '<li><a href="javascript:void(0);"><label></label></a></li>',
+                                divider: '<li class="multiselect-item divider"></li>',
+                                liGroup: '<li class="multiselect-item group"><label class="multiselect-group"></label></li>'
+                            },
+                            filterPlaceholder: '搜索',
+                            nonSelectedText: '无',
+                            allSelectedText: '全选'
+                        });
+                    });
+            
+                    $('tr').dblclick(function () {
+                        var $this = $(this);
+                        var row = $this.closest("tr");
+                        var findcell = row.find('.editcell');
+                        if (findcell.length > 0) window.location.href = findcell.attr("href");
+                    });
+
+                                    });
+    </script>
+
+    <!--开关插件-->
+    <script src="/Content/bootstrap_switch/bootstrap-switch.min.js"></script>
+    <script>
+        $(function () {
+            $("input.chkSwitch").bootstrapSwitch();
+        })
+    </script>
+
+    <script src="/Content/artDialog/dist/dialog-plus-min.js"></script>
+    <script src="/Content/artDialog/dist/dialog.new.life.js"></script>
+    <script src="/Content/Cube.js?v=5.5.8436.11800"></script>
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="https://localhost:44399/bc41754f31e04dddb0edfa4fa04cd4ae/browserLink" async="async" id="__browserLink_initializationData" data-requestId="47cea60e9351498e91c25742a89ea12d" data-requestMappingFromServer="False"></script>
+<!-- End Browser Link -->
+
+<script src="/_framework/aspnetcore-browser-refresh.js"></script>
+</html>

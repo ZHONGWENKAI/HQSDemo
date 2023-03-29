@@ -19,7 +19,7 @@
     var user = (Zero.Data.Projects.User)ViewData["user"];
 }
 
-<body id="list">
+
 
 
 
@@ -56,6 +56,8 @@
 
     </style>
 
+    <body id="list">
+
     <input type = "hidden" id ="userid" value = "@user.ID">
 
     <ul>
@@ -73,7 +75,7 @@
     @Html.ForDropDownList("InfectionID", InfectionDic, "", "新冠感染情况", true)
     @Html.ForListBox("DiseaseID", DiseaseDic, "疾病类型")  
     
-    <button id="search" type="submit" class="btn btn-purple btn-sm">
+    <button id="searchDaily" type="submit" class="btn btn-purple btn-sm">
             <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
             查询
             
@@ -163,6 +165,35 @@
         </div>
     
   </body>
+
+  <script>
+      $(document).ready(function(){
+      $("#searchDaily").click(function () {
+        var EffectText=$("#EffectID option:selected").text();       
+        var InfectionText=$("#InfectionID option:selected").text();
+        console.log(EffectText);
+        console.log(InfectionText);
+        var DiseaseText = "";
+        $("#DiseaseID option:selected").each(function () {
+            DiseaseText += $(this).text()+",";
+            console.log($(this).text());
+
+        });
+        console.log(DiseaseID)
+        var userid = $("#userid").val();
+        $.post("SearchDaily",{
+                   userid:userid,
+                   EffectText:EffectText,
+                   InfectionText:InfectionText,
+                   DiseaseText:DiseaseText,
+		            },
+		                function(data,status){
+                $("#list").html(data);
+			      alert(data);
+		        });
+        });
+ });
+  </script>
  @* <script>
  $(document).ready(function(){
    $("#search").click(function () {

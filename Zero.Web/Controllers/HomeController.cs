@@ -10,6 +10,69 @@ namespace HQSDemo.Web.Controllers
         {
             return View();
         }
+        //登录
+        public ActionResult GetCommoncss()
+        {
+            FileIO fileIO = new FileIO();
+            byte[] fileArray = fileIO.readFile("css/common.css");
+
+            //byte[] fileArray = fileIO.readFile(avatar);
+            //fileIO.writeFile("D:/Code/HQSDemo/UserAvatar/2.jpeg", fileArray);
+            //参数      图像文件的二进制数组    返回的格式
+            return File(fileArray, "text/css");
+        }
+
+        public ActionResult GetStylecss()
+        {
+            FileIO fileIO = new FileIO();
+            byte[] fileArray = fileIO.readFile("css/style.css");
+
+            //byte[] fileArray = fileIO.readFile(avatar);
+            //fileIO.writeFile("D:/Code/HQSDemo/UserAvatar/2.jpeg", fileArray);
+            //参数      图像文件的二进制数组    返回的格式
+            return File(fileArray, "text/css");
+        }
+
+        public ActionResult GetLoginImg()
+        {
+            FileIO fileIO = new FileIO();
+            byte[] fileArray = fileIO.readFile("img/login.ico");
+
+            //byte[] fileArray = fileIO.readFile(avatar);
+            //fileIO.writeFile("D:/Code/HQSDemo/UserAvatar/2.jpeg", fileArray);
+            //参数      图像文件的二进制数组    返回的格式
+            return File(fileArray, "image/x-icon");
+        }
+
+        public ActionResult GetbgImg()
+        {
+            FileIO fileIO = new FileIO();
+            byte[] fileArray = fileIO.readFile("img/bg.png");
+
+            //byte[] fileArray = fileIO.readFile(avatar);
+            //fileIO.writeFile("D:/Code/HQSDemo/UserAvatar/2.jpeg", fileArray);
+            //参数      图像文件的二进制数组    返回的格式
+            return File(fileArray, "image/png");
+        }
+
+        public ActionResult GetLoginJS()
+        {
+            FileIO fileIO = new FileIO();
+            byte[] fileArray = fileIO.readFile("JS/login.js");
+
+            //byte[] fileArray = fileIO.readFile(avatar);
+            //fileIO.writeFile("D:/Code/HQSDemo/UserAvatar/2.jpeg", fileArray);
+            //参数      图像文件的二进制数组    返回的格式
+            return File(fileArray, "text/javascript");
+        }
+
+        public IActionResult Login(Int32 id)
+        {
+            id = 2;
+            User user = Zero.Data.Projects.User.FindByID(id);
+            return View("Login", user);
+        }
+
 
         //我的
         public ActionResult GetDefalutAvatar()
@@ -187,14 +250,61 @@ namespace HQSDemo.Web.Controllers
             return View("GetDaily", dailyOrSumList);
         }
 
-        public IActionResult SearchDaily(Int32 id)
+        public IActionResult SearchDaily(Int32 userid,String EffectText,String InfectionText,String DiseaseText)
         {
-            User user = Zero.Data.Projects.User.FindByID(id);
+
+            User user = Zero.Data.Projects.User.FindByID(userid);
             ViewData["user"] = user;
 
-            List<DailyOrSum> dailyOrSumList = (List<DailyOrSum>)DailyOrSum.FindAllByType(DailyOrSum.Kind.打卡记录);
+            var effectId = Effect.FindByName(EffectText).ID;
+            var infectionId = Infection.FindByName(InfectionText).ID;
 
-            return View("GetDaily", dailyOrSumList);
+            //将疾病类型从String变为int
+            String[] diseaseNames = DiseaseText.Split(",");
+            foreach (var item in diseaseNames)
+            {
+                Console.WriteLine(item);
+            }
+            int[] diseaseIds = new int[10];
+            for (int i = 0; i < diseaseNames.Length-1; i++)
+            {
+                Console.WriteLine(diseaseNames[i]);
+                diseaseIds[i] = Disease.FindByName(diseaseNames[i]).ID;
+            }
+            //获取患有相关疾病的user
+            List<UserDisease> userDiseases = new List<UserDisease>();
+            for (int i = 0; i < diseaseNames.Length - 1; i++)
+            {
+                userDiseases.AddRange(UserDisease.FindAllByDiseaseID(diseaseIds[i]));
+            }
+            List<User> userList1 = new List<User>();
+            foreach (var userDisease in userDiseases)
+            {
+                if (userList1.Exists(t => t == Zero.Data.Projects.User.FindByID(userDisease.UserID))){
+
+                }else
+                {
+                    userList1.Add(Zero.Data.Projects.User.FindByID(userDisease.UserID));
+                }
+                
+            }
+            //筛选出有新冠感染状态的user
+            List<User> userList2 = new List<User>();
+            foreach (var user1 in userList1)
+            {
+                if(user.InfectionID== infectionId)
+                {
+                    userList2.Add(user);
+                }
+            }
+            //查询有该评价效果的Daily并且是筛选后的userid发布的
+            List<DailyOrSum> DailyOrSunList = new List<DailyOrSum>();
+            foreach (var user1 in userList2)
+            {
+                DailyOrSunList.AddRange((DailyOrSum.SearchDaily(effectId, user.ID)));
+            }
+
+            return View("GetDaily", DailyOrSunList);
         }
 
         //动态/疗程总结
@@ -206,6 +316,65 @@ namespace HQSDemo.Web.Controllers
             List<DailyOrSum> dailyOrSumList = (List<DailyOrSum>)DailyOrSum.FindAllByType(DailyOrSum.Kind.疗程总结);
 
             return View("GetSum", dailyOrSumList);
+        }
+
+        public IActionResult SearchSum(Int32 userid, String EffectText, String InfectionText, String DiseaseText)
+        {
+
+            User user = Zero.Data.Projects.User.FindByID(userid);
+            ViewData["user"] = user;
+
+            var effectId = Effect.FindByName(EffectText).ID;
+            var infectionId = Infection.FindByName(InfectionText).ID;
+
+            //将疾病类型从String变为int
+            String[] diseaseNames = DiseaseText.Split(",");
+            foreach (var item in diseaseNames)
+            {
+                Console.WriteLine(item);
+            }
+            int[] diseaseIds = new int[10];
+            for (int i = 0; i < diseaseNames.Length - 1; i++)
+            {
+                Console.WriteLine(diseaseNames[i]);
+                diseaseIds[i] = Disease.FindByName(diseaseNames[i]).ID;
+            }
+            //获取患有相关疾病的user
+            List<UserDisease> userDiseases = new List<UserDisease>();
+            for (int i = 0; i < diseaseNames.Length - 1; i++)
+            {
+                userDiseases.AddRange(UserDisease.FindAllByDiseaseID(diseaseIds[i]));
+            }
+            List<User> userList1 = new List<User>();
+            foreach (var userDisease in userDiseases)
+            {
+                if (userList1.Exists(t => t == Zero.Data.Projects.User.FindByID(userDisease.UserID)))
+                {
+
+                }
+                else
+                {
+                    userList1.Add(Zero.Data.Projects.User.FindByID(userDisease.UserID));
+                }
+
+            }
+            //筛选出有新冠感染状态的user
+            List<User> userList2 = new List<User>();
+            foreach (var user1 in userList1)
+            {
+                if (user.InfectionID == infectionId)
+                {
+                    userList2.Add(user);
+                }
+            }
+            //查询有该评价效果的Daily并且是筛选后的userid发布的
+            List<DailyOrSum> DailyOrSunList = new List<DailyOrSum>();
+            foreach (var user1 in userList2)
+            {
+                DailyOrSunList.AddRange((DailyOrSum.SearchSum(effectId, user.ID)));
+            }
+
+            return View("GetDaily", DailyOrSunList);
         }
     }
 }

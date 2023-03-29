@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Zero.Data</id>
+    <version>1.0.2023.328</version>
+    <authors>Zero.Data</authors>
+    <description>Web应用、微服务、应用服务、大数据计算等共用数据层，主要包括数据层实体类。一般只用于服务端</description>
+    <copyright>©2002-2023 NewLife</copyright>
+    <dependencies>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Zero.Core" version="1.0.2023.328" exclude="Build,Analyzers" />
+        <dependency id="NewLife.Core" version="10.1.2023.203" exclude="Build,Analyzers" />
+        <dependency id="NewLife.Stardust" version="2.6.2023.203" exclude="Build,Analyzers" />
+        <dependency id="NewLife.XCode" version="11.5.2023.203" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Code\HQSDemo\Zero.Data\bin\Release\netstandard2.1\Zero.Data.dll" target="lib\netstandard2.1\Zero.Data.dll" />
+  </files>
+</package>

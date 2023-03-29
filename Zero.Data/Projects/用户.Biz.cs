@@ -56,29 +56,29 @@ namespace Zero.Data.Projects
             if (!HasDirty) return;
 
             // 这里验证参数范围，建议抛出参数异常，指定参数名，前端用户界面可以捕获参数异常并聚焦到对应的参数输入框
-            if (Name.IsNullOrEmpty()) throw new ArgumentNullException(nameof(Name), "名称不能为空！");
+            //if (Name.IsNullOrEmpty()) throw new ArgumentNullException(nameof(Name), "名称不能为空！");
 
-            //if (Password.IsNullOrEmpty()) throw new ArgumentNullException(nameof(Password), "密码不能为空！");
+            ////if (Password.IsNullOrEmpty()) throw new ArgumentNullException(nameof(Password), "密码不能为空！");
 
-            if (!Phone.IsNullOrEmpty())
-            {
-                Regex regex = new Regex(@"^1[3-9]\d{9}$");
-                if (!regex.IsMatch(Phone))
-                {
-                    throw new ArgumentNullException(__.Phone, "请输入正确的电话号码");
-                }
-            }
-            else
-            {
-                throw new Exception("电话号码不能为空");
-            }
+            //if (!Phone.IsNullOrEmpty())
+            //{
+            //    Regex regex = new Regex(@"^1[3-9]\d{9}$");
+            //    if (!regex.IsMatch(Phone))
+            //    {
+            //        throw new ArgumentNullException(__.Phone, "请输入正确的电话号码");
+            //    }
+            //}
+            //else
+            //{
+            //    throw new Exception("电话号码不能为空");
+            //}
 
             
-            if (BirthDay==null) throw new ArgumentNullException(nameof(BirthDay), "出生日期不能为空！");
-            if (Age < 0 || Age > 150) throw new ArgumentNullException(nameof(Age), "请输入正确的年龄(0-150间的数字)！");
-            if (Height < 0 || Height > 300) throw new ArgumentNullException(nameof(Height), "请输入正确的身高(0-300cm之间)！");
-            if (Weight < 0 || Weight > 200) throw new ArgumentNullException(nameof(Weight), "请输入正确体重(0-150kg之间)！");
-            if (InfectionID<0) throw new ArgumentNullException(nameof(InfectionID), "感染症状不能为空！");
+            //if (BirthDay==null) throw new ArgumentNullException(nameof(BirthDay), "出生日期不能为空！");
+            //if (Age < 0 || Age > 150) throw new ArgumentNullException(nameof(Age), "请输入正确的年龄(0-150间的数字)！");
+            //if (Height < 0 || Height > 300) throw new ArgumentNullException(nameof(Height), "请输入正确的身高(0-300cm之间)！");
+            //if (Weight < 0 || Weight > 200) throw new ArgumentNullException(nameof(Weight), "请输入正确体重(0-150kg之间)！");
+            //if (InfectionID<0) throw new ArgumentNullException(nameof(InfectionID), "感染症状不能为空！");
             
             // 建议先调用基类方法，基类方法会做一些统一处理
             base.Valid(isNew);
@@ -303,7 +303,7 @@ namespace Zero.Data.Projects
             return FindAll(exp, page);
         }
 
-        
+
 
         // Select Count(ID) as ID,Category From User Where CreateTime>'2020-01-24 00:00:00' Group By Category Order By ID Desc limit 20
         //static readonly FieldCache<User> _CategoryCache = new FieldCache<User>(nameof(Category))

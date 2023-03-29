@@ -24,7 +24,7 @@ namespace Zero.Web.Areas.NewMuen.Controllers
             User user = Data.Projects.User.FindByID(2);
             //ViewBag.user = user;
             //ViewData.Model = user;
-            return View("GetUser", user);
+            return View("GetUser2", user);
         }
 
         public ActionResult GetCommoncss()

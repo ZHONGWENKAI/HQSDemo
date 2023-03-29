@@ -59,9 +59,9 @@
 <table id="addTable" class="table table-bordered table-hover table-striped table-condensed">
     <tbody>
             <tr><td width="60" height="65">
-                    @if (user.Avatar ==null)
+                    @if (user.Avatar == "")
                     {
-                        <img src="GetDefalutAvatar" width="60" height="60"/>
+                        <img src="../GetDefalutAvatar" width="60" height="60"/>
                     }
                     else
                     {
@@ -166,11 +166,11 @@
         
   <div style="position: fixed;bottom:0; width:100%;">
             <ul>
-            <li><a class="active" href="AddDaily?id=@user.ID">打卡</a></li>
-            <li><a href="GetSearchUser?id=@user.ID">用户</a></li>
-            <li><a href="GetChouJiang?id=@user.ID">积分抽奖</a></li>
-            <li><a href="GetDaily?id=@user.ID">动态</a></li>
-            <li><a href="GetUser?id=@user.ID">我的</a></li>
+            <li><a class="active" href="../AddDaily?id=@user.ID">打卡</a></li>
+            <li><a href="../GetSearchUser?id=@user.ID">用户</a></li>
+            <li><a href="../GetChouJiang?id=@user.ID">积分抽奖</a></li>
+            <li><a href="../GetDaily?id=@user.ID">动态</a></li>
+            <li><a href="../GetUser?id=@user.ID">我的</a></li>
             </ul>
         </div>
   

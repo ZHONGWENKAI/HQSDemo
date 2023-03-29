@@ -224,7 +224,27 @@ namespace Zero.Data.Projects
             return FindAll(exp, page);
         }
 
+        public static IList<DailyOrSum> SearchDaily(Int32 effectId,Int32 userId)
+        {
+            var exp = new WhereExpression();
 
+           
+            if (effectId > 0) exp &= _.EffectID == effectId;
+            if (userId > 0) exp &= _.UserID == userId;
+            exp &= _.Type == DailyOrSum.Kind.打卡记录;
+            return FindAll(exp);
+        }
+
+        public static IList<DailyOrSum> SearchSum(Int32 effectId, Int32 userId)
+        {
+            var exp = new WhereExpression();
+
+
+            if (effectId >= 0) exp &= _.EffectID == effectId;
+            if (userId >= 0) exp &= _.UserID == userId;
+            exp &= _.Type == DailyOrSum.Kind.疗程总结;
+            return FindAll(exp);
+        }
         public static IList<DailyOrSum> SearchDailyByConditions(String effectName, String infectionName, String diseaseName)
         {
             List<User> userList = new List<User>();

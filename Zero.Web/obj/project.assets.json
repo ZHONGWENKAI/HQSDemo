@@ -150,7 +150,7 @@
           }
         }
       },
-      "Zero.Core/1.0.2023.327": {
+      "Zero.Core/1.0.2023.329": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -163,14 +163,14 @@
           "bin/placeholder/Zero.Core.dll": {}
         }
       },
-      "Zero.Data/1.0.2023.327": {
+      "Zero.Data/1.0.2023.329": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "NewLife.Core": "10.1.2023.203",
           "NewLife.Stardust": "2.6.2023.203",
           "NewLife.XCode": "11.5.2023.203",
-          "Zero.Core": "1.0.2023.327"
+          "Zero.Core": "1.0.2023.329"
         },
         "compile": {
           "bin/placeholder/Zero.Data.dll": {}
@@ -579,12 +579,12 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Zero.Core/1.0.2023.327": {
+    "Zero.Core/1.0.2023.329": {
       "type": "project",
       "path": "../Zero.Core/Zero.Core.csproj",
       "msbuildProject": "../Zero.Core/Zero.Core.csproj"
     },
-    "Zero.Data/1.0.2023.327": {
+    "Zero.Data/1.0.2023.329": {
       "type": "project",
       "path": "../Zero.Data/Zero.Data.csproj",
       "msbuildProject": "../Zero.Data/Zero.Data.csproj"
@@ -596,15 +596,15 @@
       "NewLife.Redis >= 5.1.2023.203",
       "NewLife.Stardust.Extensions >= 2.6.2023.203",
       "System.Drawing.Common >= 7.0.0",
-      "Zero.Core >= 1.0.2023.327",
-      "Zero.Data >= 1.0.2023.327"
+      "Zero.Core >= 1.0.2023.329",
+      "Zero.Data >= 1.0.2023.329"
     ]
   },
   "packageFolders": {
     "D:\\ProgramData\\Microsoft\\VisualStudio\\Packages": {}
   },
   "project": {
-    "version": "1.0.2023.327",
+    "version": "1.0.2023.329",
     "restore": {
       "projectUniqueName": "D:\\Code\\HQSDemo\\Zero.Web\\HQSDemo.Web.csproj",
       "projectName": "HQSDemo.Web",
